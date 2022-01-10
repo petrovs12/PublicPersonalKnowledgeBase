@@ -1,9 +1,10 @@
 ---
 id: CLujm4Ho6RVqNTGxIZkxa
-title: Algorithms
+title: algos
 desc: ''
-updated: 1641811539327
+updated: 1641813752744
 created: 1641811513625
 ---
 
 ## Leetcode Problems
+

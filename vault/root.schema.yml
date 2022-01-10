@@ -2,6 +2,6 @@ version: 1
 imports: []
 schemas:
   - id: root
-    children: []
+    children: [seed,science]
     title: root
     parent: root
