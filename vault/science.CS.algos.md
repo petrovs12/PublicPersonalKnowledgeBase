@@ -1,10 +1,9 @@
 ---
 id: CLujm4Ho6RVqNTGxIZkxa
-title: algos
+title: Algorithms
 desc: ''
-updated: 1641813752744
+updated: 1641824325590
 created: 1641811513625
 ---
-
-## Leetcode Problems
-
+[[science.CS.algos.dynamicProgramming]]
+# Leetcode Problems
