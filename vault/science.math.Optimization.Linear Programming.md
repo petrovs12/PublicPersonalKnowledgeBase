@@ -8,5 +8,5 @@ created: 1641834890562
 
 [[science.math.Optimization.Simplex]]
 
-[[JuMP]]
+[[science.math.Optimization.JuMP]]
 

@@ -2,7 +2,7 @@
 id: BBCD5zCS1u3oilEWm6YmO
 title: dual_numbers_algebra
 desc: ''
-updated: 1641834859014
+updated: 1641840664770
 created: 1641834781878
 ---
 
@@ -12,4 +12,5 @@ created: 1641834781878
 [[science.math.calculus]]
 
 [[source transformations]]
+
 

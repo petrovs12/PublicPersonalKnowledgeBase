@@ -1,6 +1,6 @@
 ---
 id: YSgeu1I7ZeKOAKUbvuL8M
-title: Linear_regression
+title: Linear Regression
 desc: ''
 updated: 1641835781997
 created: 1641834611902
@@ -17,7 +17,7 @@ created: 1641834611902
 
 
 ## Mixed Effect Models
-[[Mixed Effect Models]]
+[[science.stats.Mixed Effect Models]]
 
 
 

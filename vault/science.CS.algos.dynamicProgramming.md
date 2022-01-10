@@ -2,22 +2,18 @@
 id: s8P64cXaxlGWXzSWnpGjP
 title: dynamicProgramming
 desc: ''
-updated: 1641825780392
+updated: 1641855023064
 created: 1641824312181
 ---
 
 # Dynamic programming 
 ## Shortest path problem in DAGs
 
-```
-G={V,E}
-s
+$G={V,E}$
+<!-- $dist[v] = min(dist[u] + l(u,v) | u,v \in e})$ -->
 
-$dist[v] = min{dist[u] + l(u,v) | u,v in e}
-$
 as the dag is linearizeable, the above will never go back to the same node.
 
-```
 
 $dist[v] = min(dist[u] + l(u,v) | (u,v) \in e)$
 

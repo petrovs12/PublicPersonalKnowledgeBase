@@ -19,13 +19,13 @@ created: 1641834911938
 
 
 ## Special Cases
-[[Graph Traversal]]
-[[Minimax Algorithm]]
-[[NP-complete Problems]]
+[[science.CS.algos.Graph Traversal]]
+[[science.CS.algos.MiniMax]]
+[[science.CS.theory.NP-complete Problems]]
 
 ## Sequence Optimization
 [[science.math.Optimization.Optimal Control.Classic Optimal Control Theory]]
-[[Dynamic Programming]] ^cF8Y6fTJS0AH
+[[science.math.optimization.Dynamic Programming]] ^cF8Y6fTJS0AH
 [[]]
 
 

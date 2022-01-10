@@ -1,6 +1,6 @@
 ---
 id: yAJy4YgrYvSvzJwQ40gyG
-title: Differential Equations
+title: Mode
 desc: ''
 updated: 1641836275225
 created: 1641836019848
@@ -16,7 +16,7 @@ created: 1641836019848
 # Special ODE Forms
 ## Ricatti
 [[Optimal Control]] Linear Quadratic Regulator.
-[[Robotics]]
+[[science.engineering.Robotics]]
 
 
 # Differential Equations in Julia

@@ -7,4 +7,4 @@ created: 1641835021208
 ---
 
 [[science.math.Linear Algebra]]
-[[Cones]]
+[[science.math.theory.Cones]]

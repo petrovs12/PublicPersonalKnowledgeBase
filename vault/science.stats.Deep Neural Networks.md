@@ -18,8 +18,8 @@ created: 1641835799979
 
 # Recurrent Neural Networks
 ## The exploding/vanishing gradient problem
-[[Dynamical Systems]]
-[[Differential Equations]]
+[[science.math.theory.Dynamical Systems]]
+[[science.math.mode]]
 [[science.stats.Autoregressive Models]]
 
 

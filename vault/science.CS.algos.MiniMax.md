@@ -1,6 +1,6 @@
 ---
 id: EqoDXkMwRFMRXsExQi5FS
-title: Minimax Algorithm
+title: MiniMax
 desc: ''
 updated: 1641835218434
 created: 1641835111015

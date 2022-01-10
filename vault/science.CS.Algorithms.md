@@ -10,9 +10,11 @@ created: 1641811513625
 
 ### [1. Two Sum](https://leetcode.com/problems/two-sum/)
 
-```{mermaid}
-graph LR;
-a-->b
+```mermaid
+
+graph TD;
+a-->b;
+
 ```
 
 $x$
@@ -21,5 +23,4 @@ $$
     x=2
 \end{align}
 $$
-
 
