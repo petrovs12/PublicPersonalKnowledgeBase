@@ -12,7 +12,14 @@ created: 1641811513625
 
 ```{mermaid}
 graph LR;
-a(x) --> b(x)
+a-->b
 ```
+
+$x$
+$$
+\begin{align}
+    x=2
+\end{align}
+$$
 
 
