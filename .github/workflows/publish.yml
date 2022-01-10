@@ -42,4 +42,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: pages
         publish_dir: docs/
-        force_orphan: true
+        force_orphan: true  
