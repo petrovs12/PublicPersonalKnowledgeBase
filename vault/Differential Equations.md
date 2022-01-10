@@ -1,5 +1,4 @@
 ---
-
 id: yAJy4YgrYvSvzJwQ40gyG
 title: Differential Equations
 desc: ''
@@ -21,7 +20,7 @@ created: 1641836019848
 
 
 # Differential Equations in Julia
-[[julia]]
+[[science.cs.languages.julia]]
 
 
 

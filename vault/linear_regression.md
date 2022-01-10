@@ -22,6 +22,6 @@ created: 1641834611902
 
 
 
-[[stan]]
-[[turing]]
+[[science.CS.theory.Code Transformations.Differentiable Programming.stan]]
+[[science.cs.theory.Code Transformations.Differentiable Programming.turing]]
 

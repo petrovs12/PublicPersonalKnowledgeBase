@@ -17,6 +17,6 @@ have various 'utilities' (in the sense of wellfare).
 'If your computer can't find the equilibria, neither can the market'. 
 Or the good equilibria, etc.
 
-[[Vickrey Auctions]]
+[[science.math.Game Theory.Vickrey Auctions]]
 
-[[Mechanism Design]]
+[[science.math.Game Theory.Mechanism Design]]

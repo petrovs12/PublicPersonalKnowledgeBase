@@ -6,5 +6,5 @@ updated: 1641836451243
 created: 1641835021208
 ---
 
-[[Linear Algebra]]
+[[science.math.Linear Algebra]]
 [[Cones]]

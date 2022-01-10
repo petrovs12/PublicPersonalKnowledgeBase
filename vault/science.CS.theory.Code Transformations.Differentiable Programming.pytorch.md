@@ -1,6 +1,6 @@
 ---
 id: awidUgzHuMsvTiKstZ28g
-title: Pytorch
+title: pytorch
 desc: ''
 updated: 1641836127085
 created: 1641834743300

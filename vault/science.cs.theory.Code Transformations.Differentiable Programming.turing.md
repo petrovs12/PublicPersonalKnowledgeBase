@@ -1,6 +1,6 @@
 ---
 id: LupDGzsXmIWEsZbUQJPuh
-title: Turing
+title: turing
 desc: ''
 updated: 1641834750131
 created: 1641834750131

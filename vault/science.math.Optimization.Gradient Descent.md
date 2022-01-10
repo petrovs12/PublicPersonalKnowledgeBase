@@ -14,14 +14,14 @@ created: 1641834928947
 #minibatches
 
 # Adam Optimizer
-[[Adam Optimizer]]
+[[science.math.Optimization.Adam Optimizer]]
 
 # Second Order Optimizers
-[[Second Order Optimizers]]
+[[science.math.Optimization.Second Order Optimizers]]
 
 
-[[Newton's Method]]
-[[Stochastic Gradient Descent]]
+[[science.math.Optimization.Newton's Method]]
+[[science.math.Optimization.Stochastic Gradient Descent]]
 [[Minimatch Method]]
 
 
