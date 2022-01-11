@@ -2,12 +2,14 @@
 id: YSgeu1I7ZeKOAKUbvuL8M
 title: Linear Regression
 desc: ''
-updated: 1641835781997
+updated: 1641864532916
 created: 1641834611902
 ---
 
 
 ## Linear Regression - Setup 
+
+[[science.probability.Distributions.gaussian]]
 
 ## Analytical Solution
 
@@ -25,3 +27,6 @@ created: 1641834611902
 [[science.CS.theory.Code Transformations.Differentiable Programming.stan]]
 [[science.cs.theory.Code Transformations.Differentiable Programming.turing]]
 
+
+## Quantile Regression
+[[science.math.Optimization.Linear Programming]]

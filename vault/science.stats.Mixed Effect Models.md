@@ -7,7 +7,7 @@ created: 1641835776982
 ---
 
 
-[[science.stats.Linear Regression]]
+[[science.stats.Regression.Linear Regression]]
 
 [[science.stats.Deep Neural Networks]]
 

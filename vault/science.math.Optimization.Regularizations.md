@@ -1,0 +1,20 @@
+---
+id: DXLiLGTveXMnlFQGLKG3b
+title: Regularizations
+desc: ''
+updated: 1641865173770
+created: 1641864475560
+---
+# $L_1$or $L_2$ regularizations in regression
+[[science.stats.Regression.Linear Regression]]
+
+# MAP vs MLE
+[[science.stats.Regression.Linear Regression]]
+
+
+Given a dataset X, a common task is to try to estimate the most likely values for the model parameters. To do this, you must find the values that maximize the likelihood function, given X. In this example, if you have observed a single instance x=2.5, the maximum likelihood estimate (MLE) of θ is $\hat{\theta}=1.5$. If a prior probability distribution g over θ exists, it is possible to take it into account by maximizing $L(θ|x)g(θ)$ rather than just maximizing $L(θ|x)$. This is called __maximum a-posteriori (MAP) estimation__. Since MAP constrains the parameter values, you can think of it as a regularized version of MLE.
+
+For example $L_1$ regularization is equivalent to putting a Laplace prior on the parameters, whereas
+$L_2$ regularization is equivalent to putting a Gaussian prior on them.
+
+
