@@ -2,7 +2,7 @@
 id: s8P64cXaxlGWXzSWnpGjP
 title: dynamicProgramming
 desc: ''
-updated: 1641855023064
+updated: 1641900157570
 created: 1641824312181
 ---
 
@@ -168,3 +168,40 @@ Explanation: The polygon is already triangulated, and the score of the only tria
 ```
 
 
+
+
+# Vazirani Chapter on Dynamic Programming
+#dynamic_programming
+*Algorithms Vazirani*
+
+### Dynamic Programming Chapter
+
+------------
+Dist in dag- algo
+```
+1. linearize nodes in graph
+2. for each v in V, in linearized order:
+    dist(v) = min_{u,v in E}(dist(u,v)+l(u,v))
+```
+
+linearize by topo-sort
+topo-sort is dfs with looking at completion time
+
+-------------
+linearization of collection of sybproblems, solving after solving previous (and caching result).
+
+-------
+
+longest inc subsequence:
+
+
+Solve as follows
+a(i)->len of longest increasing ending here
+Input: $nums$
+$a(i) = 1+max(a(j)|j<i,nums[i]>nums[j])$
+
+---------------
+
+dp- problmes are a bit smaller, not times smaller like divide and conquer...
+
+--------------
