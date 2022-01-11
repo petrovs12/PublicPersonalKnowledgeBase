@@ -2,7 +2,7 @@
 id: A2FzwchWzREHaBH3v4H0W
 title: Distribution
 desc: ''
-updated: 1641864810696
+updated: 1641865894810
 created: 1641862970587
 ---
 # Distribution
@@ -19,6 +19,7 @@ created: 1641862970587
 # Random variables
 
 # Expectation
+[[science.probability.Distributions.Theory]]
 
 ## Tower Theorem
 

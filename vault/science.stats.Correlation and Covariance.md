@@ -2,9 +2,25 @@
 id: FA0Q4HIXwyBCfLaIv5Khg
 title: Correlation and Covariance
 desc: ''
-updated: 1641856057464
+updated: 1641866553455
 created: 1641855990425
 ---
+
+$var(v) = \Sigma(v_i-E(v))^2 = E[(X-\mu)^2]$
+
+$cov(X,Y) = \Sigma((x_i-E(x))(y_i-E(y)))/n$  
+
+or (n-1) for sample covariance
+
+$cor(X,Y) = \frac{cov(X,Y)}{\sqrt{var(X)*var(Y)}}$
+
+
+Pearson correlation
+
+
+
+
+
 
 
 
