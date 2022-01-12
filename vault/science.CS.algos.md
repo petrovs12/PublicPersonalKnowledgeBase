@@ -1,9 +1,9 @@
 ---
-id: CLujm4Ho6RVqNTGxIZkxa
-title: Algorithms
+id: R3N3tS0RNCjMvqnqSnGZI
+title: algos
 desc: ''
-updated: 1641824325590
-created: 1641811513625
+updated: 1641979495201
+created: 1641979495201
+stub: true
 ---
-[[science.CS.algos.dynamicProgramming]]
-# Leetcode Problems
+

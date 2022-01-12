@@ -2,6 +2,9 @@ version: 1
 imports: []
 schemas:
   - id: root
-    children: [seed,science]
+    children:
+      - pattern: '*'
+        children:
+          - pattern: '*'
     title: root
     parent: root
