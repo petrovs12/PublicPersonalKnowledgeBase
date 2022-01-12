@@ -2,7 +2,7 @@
 id: W5KwHEIyMAUXkjZR2PdlA
 title: Network Flows
 desc: ''
-updated: 1641856997970
+updated: 1641998578676
 created: 1641856582772
 ---
 
@@ -16,6 +16,10 @@ created: 1641856582772
 ## Network Simples
 
 # Multicommodity Flow
+[Multicommodity Flow in Julia](https://drive.google.com/open?id=12OlkSvm7qVNrrdlbXIJhps2gR4j7b0lk&authuser=stefanvpetrov%40gmail.com&usp=drive_fs)
+
+[[science.cs.languages.julia]]
+[[science.math.Optimization.JuMP]]
 
 ## Path-based formulation 
 [Luca Trevisan's lecture](https://www.cs.stanford.edu/~trevisan/cs261/lecture16.pdf)
