@@ -2,7 +2,7 @@
 id: V5KRhS5P7zyez6CQxsAFO
 title: Online
 desc: ''
-updated: 1641979564960
+updated: 1642000285077
 created: 1641895819584
 ---
 
@@ -22,6 +22,11 @@ created: 1641895819584
 #DifferentialEquations
 
 [[science.math.modelling.Differential Equations]]
+
+
+
+#archive
+[Combo Bets With Mathematica](https://drive.google.com/open?id=0B-C_0LZtyGcNOGhXQmt3blNTcVk&resourcekey=0-GpsyMO-2b3GhUfDuF-n0yQ&authuser=stefanvpetrov%40gmail.com&usp=drive_fs)
 
 
 
