@@ -2,7 +2,7 @@
 id: s8P64cXaxlGWXzSWnpGjP
 title: dynamicProgramming
 desc: ''
-updated: 1641900157570
+updated: 1642248751278
 created: 1641824312181
 ---
 
@@ -173,6 +173,7 @@ Explanation: The polygon is already triangulated, and the score of the only tria
 # Vazirani Chapter on Dynamic Programming
 #dynamic_programming
 *Algorithms Vazirani*
+[Vazirani Intro Book](http://algorithmics.lsi.upc.edu/docs/Dasgupta-Papadimitriou-Vazirani.pdf)
 
 ### Dynamic Programming Chapter
 

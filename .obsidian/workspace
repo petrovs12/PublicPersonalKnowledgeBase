@@ -1,0 +1,96 @@
+{
+  "main": {
+    "id": "e38214574328a5c3",
+    "type": "split",
+    "children": [
+      {
+        "id": "c3fa54b888631bc4",
+        "type": "leaf",
+        "state": {
+          "type": "graph",
+          "state": {}
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "5013a3621f612690",
+    "type": "split",
+    "children": [
+      {
+        "id": "70a9d6bbea3964dc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ecffcf71bac2011d",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "a64f72ce33b236ed",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "08c0597d8008bb0d",
+    "type": "split",
+    "children": [
+      {
+        "id": "2858381cc8e3b0f8",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "b6a8813dc5e60567",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "c3fa54b888631bc4",
+  "lastOpenFiles": [
+    "moo.md.md",
+    "vault/science.math.Game Theory.Nash Equilibrium.md",
+    "vault/science.math.Game Theory.md",
+    "vault/science.cs.languages.julia.md",
+    "vault/engineering.technologies.tooling.Pluto.md",
+    "vault/science.stats.Regression.Classification.md",
+    "vault/science.stats.Regression.md",
+    "vault/science.math.Optimization.Optimal Control.Reinforcement Learning.md"
+  ]
+}

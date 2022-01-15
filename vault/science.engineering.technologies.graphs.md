@@ -2,7 +2,7 @@
 id: iiXbMCqdkdfEMqpCPWrpY
 title: Graphs
 desc: ''
-updated: 1641981333646
+updated: 1642101098299
 created: 1641981216726
 ---
 
@@ -16,6 +16,10 @@ created: 1641981216726
 
 [[science.cs.languages.python]]
 
+3nuts- Peer to peer network lib in Java (academic, experimental)
+[JGraphT](https://jgrapht.org/). - also has python bindings
+
+
 # igraph 
 [[science.cs.languages.python]]
 [[science.cs.languages.R]]
@@ -25,3 +29,6 @@ created: 1641981216726
 # Neo4j
 
 [[science.CS.algos.Graph Traversal]]
+
+
+# Me
