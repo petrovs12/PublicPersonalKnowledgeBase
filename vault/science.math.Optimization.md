@@ -8,7 +8,7 @@ created: 1641834911938
 
 ## Continous Optimization
 [[science.math.Optimization.Gradient Descent]]
-[[science.math.Optimizers In in Neural Networks]]
+[[science.math.Optimization.Optimizers In in Neural Networks]]
 [[science.math.Optimization.Linear Programming]]
 [[science.math.Optimization.Convex Optimization]]
 

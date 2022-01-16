@@ -7,8 +7,12 @@
         "id": "c3fa54b888631bc4",
         "type": "leaf",
         "state": {
-          "type": "graph",
-          "state": {}
+          "type": "markdown",
+          "state": {
+            "file": "vault/child development.screen time.md",
+            "mode": "source",
+            "source": false
+          }
         }
       }
     ],
@@ -65,6 +69,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "vault/child development.screen time.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -84,6 +89,7 @@
   },
   "active": "c3fa54b888631bc4",
   "lastOpenFiles": [
+    "vault/child development.screen time.md",
     "moo.md.md",
     "vault/science.math.Game Theory.Nash Equilibrium.md",
     "vault/science.math.Game Theory.md",
