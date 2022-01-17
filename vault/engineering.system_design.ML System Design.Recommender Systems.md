@@ -2,7 +2,7 @@
 id: QE1BddXlccbyYN1avaB4M
 title: Recommender Systems
 desc: ''
-updated: 1642434298927
+updated: 1642439310279
 created: 1642338149259
 ---
 
@@ -49,6 +49,7 @@ To get from __Corpus__ to __Candidates__
 
 quick-ish models, fast collaborative filtering,etc.
 KNN w/ random projection or local hashing, etc.
+
 # Second Pass
 
 Bigger models, use everything possible, user activity etc.
@@ -238,3 +239,20 @@ gain more feedback about it.
 Can match clickbait titles, if we detect topic or semantics of a title/article, can check agains 
 3rd party fact-checkers.
 
+
+# Quick Filtering Tricks  ^filters
+
+Some fast algorithms for deleting items for consideration for a certain query.
+
+### Bloom Filters for deleting forbidden Items
+[[science.CS.algos.Data Structures.Bloom Filters#use-in-recommendation-systems]]
+Usage- mostly first-pass.
+### Exclusion of 'too similar' items from same newsfeed
+This looks vaguely like [[science.math.modelling.Operations Research.Facility Location]], or
+[[science.stats.Unsupervised Learning.Clustering]] problem. Can, though, solve approximately by a greedy approach where we pick an item and remove from consideration items too similar to it, until correlation/cosine similarity is low enough, pick next item, etc. Always pick the next thing that's dissimilar enough from the previous ones.
+
+See also (Greedy 2-approximation for k-center)[https://ugtcs.berkeley.edu/src/approx-sp19/scribe-notes-2.pdf].
+
+Usage-mostly first pass.
+
+# 
