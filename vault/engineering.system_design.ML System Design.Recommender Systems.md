@@ -2,7 +2,7 @@
 id: QE1BddXlccbyYN1avaB4M
 title: Recommender Systems
 desc: ''
-updated: 1642340920439
+updated: 1642378396594
 created: 1642338149259
 ---
 
@@ -12,6 +12,10 @@ created: 1642338149259
 Item space, user space.
 Very high value to customer and commercial.
 Items can be other users too, i.e. tinder.
+
+# References
+[Matrix Factorization Report](https://pdfs.semanticscholar.org/b474/56864177f79b0ef1b00ac923527aac256ffc.pdf).
+
 
 # Requirements
 ## Functional
@@ -31,14 +35,13 @@ Items can be other users too, i.e. tinder.
 ## Scalability Concern 1
 
 ```mermaid
-
 graph LR;
+a["Corpus(10^9s)"];
+b["Candidates(100's)"]
+c["Top Candidates(10's)"]
+d["Top Recommendations(ordered))"]
 
-a[("Corpus(10^9s)")]--"candidate generation(offline, maybe items only)"-->b[("Candidates(10^2s)")]--"scoring(mor complex algos)"-->[(Top Candidates)[10^2s]]--"re/ranking/optimization"-->c[("Top Recommendations in order")];
-```
-```mermaid
-graph LR;
-A("test(vcc)") --> B;
+a--scoring-->b--complex re-scoring-->c--ranking,selection-->d
 ```
 
 # Data
@@ -57,26 +60,58 @@ Item content features- description, publisher, category, images, video snapshots
 * Other stuff
 
 
-# Feature Engineerin
+# Feature Engineering
 * Normalization of ratings
 
 
-## Implicit and Explicit Signals, combining them
+
+## Implicit and Explicit Signals, combining them ^implicit-explicit signal
 
 
 # Metrics
-* Targiting
+* 
 
 
-# Item-item based similarity (content-based filtering)
+# Item-item or user-user based similarity (content-based filtering) ^content-filtering
+## Data:
+Movie profile:
+* Genre
+* Producer
+* Tags
+* Description (word2vec,doc2vec)
+* Images and video snapshots (maybe tagging based on that, maybe color pallet)
+* Thumbnails
+<!-- * User search/interest history -->
 
-# Item-user based similarity
+Maybe latent space of 'interests' that's common to not only this recsys, but
+the search as well...
+
+
+
+
+# Item-user based similarity (collaborative filtering) ^collaborative-filtering
 
 # Algorithms:
 ## Item-Item Similarity
 
+* Item KNN
+* Item Attr
+* BPRMF
+* ItemKNN
+* Item Attribute KNN
+* UserKNN
+* User Attribute KNN
+* Group-based (Clustering-based algorithm)
+* Paco Recommender (Co-Clustering-based algorithm)
+
+
 
 ## Item-User Embedding (Collaborative Filtering))
+* Matrix Factorization (with and without baseline)
+* Non-negative Matrix Factorization
+* SVD
+* SVD++
+* ItemKNN
 
 
 
@@ -101,9 +136,10 @@ Item content features- description, publisher, category, images, video snapshots
 
 Can have variety of final allocators.
 
-# Fairness
+# Fairness ^fairness
 ## Error is same across groups
 Can just train algo and then test if erros same (ANOVA, t-test variations etc)
+[[Philosophy and Rationality.Algorithmic Fairness]]
 
 
 # Keeping Track and serving of multiple models, model versions, A/B/C/D... testing,rollbacks
@@ -115,7 +151,6 @@ Can just train algo and then test if erros same (ANOVA, t-test variations etc)
 
 
 
+## Train-test set splitting
 
-
-
-
+Probably similar to how we split data for testing in [[science.stats.Deep Neural Networks.Graph Neural Networks]]
