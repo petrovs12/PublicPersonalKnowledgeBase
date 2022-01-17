@@ -1,8 +1,8 @@
 ---
 id: C0xQGR2tHaA6spLh3IAiw
-title: 'Precision, Recall, etc'
+title: Metrics
 desc: ''
-updated: 1641863371498
+updated: 1642433474198
 created: 1641861967307
 ---
 #FalsePositiveRate
@@ -14,6 +14,8 @@ created: 1641861967307
 #FPR
 #TPR
 
+
+# Accuracy, prediction, recall, ...
 
 
 [Note From Google](https://developers.google.com/machine-learning/crash-course/classification/precision-and-recall)
@@ -40,5 +42,12 @@ At 1: all predictions are positive, TN = FN  = 0, hence TPR =1, FPR = 1.
 
 
 
+# Likelihood/log-likelihood
+## Cross-Entropy
+
+
+# Multivariate
+
 
  
+
