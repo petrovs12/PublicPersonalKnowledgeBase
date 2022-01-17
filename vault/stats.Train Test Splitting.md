@@ -2,7 +2,7 @@
 id: 6I2g5QI7rldW6fRaQrVsJ
 title: Train Test Splitting
 desc: ''
-updated: 1642430409977
+updated: 1642433825263
 created: 1642429651081
 ---
 
@@ -16,7 +16,7 @@ If we have some set of characteristics, we want to be able to split the set into
  Split by expanding time windows (information set)
 
 
-# Recommender System test set split
+# Recommender System test set split ^recsys-start
  
  For collaborative filtering if we __don't want to deal with cold starts__ directly with this model, use approach similar to stratified sampling. So we just mask some entries in the matrix randomly, should put roughly all items and all users in both the train and test set. Related to [[^transductive-gnn]]
 
@@ -25,6 +25,8 @@ If we want to deal with the cold start in integrated way (idk of possible), then
 
 Cold start problem is related to [^inductive-gnn].
 
+ 
+ ^recsys-end
  
  # Graph Neural Nets:
 

@@ -2,7 +2,7 @@
 id: QE1BddXlccbyYN1avaB4M
 title: Recommender Systems
 desc: ''
-updated: 1642433441427
+updated: 1642434298927
 created: 1642338149259
 ---
 
@@ -43,6 +43,25 @@ d["Top Recommendations(ordered))"]
 
 a--scoring-->b--complex re-scoring-->c--ranking,selection-->d
 ```
+# High-level description on priorities/ ML approach at each stage above
+# First Pass
+To get from __Corpus__ to __Candidates__
+
+quick-ish models, fast collaborative filtering,etc.
+KNN w/ random projection or local hashing, etc.
+# Second Pass
+
+Bigger models, use everything possible, user activity etc.
+[possible recsys architectures](https://d2l.ai/chapter_recommender-systems/index.html).
+
+All tricks about cold start, session models, etc also come here.
+
+
+# Third pass re-Ranking
+
+Add constraints (already seen this item, has clicked 'not interested' on similar, etc).
+Add freshness, fairness, diversity.
+Maybe use some linear programming or other stuff to optimize something close to business objective.
 
 # Data
 
@@ -192,6 +211,7 @@ Can either model directly or just train algo and then test if erros same (ANOVA,
 
 Probably similar to how we split data for testing in [[science.stats.Deep Neural Networks.Graph Neural Networks]]
 
+![[stats.Train Test Splitting#^recsys-start:^recsys-end]]
 [[stats.Train Test Splitting]]
 
 
@@ -217,3 +237,4 @@ gain more feedback about it.
 
 Can match clickbait titles, if we detect topic or semantics of a title/article, can check agains 
 3rd party fact-checkers.
+
