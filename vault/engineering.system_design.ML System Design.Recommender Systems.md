@@ -2,7 +2,7 @@
 id: QE1BddXlccbyYN1avaB4M
 title: Recommender Systems
 desc: ''
-updated: 1642439310279
+updated: 1642455907417
 created: 1642338149259
 ---
 
@@ -95,7 +95,7 @@ basing only on implicit feedback, might have popularity bias.
 ![[science.stats.Regression.Recommender Systems#^popularity-bias-implicit]]
 
 
-# Metrics
+ Metrics
 * 
 ![[science.stats.Regression.Metrics#^ranking-start:^ranking-end]]
 ![[science.stats.Regression.Metrics#^ranking-start:#^ranking-end]]
@@ -120,7 +120,7 @@ the search as well...
 # Item-user based similarity (collaborative filtering) ^collaborative-filtering
 
 # Models ^models
-## Item-Item Similarity
+## Item-Item Similarity ^item-item-similarity
 
 * Item KNN
 * Item Attr
@@ -168,12 +168,19 @@ Same for fixing $q,b$ -$p$ and $q,p$, which means we can have a sequence of solv
 
 
 # Cold Start Problem
+New (or unknown) users or  items.
+
+
 
 ## New Item
-* Use item-item model, based on content:
+ No historical interaction data.
+ Typically use item data or baselines.
 
+* Use item-item model, based on content (item-similarity for current item) [[^item-item-similarity]]
 
 ## New User
+
+Unseen or anonusers - no profile or historical interactions. 
 
 ### User-user model, based on demographic characteristics
 
@@ -181,9 +188,40 @@ Same for fixing $q,b$ -$p$ and $q,p$, which means we can have a sequence of solv
  
  If no profile, start showing items (Akinator-style)[https://en.akinator.com/] somehow and try to represent the user a s linear combination of the items seen.
 
+## No collaborative filtering
 
+Item-similarity
+Contextual models for short-term history.
 
 ### Intra-session models
+From [this video](https://youtu.be/y_TzOOCJqxI?t=1066), we get a session-based recommendation
+using such architecture:
+```mermaid
+graph LR;
+
+a["Input 1-hot encoding"];
+b["Embedding Layer"];
+c["GRU Layer"];
+d["GRU Layer"];
+e["GRU Layer"];
+f["Feedforward layers"];
+g["Output: scores on items"];
+
+a-->b-->c-->d-->e-->f-->g
+b-->d;
+b-->e;
+b-->f;
+```
+
+uses [[science.math.Optimization.Optimizers In in Neural Networks.Negative Sampling]],#minibatch.
+
+[[science.stats.Regression.Metrics:^ranking-start:^ranking-end]]: BPR, TOP1.
+
+
+### But in fact neighborhood based Methods are not much worse if done properly
+[Debunk on the 20-30% of the last paragraph](https://web-ainf.aau.at/pub/jannach/files/Conference_RecSys_2017.pdf)
+
+
 
 ## Representing user as linear combination of items
 
@@ -255,4 +293,18 @@ See also (Greedy 2-approximation for k-center)[https://ugtcs.berkeley.edu/src/ap
 
 Usage-mostly first pass.
 
-# 
+#  Privacy and GDPR
+![[Philosophy and Rationality.Algorithmic Privacy, Right to be Forgotten#^gdpr:#^gdpr-end]]
+
+
+# Model Serving 
+Tricky, thus the multi-step process.
+
+
+# Future Directions
+
+# Improved RNN's : cold starts and session models
+
+# curther research on contextual models, as well as content and metadata.
+
+# Combining sequence and historical data (long and short term behavior)

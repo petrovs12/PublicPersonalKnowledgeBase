@@ -2,7 +2,7 @@
 id: VG6JMpj1Lic8br5iTSvIL
 title: Recommender Systems
 desc: ''
-updated: 1642432731366
+updated: 1642446759657
 created: 1641997907947
 ---
 
@@ -115,7 +115,7 @@ and implicit feedback, we propose a weak supervision approach to augment the imp
 model at the lower level of data pre-processing
 
 
-## Summary of model as I understand it:
+## Summary of model (as I understand it) ^glasgow-summary
 Let $U = {u_1,u_2,...,u_m}$ iterates over users, and $I={i_1,i_2,...,i_n}$ iterates over items.
 
 The explicit feedback dataset is $D_e=<U,I,R>$ (by obvious abuse of notation).
@@ -187,7 +187,7 @@ $min_{p,q,b}\Sigma_{u,i} (r_{ui}-\mu-b_u-b_i-p_u . q_i)^2+\lambda(||p_u||^2+||q_
 https://github.com/gpfvic/IRR/blob/master/Factorization%20meets%20the%20neighborhood-%20a%20multifaceted%20collaborative%20filtering%20model.pdf
 ).
 
-This is in the __Additional input sources_ part of the recommender-systems[netflix] paper.
+This is in the __Additional input sources_ part of the recommender-systems[netflix] paper. ^additional-input-sources
 
 There we essentially have SVD++.
 
@@ -209,6 +209,7 @@ Of course, can add neural nets and stuff here.
 
 Can also weight the observations somehow, as mentioned in 
 $min_{q,p} c_{u,i}(\hat{r}_{ui}-p_u.q_i)^2$ ^basic-model-equation-weighted
+
 
 
 
