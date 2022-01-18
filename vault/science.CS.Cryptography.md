@@ -2,7 +2,7 @@
 id: y9SiJpuxsQoorh46ktkyU
 title: Cryptography
 desc: ''
-updated: 1642242075026
+updated: 1642547174896
 created: 1642078452738
 ---
 ## Private-key schemes (one-time pad, AES, etc)
@@ -20,7 +20,7 @@ Bob:
 
 Alice, sending message $x$ to bob:
 * Looks up public key $(N,e)$, and sends him $y=(x^e mod\text{ }N)$
-* $(y^d mod \text{ }N) = ((x^e)^d mod\text{ } N) = (x^(e*d) \text{ }mod N) = (x^1 \text{ }modN) = x $  
+* $(y^d mod \text{ }N) = ((x^e)^d mod\text{ } N) = (x^(e*d) \text{ }mod N) = (x^1 \text{ }modN) = x$  
 So Bob computes $y^d mod\text{ }N$, and gets back $x$.
 
 The above relies on the fact that factoring $N=pq$ is hard, and thus an eavesdropper can't get $(p-1)(q-1)$ and thus the secret key $d$.
