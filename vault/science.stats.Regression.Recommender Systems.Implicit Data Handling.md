@@ -17,7 +17,7 @@ created: 1642446633466
 Flexible:
  * Frame it as classification problem, use built-in loss function.
  * Frame it as a ranking problem, use custom loss functions (typically using also [[science.math.Optimization.Optimizers In in Neural Networks.Negative Sampling]]) .
- See also ![[science.stats.Regression.Metrics#^ranking-metrics:#^ranking-end]]
+ See also ![[science.stats.Regression.Loss Functions#^ranking-metrics:#^ranking-end]]
  * Frame it as a weighted regression/classification problem.
 
 ![](/assets/images/2022-01-17-20-19-44.png) 

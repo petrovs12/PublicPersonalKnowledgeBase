@@ -1,8 +1,8 @@
 ---
 id: pBIMmRuN5zKHlVDIWn2wt
-title: Metrics
+title: Loss Functions
 desc: ''
-updated: 1642447055937
+updated: 1642521255441
 created: 1642432837032
 ---
 
@@ -33,4 +33,5 @@ created: 1642432837032
 * Precision at K ("p@K").
 * DCG/NDCG (Normalized Discounted Gain)
 ^ranking-end
+
 

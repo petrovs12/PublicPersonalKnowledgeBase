@@ -1,8 +1,8 @@
 ---
 id: kWzR0yolsu5D1FBzQDiZE
-title: User Based Metrics
+title: User Based Metrics (Digital Products)
 desc: ''
-updated: 1642432683390
+updated: 1642522459793
 created: 1642430529527
 ---
 
@@ -12,7 +12,7 @@ created: 1642430529527
 # CTR
 
 
-# Active Users
+# Active Users ^active-users
 ## Daily
 ## Monthly
 

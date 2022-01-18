@@ -2,7 +2,7 @@
 id: QE1BddXlccbyYN1avaB4M
 title: Recommender Systems
 desc: ''
-updated: 1642455907417
+updated: 1642521169022
 created: 1642338149259
 ---
 
@@ -97,8 +97,8 @@ basing only on implicit feedback, might have popularity bias.
 
  Metrics
 * 
-![[science.stats.Regression.Metrics#^ranking-start:^ranking-end]]
-![[science.stats.Regression.Metrics#^ranking-start:#^ranking-end]]
+![[science.stats.Regression.Loss Functions#^ranking-start]]
+![[science.stats.Regression.Loss Functions#^ranking-start:#^ranking-end]]
 
 # Item-item or user-user based similarity (content-based filtering) ^content-filtering
 ## Data:
@@ -134,12 +134,6 @@ the search as well...
 
 
 
-## Item-User Embedding (Collaborative Filtering))
-* Matrix Factorization (with and without baseline)
-* Non-negative Matrix Factorization
-* SVD
-* SVD++
-* ItemKNN
 
 
 # Algorithms ^algorithms
@@ -151,8 +145,19 @@ Clustering type things, manifold dimensionality reduction, etc. General unsuperv
 [[science.stats.Unsupervised Learning.KNN]] 
 
 
-## Collaborative Filtering
+## Collaborative Filtering ^collaborative-filtering
+
+## Item-User Embedding (Collaborative Filtering)) ^collaborative-filtering-models
+* Matrix Factorization (with and without baseline)
+* Non-negative Matrix Factorization
+* SVD
+* SVD++
+* ItemKNN
+
+## Optimization Techniques ^optimization-techniques
 ### Stochastic Gradient Descent ^sgd
+
+
 [[science.math.Optimization.Stochastic Gradient Descent]]
 
 ### Alternating Least Squares ^als
@@ -169,7 +174,6 @@ Same for fixing $q,b$ -$p$ and $q,p$, which means we can have a sequence of solv
 
 # Cold Start Problem
 New (or unknown) users or  items.
-
 
 
 ## New Item
