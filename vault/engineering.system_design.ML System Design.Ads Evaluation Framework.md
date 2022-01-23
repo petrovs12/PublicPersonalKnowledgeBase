@@ -2,7 +2,7 @@
 id: 7N29gmizh7Ks2JbsvDOdF
 title: Ads Evaluation Framework
 desc: ''
-updated: 1642541960968
+updated: 1642875780362
 created: 1642536498536
 ---
 
@@ -39,4 +39,42 @@ Shopper.
 For each model you have treatment, do statistical testing on the business metrics.
 
 When you're online you know the metrics.
-You need offline metrics (counterfactuals) that it correlates a lot with the online evaluation.
+
+**You need offline metrics (counterfactuals) that it correlates a lot with the online evaluation.
+**
+
+
+
+# offline vs online ads testing
+Online - AB testing, etc.
+
+Offline - counterfactuals with proxies.
+
+Need very high value of the 'offline evaluation data'.
+
+Humans can create this 'ground truth' data.
+
+Example of automatically create ground truth data is 'clicked and purchased' data..
+
+**Is the offline ground truth data representative of the online use case
+**
+
+Rank models against each other- offline proxies.
+
+Offline data is not representative of the online use case.
+
+
+
+
+
+ Offline proxi metric should 'correlate' with online 'proper counterfactuals', which are impossible to estimate. 
+
+ The correlation should be in the sense of 'ranks between models are monotonous'.
+
+
+## AB Testing Comment when switching models
+
+  When switching models, leave the baselines as some pct to be able to compare stuff later.
+
+ e.g. tiny percentage of population w/o spam filter.
+ 
