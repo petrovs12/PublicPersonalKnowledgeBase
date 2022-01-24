@@ -2,7 +2,7 @@
 id: BOy4GLBQlse9SzjLAlwqp
 title: mics problems
 desc: ''
-updated: 1642937774228
+updated: 1642951951657
 created: 1641981602342
 ---
 
@@ -180,6 +180,7 @@ add current to skyline. if $current.start < proc.start<=current.end$, then :
  * in the end add the last one if needed.
 
  Be careful with corner cases, e.g. when 2 heights are the same, with deleting the first dummy building, and adding the last building if needed. 
+
  ```{python}
  from heapq import heappop, heappush
 class Solution:
@@ -243,3 +244,70 @@ class Solution:
  ```
 
 
+#todo check tree and stuff 
+
+
+[Longest Increasing Path in Matrix](https://leetcode.com/problems/longest-increasing-path-in-a-matrix/)
+
+Approach:
+first do topo-sort in order to 'linearize' the graph.
+Then do a DFS from each node, and keep track of the max path length, memoizing the DP calls.
+
+```{python}
+from functools import lru_cache
+
+class Solution:
+    def longestIncreasingPath(self, matrix: List[List[int]]) -> int:
+        # first step-topological sort to find potential roots
+        st = []
+        m = len(matrix)
+        n = len(matrix[0])
+        def getNeighbors(cell):
+            i,j = cell[0], cell[1]
+            return [(i+k,j+l) for k in range(-1,2) for l in range(-1,2)
+                   if 0<=i+k<m and 0<=j+l<n and abs(k)+abs(l) ==1 
+                    and matrix[i][j]<matrix[i+k][j+l]
+                   
+                   ]
+        st = []
+        seen = set()
+        #totBest = 0
+        from collections import defaultdict
+        bestWalk = defaultdict( lambda :1)
+        
+        def walk(nd):
+           # print(f"walking {nd=}")
+            if nd in seen:
+                return
+            seen.add(nd)
+            for nb in getNeighbors(nd):
+                #print(f"{nd=},{nb=}")
+                walk(nb)
+            st.append(nd)
+            return
+        
+        #print(st)
+        for i in range(m):
+            for j in range(n):
+                walk((i,j))
+        #print(st)
+        
+        @lru_cache(maxsize = None)
+        def dpwalk(node):
+            #curr = 1
+            best = 1
+            for nb in getNeighbors(node):
+               # print(f"{node=},{nb=}")
+                k= dpwalk(nb)
+                best = max(best,k+1)
+            return best
+        
+        bestFound = 1
+        for el in st[-1::-1]:
+            bestFromHere = dpwalk(el)
+            #print(f"{el=},{bestFromHere=}")
+            bestFound= max(bestFound,bestFromHere)
+            
+        
+        return bestFound
+```

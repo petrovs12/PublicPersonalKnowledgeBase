@@ -2,7 +2,7 @@
 id: XGuPRH9frbFI57K3ZdqVw
 title: mics
 desc: ''
-updated: 1642869047458
+updated: 1643018330674
 created: 1641979954736
 ---
 
@@ -240,3 +240,7 @@ Solution: dfs, counting components...
 ```
 
 #TODO - maybe look at the DP solutions in LC.
+
+[longest w/o rep chars](https://leetcode.com/explore/interview/card/facebook/5/array-and-strings/3008/)
+
+keep a set, if new char in set, pop chars from correspondign indices.
