@@ -2,7 +2,7 @@
 id: XGuPRH9frbFI57K3ZdqVw
 title: mics
 desc: ''
-updated: 1643018330674
+updated: 1643033656503
 created: 1641979954736
 ---
 
@@ -173,6 +173,9 @@ Solution: dfs, counting components...
 
 # [Lowest common ancestor binary tree](https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/)
 
+keep a dict, denoting how many of [p,q] we have found in the corresponding subtree.
+keep a global state to know when we've found the answer...
+
 ```{python}
     def lowestCommonAncestor(self, p: 'Node', q: 'Node') -> 'Node':
         # so what do we want to do here...
@@ -244,3 +247,206 @@ Solution: dfs, counting components...
 [longest w/o rep chars](https://leetcode.com/explore/interview/card/facebook/5/array-and-strings/3008/)
 
 keep a set, if new char in set, pop chars from correspondign indices.
+
+## Basic calculator
+
+(1+(4+5+2)-3)+(6+8)
+(10)
+
+idea:
+keep:
+curr Operand 
+current Operator (+ or -, so === sign)
+current output
+stack of 'stuff for later FROM before' to remember the result when we enter a '('
+
+if digit- append to operand
+2 'stacks-'- a 'local' mini-stack, consisting of 
+(output, operand, and operator ->eval() = output+operand*operator
+'global' stack, consisting of the list when we keep stuff for when we see a bracket. There we 
+can keep multiple (output, operand) pairs from before
+if + or -, evaluate current 'mini-stack',write to 'output',reset current, and write the new 'sign'
+if (, push to 'global' stack, reset output, operand and operator
+if ), finish current evaluation (res+sign*operand). Next thing in global stack wll be operator, so res*stack.pop().
+next thing is the remembered value, so res+stack.pop() and that's the result. do we also reset sign?
+
+## [Minimum Number of opening/closings to add](https://leetcode.com/problems/remove-invalid-parentheses/solution/)
+
+### Remove Invalid Parentheses
+
+in each position, we consider adding.
+
+We know how many left and how many right we should add to get the minimal correct number of brackets.
+we backtrack and add expressions, in case in the end we have a valid state...
+
+## [k closest to origin](https://leetcode.com/problems/k-closest-points-to-origin/solution/)
+
+heap w/ keeping only the top k. O(nlogk) :). Sort is O(nlogn). 
+binary search wrt the distance to consider. O(n)
+In this case, however, we can improve upon the time complexity of this modified binary search by eliminating one set of points at the end of each iteration. If the target distance yields fewer than kk closer points, then we know that each of those points belongs in our answer and can then be ignored in later iterations. If the target distance yields more than kk closer points, on the other hand, we know that we can discard the points that fell outside the target distance.
+
+By roughly halving the remaining points in each iteration of the binary search, we reduce the total number of processes to $N + \frac{N}{2} + \frac{N}{4} + \frac{N}{8} + ... + \frac{N}{N} = 2N$
+ This results in an average time complexity of $O(N)$.
+
+
+##[Minimal Rectangle](https://leetcode.com/problems/minimum-area-rectangle/)
+
+ Idea- put points in set, consider each pair as a diagonal, check if it's a rectangle and it's area. $O(n^2)$ time, O(n) space.
+
+ ## [Next Permutation](https://leetcode.com/problems/next-permutation/)
+ 
+Very similar to [Maximum Swap](https://leetcode.com/problems/maximum-swap/), but a bit more complicated.
+In Maximum swap, we find the 'biggest' jump. Here, we want to find the 'smallest' jump+ fixup the stuff behind it.
+So, we go backwards until we find a decreasing element in pos $i$. All nums in positions $j>i$ are sorted in decreasing order. We swap $i$ with the smallest number, larger than it, in $a[i+1...]$. 
+Now, the numbers $a[i+1...]$ are still sorted in decreasing order. We __reverse the numbers in $a[i+1...]$ to get the smallest permutation__!!!
+
+## [Merge Intervals](https://leetcode.com/problems/merge-intervals/)
+
+Sort and merge- straightforward.
+
+## [Valid Number](https://leetcode.com/problems/valid-number/)
+Annoying.
+Here's the definition:
+```
+A valid number can be split up into these components (in order):
+
+A decimal number or an integer.
+(Optional) An 'e' or 'E', followed by an integer.
+A decimal number can be split up into these components (in order):
+
+(Optional) A sign character (either '+' or '-').
+One of the following formats:
+One or more digits, followed by a dot '.'.
+One or more digits, followed by a dot '.', followed by one or more digits.
+A dot '.', followed by one or more digits.
+An integer can be split up into these components (in order):
+
+(Optional) A sign character (either '+' or '-').
+One or more digits.
+```
+Just implement it...
+
+
+## [Copy list with random pointer](https://leetcode.com/problems/copy-list-with-random-pointer/)
+
+Keep a hashmap w/ the copies and be careful of what's pointing to None and so on...
+
+## [Word Break II](https://leetcode.com/problems/word-break-ii/)
+Backtrack (or maybe use DP). state is current index, and a set of words we've collected so far.
+To add a word, we check if s[ind:] starts with it, and call backtrack(ind+len(word), words+[word]))).
+When we reverse, we pop last word from partial solutions...
+
+
+## [Peak Element/ Local Maximum](https://leetcode.com/problems/find-peak-element/)
+First, check both ends. Check middle. If middle is peak, return. 
+Else, check if they are ordered somehow. Check the slope as well...
+
+## [Simplify Path](https://leetcode.com/problems/simplify-path/)
+
+Basically we just keep a stack of the solution. We split the initial path by '/' and join it back. 
+Rules:
+* if we see "..", pop stack, as we're going up a directory.
+* if we see "." or "", do nothing.
+* else - append to stack.
+return "/"+"/".join(stack)
+
+```{python}
+    def simplifyPath(self, path: str) -> str:
+        m=path.split("/")
+        # print(f"{m=}")
+        from queue import deque
+        res=deque()
+        for dr in m:
+            if dr=="" or dr==".":
+                continue
+            elif dr=="..":
+                if len(res)>0:
+                    res.pop()
+            else:
+                res.append(dr)
+        # print(f"{res=}")
+        return "/"+"/".join(res)
+```
+
+## [Binary Search Tree Iterator](https://leetcode.com/problems/binary-search-tree-iterator/)
+
+You can serialize as an array, and then iterate through it.
+
+## [Binary Tree Right Side View](https://leetcode.com/problems/binary-tree-right-side-view/)
+ Do BFS, keep track of the current depth, when it changes, add to res. Take care to add to res in the end as well (maybe there's a corner case).
+
+
+## [Kth Largest In Array](https://leetcode.com/problems/kth-largest-element-in-an-array/)
+
+Sort $O(nlogn)$, heap with pops etc: $O(nlogk)$
+
+## [Basic Calculator II](https://leetcode.com/problems/basic-calculator-ii/)
+ Multiply and divide, but no parentheses.
+ Algorithm?
+currNum, currOp,stack = ...
+if digit- add to currNum
+if op:
+2 cases : "+-" vs "*/"
+ops implicitly on the stack are '+' !!!
+We have to delay the evaluation of "+" and "-" until the multiplications and divisions are "done".
+ Conversely, if we see + or - we can 'evaluate' the stack so far by summing.
+ If we see a * or /, if current op is -, then we put $-currentNumber$ to stack.
+ if current op is "+", we put currentNumber to stack.
+ if we see an op, and previous op was * or /, we evaluate op(stack.pop(),currentNumber) and add this to the currentNumber.
+ ...
+
+ finally add everything to the stack and that's the result...
+
+
+ 
+ ## [Group Shifted Strings](https://leetcode.com/problems/group-shifted-strings/)
+
+ Create the signature be the tuple of differences between the chars.
+ Then, we can group strings by signature.
+ Take care signatures are tuples os they're hashable as keys.
+ If N-num strings,, K = max length of strings, then we have $O(N*K)$ time and $O(K*N)$ space.
+
+##  [Binary Tree Vertical Order](https://leetcode.com/problems/binary-tree-vertical-order-traversal/)
+* Do BFS, keep track of current depth AND current index. Then we sort in the end.
+Maybe we can use a hashmap to store the current depth and the string.
+
+O(nlogn)
+Another option:
+do BFS, put results in a hashmap.
+Then, we can sort the keys and iterate through them. Know the range of the keys.
+See also
+https://leetcode.com/problems/vertical-order-traversal-of-a-binary-tree/solution/
+for a slightly harde rversion.
+987. Vertical Order Traversal of a Binary Tree
+
+
+## Nested List Weighted Sum
+ DFS
+```{python}
+class Solution:
+    def depthSum(self, nestedList: List[NestedInteger]) -> int:
+        def dfs(nested_list,depth):            
+            total = 0
+            for nested in nested_list:
+                if nested.isInteger():
+                    total+=nested.getInteger()*depth
+                else:
+                    total+=dfs(nested.getList(),depth+1)
+            return total
+
+        return dfs(nestedList,1)
+
+
+```
+
+
+
+## [Maximum Subarry Sum](https://leetcode.com/problems/maximum-subarray/solution/)
+
+Kadane $maxEndingHere[i] = max(maxEndingHere[i-1]+nums[i])$. Can optimize to not hold a whole array of maxEndingHere, but a single number, for obvious reasons.
+
+
+
+
+
+  
