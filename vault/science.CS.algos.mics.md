@@ -2,7 +2,7 @@
 id: XGuPRH9frbFI57K3ZdqVw
 title: mics
 desc: ''
-updated: 1643033656503
+updated: 1643068262187
 created: 1641979954736
 ---
 
@@ -163,6 +163,10 @@ class Solution:
 
 # [886. Possible Bipartition](https://leetcode.com/problems/possible-bipartition/)
  #TODO write some notes about this.. see why it was slow...
+  An approach to detect a bipartite graph is to try to color it with 2 colors.
+    We can do this by using a color dict. Then we iterate through the graph (BFS sounds most natural for me in this case), and for each node, we assign it a color.
+    As usual, we use a 'seen' set to keep track of nodes we've seen. Now, as we're about to put a node in the queue, we first check if color doesn't exist or is compatible with the current node's color. If not, return false. If it has already been colored, we skip it. Else put it in the queue.
+    
 
 
 # https://leetcode.com/problems/number-of-islands/solution/
@@ -444,6 +448,15 @@ class Solution:
 ## [Maximum Subarry Sum](https://leetcode.com/problems/maximum-subarray/solution/)
 
 Kadane $maxEndingHere[i] = max(maxEndingHere[i-1]+nums[i])$. Can optimize to not hold a whole array of maxEndingHere, but a single number, for obvious reasons.
+
+## [Top K frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
+
+Counter + heap would yield O(n*log(k)) time and O(n) space. Counter + sort would be just O(nlog(n))
+
+__Quickselect__ would be O(n^2) worst case, O(n) average case.
+
+ #TODO start top fb questions from 408- valid word abbreviation
+
 
 
 
