@@ -2,7 +2,7 @@
 id: pBIMmRuN5zKHlVDIWn2wt
 title: Loss Functions
 desc: ''
-updated: 1642521255441
+updated: 1643151887946
 created: 1642432837032
 ---
 
@@ -30,8 +30,21 @@ created: 1642432837032
 
 #TODO- learn some of these
 * Mean Reciprocal Rank (MRR)
+ ```
+For each user and each relevant item, compute 
+the mean precision of the list __trough__ that item
+
+ ```
 * Precision at K ("p@K").
 * DCG/NDCG (Normalized Discounted Gain)
+
 ^ranking-end
 
 
+
+# Huber Loss Functions
+
+L_{\delta }(a)={\begin{cases}{\frac  {1}{2}}{a^{2}}&{\text{for }}|a|\leq \delta ,\\\delta (|a|-{\frac  {1}{2}}\delta ),&{\text{otherwise.}}\end{cases}}
+This function is quadratic for small values of a, and linear for large values, with equal values and slopes of the different sections at the two points where {\displaystyle |a|=\delta }|a|=\delta . The variable a often refers to the residuals, that is to the difference between the observed and predicted values {\displaystyle a=y-f(x)}a=y-f(x), so the former can be expanded to[2]
+
+{\displaystyle L_{\delta }(y,f(x))={\begin{cases}{\frac {1}{2}}(y-f(x))^{2}&{\textrm {for}}|y-f(x)|\leq \delta ,\\\delta \,(|y-f(x)|-{\frac {1}{2}}\delta ),&{\textrm {otherwise.}}\end{cases}}}{\displaystyle L_{\delta }(y,f(x))={\begin{cases}{\frac {1}{2}}(y-f(x))^{2}&{\textrm {for}}|y-f(x)|\leq \delta ,\\\delta \,(|y-f(x)|-{\frac {1}{2}}\delta ),&{\textrm {otherwise.}}\end{cases}}}
