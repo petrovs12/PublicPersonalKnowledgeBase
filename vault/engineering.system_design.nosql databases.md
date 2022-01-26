@@ -2,7 +2,7 @@
 id: ku6IjaM8VZscHWIneLNJv
 title: Nosql Databases
 desc: ''
-updated: 1643128850259
+updated: 1643200872616
 created: 1641827261064
 ---
 
@@ -37,6 +37,8 @@ You require less number of joins and aggregations in your queries to the databas
 Health trackers, weather data, tracking of orders, and time series data are some good use cases where you can use Cassandra databases 
 
 # Wide Column Stores
+ BigTable
+
 
 # Graph Databases (Neo4j)
 

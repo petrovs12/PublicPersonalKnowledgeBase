@@ -2,11 +2,12 @@
 id: ZnFjgKrM07rg4lZISlQy8
 title: CAP and PACELC Theorems
 desc: ''
-updated: 1643138666660
+updated: 1643200854523
 created: 1643138564603
 ---
 
 
+# CAP theorem
 
 
 # PACELC Theorems
