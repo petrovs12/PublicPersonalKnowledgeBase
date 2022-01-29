@@ -2,11 +2,11 @@
 id: 2UAl3oCLpwxHfTuKY397U
 title: Baby Shopping List
 desc: ''
-updated: 1643489432179
+updated: 1643489967122
 created: 1643486967208
 ---
 
-Watch some baby first aid videos/take a course. Get first aid and [grooming kit for newborn](https://www.amazon.de/-/en/Thermometer-Aspirator-Scissors-Equipment-Newborns/dp/B07W7YWC67/ref=sr_1_6?keywords=baby+pflegeset&qid=1643489359&sprefix=baby+grooming%2Caps%2C92&sr=8-6).
+Watch some baby first aid videos/take a course. Get first aid and [grooming kit for newborn](https://www.amazon.de/-/en/Thermometer-Aspirator-Scissors-Equipment-Newborns/dp/B07W7YWC67/ref=sr_1_6?keywords=baby+pflegeset&qid=1643489359&sprefix=baby+grooming%2Caps%2C92&sr=8-6). Also get some special [ baby laundry detergent](https://www.thebump.com/a/best-baby-detergent) and wash new everything new before wearing. Idk if needed, but my partner did it.
 
 0. Baby stroller- not much opinion, you can buy used, just test it, look so it has big wheels as it's easier to handle. Also if you're driving, be careful if buying so it's easy to put a base on the car. I think there are different standards and so on. For us we put it without the base.
 
@@ -58,3 +58,5 @@ I went trough first 5 chapters of [Baby 411](https://www.amazon.de/-/en/Ari-Brow
 ## From 10th week
 23. [Some stuff to chew on if needed](https://www.amazon.de/gp/product/B001ABZGU2/ref=ppx_yo_dt_b_asin_title_o01_s00?ie=UTF8&psc=1)
 
+
+## Consider nannies/ au pair/etc.
