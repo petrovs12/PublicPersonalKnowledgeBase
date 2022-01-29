@@ -2,7 +2,7 @@
 id: 2UAl3oCLpwxHfTuKY397U
 title: Baby Shopping List
 desc: ''
-updated: 1643489967122
+updated: 1643491458588
 created: 1643486967208
 ---
 
@@ -16,7 +16,7 @@ Watch some baby first aid videos/take a course. Get first aid and [grooming kit 
 Also consider buying some [baby swaddles](https://www.amazon.de/gp/product/B08DG66XWC/ref=ppx_yo_dt_b_asin_title_o06_s02?ie=UTF8&psc=1). We bought some, but practically used only the ones w/ the snoo. 
 
 2. Books - we read very little, but I do recommend [Emily Oster's books](https://www.amazon.co.jp/s?k=emily+oster&crid=6IVPRSTBTOZC&sprefix=emily+oster%2Caps%2C259&ref=nb_sb_noss_1).
-We are using a lot of the advice there. It appeals to me cause it's short and it has a lot of meta-analyses of papers and help you ease your anxiety specifically about breastfeeding and so.
+We are using a lot of the advice there. It appeals to me cause it's short and it has a lot of meta-analyses of papers and help you ease your anxiety specifically about breastfeeding and so. She now has a [blog, which is pretty nice too](https://emilyoster.substack.com/).
 I went trough first 5 chapters of [Baby 411](https://www.amazon.de/-/en/Ari-Brown/dp/1889392618/ref=sr_1_1?crid=7LR0P02PBXVG&keywords=baby+411&qid=1643489049&sprefix=baby+411%2Caps%2C100&sr=8-1), it's great, then used rest for reference
 
 
