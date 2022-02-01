@@ -2,7 +2,7 @@
 id: DyoLE2kwm9rRfRZhBGxPW
 title: Health
 desc: ''
-updated: 1643721853610
+updated: 1643722231685
 created: 1643721642930
 ---
 
@@ -30,3 +30,12 @@ From [Valter Longo's site](https://www.valterlongo.com/daily-longevity-diet-for-
 * Select ingredients among those discussed in this book that your ancestors would have eaten.
 * Based on your weight, age, and abdominal circumference, decide whether to have two or three meals per day. If you are overweight or tend to gain weight easily, consume two meals a day: breakfast and either lunch or dinner, plus two low-sugar (less than 5 grams) snacks with fewer than 100 calories each. If you are already at a normal weight, or if you tend to lose weight easily or are over 65 and of normal weight, eat three meals a day and one low-sugar (less than 3 to 5 grams) snack with fewer than 100 calories.
 * Confine all eating to within a twelve-hour period; for example, start after 8 a.m. and end before 8 p.m. Don’t eat anything within three to four hours of bedtime.
+
+# Rhonda Patrick 
+[Podcast By Rhonda Patrick](https://www.foundmyfitness.com/about-dr-rhonda-patrick)
+# Finnish Sauna Study
+[From Harvard Health](https://www.health.harvard.edu/blog/sauna-use-linked-longer-life-fewer-fatal-heart-problems-201502257755)
+
+Researchers from the University of Eastern Finland tracked 2,300 middle-aged men for an average of 20 years. They categorized the men into three groups according to how often they used a sauna each week. The men spent an average of 14 minutes per visit baking in 175° F heat. Over the course of the study, __49% of men who went to a sauna once a week died, compared with 38% of those who went two to three times a week and just 31% of those who went four to seven times a week__.  But is it causal or just healthier ppl went to the sauna??
+
+
