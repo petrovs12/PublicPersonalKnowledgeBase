@@ -2,7 +2,7 @@
 id: 8i2m6qqkBscsgEvhQWRxT
 title: Clustering
 desc: ''
-updated: 1644230729836
+updated: 1644281500310
 created: 1642438864125
 ---
 
@@ -36,7 +36,7 @@ We can't have all 3 of these natural properties holding simultaneously.
 
 
 
-# K-means
+# K-means ^kmeans
 
 We want to minimize the total in-cluster distance.
 
