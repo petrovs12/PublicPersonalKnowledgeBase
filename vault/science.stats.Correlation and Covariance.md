@@ -2,7 +2,7 @@
 id: FA0Q4HIXwyBCfLaIv5Khg
 title: Correlation and Covariance
 desc: ''
-updated: 1641866553455
+updated: 1643976490866
 created: 1641855990425
 ---
 
@@ -29,3 +29,4 @@ Pearson correlation
 # Large Correlation Matrices in R
 
 [blog post about bigCor](http://www.r-bloggers.com/bigcor-large-correlation-matrices-in-r/)
+

@@ -2,7 +2,7 @@
 id: DXLiLGTveXMnlFQGLKG3b
 title: Regularizations
 desc: ''
-updated: 1641865173770
+updated: 1644232992006
 created: 1641864475560
 ---
 # $L_1$or $L_2$ regularizations in regression
@@ -16,5 +16,15 @@ Given a dataset X, a common task is to try to estimate the most likely values fo
 
 For example $L_1$ regularization is equivalent to putting a Laplace prior on the parameters, whereas
 $L_2$ regularization is equivalent to putting a Gaussian prior on them.
+
+# L1, L2, Ridge, Tikhonov, LASSO
+
+Ridge regression has a closed form solution.
+
+[[science.math.Norms and Metrics]]
+
+#
+
+
 
 

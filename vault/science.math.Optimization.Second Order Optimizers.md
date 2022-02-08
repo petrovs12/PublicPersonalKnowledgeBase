@@ -2,9 +2,11 @@
 id: gEvZkRFpzl8TIsH53TlXn
 title: Second Order Optimizers
 desc: ''
-updated: 1641979908419
+updated: 1644174751303
 created: 1641836423613
 ---
+
+## Newton's Method
 
 ## BFGS and L-BFGS
 
