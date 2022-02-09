@@ -2,7 +2,7 @@
 id: BOy4GLBQlse9SzjLAlwqp
 title: mics problems
 desc: ''
-updated: 1642951951657
+updated: 1643307913447
 created: 1641981602342
 ---
 
@@ -311,3 +311,288 @@ class Solution:
         
         return bestFound
 ```
+
+ # Problem 1041: Robot Bounded in Circle
+  On an infinite plane, a robot initially stands at (0, 0) and faces north. The robot can receive one of three instructions:
+* "G": go straight 1 unit;
+* "L": turn 90 degrees to the left;
+* "R": turn 90 degrees to the right.
+
+
+The robot performs the instructions given in order, and repeats them forever.
+
+Return true if and only if there exists a circle in the plane such that the robot never leaves the circle.
+
+Let $v$ be the vector we move the robot in one instruction set, and $d$ be the direction in radians, relative to the initial direction of the robot.
+
+Solution/ answer:
+After 1 instruction set we're either at the origin, or we're __not__ facing north.
+
+### Proof
+Exercise for reader.
+
+
+# Problem 1463. Cherry Pickup II
+You are given a rows x cols matrix grid representing a field of cherries where $grid[i][j]$
+ represents the number of cherries that you can collect from the $(i, j)$ cell.
+
+You have two robots that can collect cherries for you:
+
+Robot #1 is located at the top-left corner (0, 0), and
+Robot #2 is located at the top-right corner (0, cols - 1).
+Return the maximum number of cherries collection using both robots by following the rules below:
+
+From a cell (i, j), robots can move to cell $(i + 1, j - 1), (i + 1, j), \text{or }  (i + 1, j + 1)$.
+When any robot passes through a cell, It picks up all cherries, and the cell becomes an empty cell.
+When both robots stay in the same cell, only one takes the cherries.
+Both robots cannot move outside of the grid at any moment.
+Both robots should reach the bottom row in grid.
+
+### Solution:
+Let D(col1,col2,row) be the maximum number of cherries that can be collected if the robots are at
+$(row,col1),(row,col2)$.
+Then:
+
+
+
+$$
+D(c_1,c_2,r) = \max_{cn_1 \in [c_1-1,c_1,c_1+1],cn_2\in {c_2-1,c_2,c_2+1}} D(cn_1,cn_2,r+1) +\begin{cases}
+grid[c_1,r]+grid[c_2,r] \text{ if } c_1!=c_2\\
+grid[c_1,r] \text{ else }
+\end{cases}
+$$
+The solution is then $D(0,n-1,0)$
+ 
+
+With the obvious boundary conditions. We use memoization table to store the results .A small optimization we could use is to make sure $c_1<=c_2$ troughout the execution of the algorithm.
+
+
+## 1094. Car Pooling
+
+
+There is a car with capacity empty seats. The vehicle only drives east (i.e., it cannot turn around and drive west).
+
+You are given the integer capacity and an array trips where trip[i] = [numPassengersi, fromi, toi] indicates that the ith trip has numPassengersi passengers and the locations to pick them up and drop them off are fromi and toi respectively. The locations are given as the number of kilometers due east from the car's initial location.
+
+Return true if it is possible to pick up and drop off all passengers for all the given trips, or false otherwise.
+
+ 
+
+Example 1:
+
+```
+Input: trips = [[2,1,5],[3,3,7]], capacity = 4
+Output: false
+```
+Example 2:
+```
+Input: trips = [[2,1,5],[3,3,7]], capacity = 5
+Output: true
+```
+
+Solution:
+we simply merge all intervals and keep track if the capacity is enough.
+
+```{python}
+class Solution:
+    def carPooling(self, trips: List[List[int]], capacity: int) -> bool:
+        from collections import defaultdict
+        # aggregate pickups and dropoffs at any time something happens'
+        pickups = defaultdict(lambda :0)
+        dropoffs = defaultdict(lambda :0)
+        for t in trips:
+            pickups[t[1]]+=t[0]
+            dropoffs[t[2]]+=t[0]
+        # sort !! NB- this step is important, BUT if we have limited numbers
+        # we can use bucket sort for linear time!!!
+        pickupsAndDropoffs = sorted(
+            list(
+                set(
+                    [t[1] for t in trips]+[t[2] for t in trips]
+                )
+            ))
+        currOcc = 0
+        for t in pickupsAndDropoffs:
+            if t in pickups:
+                currOcc+=pickups[t]
+            if t in dropoffs:
+                currOcc-=dropoffs[t]
+            assert currOcc>=0
+            if currOcc>capacity:
+                return False
+        return True
+                                    
+```
+
+### Approach 2: Bucket Sort
+##### Intuition
+
+Note that in the problem there is a interesting constraint:
+
+$0 <= trips[i][1] < trips[i][2] <= 1000$
+What pops into the mind is Bucket Sort, which is a sorting algorithm in $\mathcal{O}(N)$ time but requires some prior knowledge for the range of the data.
+
+We can use it instead of the normal sorting in this method.
+
+What we do is initial 1001 buckets, and put the number of passengers changed in corresponding buckets, and collect the buckets one by one.
+
+Algorithm
+
+We will initial 1001 buckets, iterate trip, and save the number of passengers changed at i mile in the i-th bucket.
+
+## 
+
+
+## 131. Palindrome Partitioning
+_Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s._
+
+ 
+```
+Example 1:
+
+Input: s = "aab"
+Output: [["a","a","b"],["aa","b"]]
+Example 2:
+
+Input: s = "a"
+Output: [["a"]]
+ 
+
+Constraints:
+
+1 <= s.length <= 16
+s contains only lowercase English letters.
+```
+
+#### Solution
+
+Given that we're being asked to return everything, we can use backtracking to solve this problem. We also note the maximum possible length of the string is 16, 
+which is small enough to do a brute force search.
+
+```{python}
+def isPalindrome(a):
+    return a==a[-1::-1]
+def findPossiblePalindromesStartingFromBeginning(s):
+    res = []
+    if len(s)==0:
+        return res
+    for i in range(0,len(s)):
+        if isPalindrome(s[:i+1]):
+            res.append(s[:i+1])
+    return res
+        
+            
+            
+    
+class Solution:
+    def partition(self, s: str) -> List[List[str]]:
+        res = []
+        n = len(s)
+        
+        def backtrack(partialResult,currInd):
+            #print(f"{partialResult=},{currInd=}")
+            if currInd >n:
+            #    pass
+                return
+            elif currInd == n:
+                print("adding")
+                res.append(partialResult.copy())
+                return
+            else:
+                possibleContinuations = [(len(c),c) for c in findPossiblePalindromesStartingFromBeginning(s[currInd:])]
+                print(possibleContinuations)
+                for ind,c in possibleContinuations:
+                    # partialResult.append(c)
+                    backtrack(partialResult+[c],currInd+ind)
+                    
+            #partialResult.pop(-1)
+            return res
+        return backtrack([],0)
+            
+                
+```
+
+
+## 1762. Buildings With an Ocean View
+
+There are n buildings in a line. You are given an integer array heights of size n that represents the heights of the buildings in the line.
+
+The ocean is to the right of the buildings. A building has an ocean view if the building can see the ocean without obstructions. Formally, a building has an ocean view if all the buildings to its right have a smaller height.
+
+Return a list of indices (0-indexed) of buildings that have an ocean view, sorted in increasing order.
+
+ 
+
+Example 1:
+```
+Input: heights = [4,2,3,1]
+Output: [0,2,3]
+```
+Explanation: Building 1 (0-indexed) does not have an ocean view because building 2 is taller.
+Example 2:
+
+Input: heights = [4,3,2,1]
+Output: [0,1,2,3]
+Explanation: All the buildings have an ocean view.
+Example 3:
+
+Input: heights = [1,3,2,4]
+Output: [3]
+Explanation: Only building 3 has an ocean view.
+ 
+
+Constraints:
+
+1 <= heights.length <= 105
+1 <= heights[i] <= 109
+
+it's a bit slow cause of the appending, but can be fixed by instead starting from the the beginning
+and maintaining a monotonously decreasing sequence- every time we add an element,
+it deletes all elements already in the stack that have smaller height already (we keep the index in the stack and check heights dynamically) .
+Finally return the stack.
+```
+class Solution:
+    def findBuildings(self, heights: List[int]) -> List[int]:
+        maxToRight = float("-inf")
+        n = len(heights)
+        res = []
+        for i in range(n-1,-1,-1):
+            if heights[i]>maxToRight:
+                res.append(i)
+                maxToRight = heights[i]
+        return res[-1::-1]
+```
+
+
+## 1891. Cutting Ribbons
+
+You are given an integer array ribbons, where ribbons[i] represents the length of the ith ribbon, and an integer k. You may cut any of the ribbons into any number of segments of positive integer lengths, or perform no cuts at all.
+
+For example, if you have a ribbon of length 4, you can:
+Keep the ribbon of length 4,
+Cut it into one ribbon of length 3 and one ribbon of length 1,
+Cut it into two ribbons of length 2,
+Cut it into one ribbon of length 2 and two ribbons of length 1, or
+Cut it into four ribbons of length 1.
+Your goal is to obtain k ribbons of all the same positive integer length. You are allowed to throw away any excess ribbon as a result of cutting.
+
+Return the maximum possible positive integer length that you can obtain k ribbons of, or 0 if you cannot obtain k ribbons of the same length.
+
+ 
+```
+Example 1:
+
+Input: ribbons = [9,7,5], k = 3
+Output: 5
+Explanation:
+- Cut the first ribbon to two ribbons, one of length 5 and one of length 4.
+- Cut the second ribbon to two ribbons, one of length 5 and one of length 2.
+- Keep the third ribbon as it is.
+```
+
+Now you have 3 ribbons of length 5.
+
+
+
+
+

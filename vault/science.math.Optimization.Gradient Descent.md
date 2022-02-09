@@ -20,7 +20,7 @@ created: 1641834928947
 [[science.math.Optimization.Second Order Optimizers]]
 
 
-[[science.math.Optimization.Newton's Method]]
+[[science.math.Optimization.Newton-Rhapson Method]]
 [[science.math.Optimization.Stochastic Gradient Descent]]
 [[Minimatch Method]]
 

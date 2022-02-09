@@ -2,7 +2,7 @@
 id: XGuPRH9frbFI57K3ZdqVw
 title: mics
 desc: ''
-updated: 1643068262187
+updated: 1643394361635
 created: 1641979954736
 ---
 
@@ -447,7 +447,7 @@ class Solution:
 
 ## [Maximum Subarry Sum](https://leetcode.com/problems/maximum-subarray/solution/)
 
-Kadane $maxEndingHere[i] = max(maxEndingHere[i-1]+nums[i])$. Can optimize to not hold a whole array of maxEndingHere, but a single number, for obvious reasons.
+Kadane $maxEndingHere[i] = max(maxEndingHere[i-1]+nums[i])$. Can optimize to not hold a whole array of maxEndingHere, but a single number,  in an obvious way obvious reasons (loop ).
 
 ## [Top K frequent Elements](https://leetcode.com/problems/top-k-frequent-elements/)
 
@@ -456,6 +456,12 @@ Counter + heap would yield O(n*log(k)) time and O(n) space. Counter + sort would
 __Quickselect__ would be O(n^2) worst case, O(n) average case.
 
  #TODO start top fb questions from 408- valid word abbreviation
+
+ ##  (Range Sum of BST)[https://leetcode.com/problems/range-sum-of-bst/]
+  
+  Keep a global for the sum
+  Option 1: just traverse the whole tree (DFS) and check the value of the values.
+  Option 2:In the DFS code, add 2 parameters 'high' and 'low'. Depending on the passed  parameters, we can prune the tree and decide weather to go to left and/or right, changing the 'high' and 'low'. Values accordingly.
 
 
 

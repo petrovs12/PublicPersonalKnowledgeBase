@@ -2,10 +2,13 @@
 id: pBIMmRuN5zKHlVDIWn2wt
 title: Loss Functions
 desc: ''
-updated: 1643151887946
+updated: 1644232568530
 created: 1642432837032
 ---
 
+
+
+Loss functions can often be expressed as a function of $yf(x)$. That is because we often want to penalized misclassification or 
 
 
 

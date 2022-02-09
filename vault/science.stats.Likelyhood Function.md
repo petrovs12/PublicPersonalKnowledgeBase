@@ -2,7 +2,7 @@
 id: rhbOpfr6QRdQegCCpWekd
 title: Likelyhood Function
 desc: ''
-updated: 1643069729875
+updated: 1644175295702
 created: 1643069103749
 ---
 

@@ -2,7 +2,7 @@
 id: F4qDUpHVv34wdYvQu0h2O
 title: Linear Algebra
 desc: ''
-updated: 1642358637609
+updated: 1643980418123
 created: 1641835038170
 ---
 
@@ -28,6 +28,12 @@ moo
 # Distances and Norms ^norms
 
 # Determinant ^determinant
+
+# Matrix Inverse ^invers
+
+$A^{i}$:= solution of the equation $A*A^{-1}=I$.
+If A's columns is orthonormal, then $A*A^{T}$.
+
 
 # Matrices and Linear Transformations ^linear-transformations
 ![[^Vector-Spaces]]
@@ -84,6 +90,7 @@ Then, $a_k$ is a linear combination of $e_1,e_2,...,e_{k}$.
 # SVD ^svd
 
 
+
 [[science.math.Linear Algebra.Singular Value Decomposition]]
 
 [[science.stats.Dimensionality Reduction.SVD]]
@@ -101,6 +108,8 @@ Relationship between SVD and [[#^qr-decomposition]]:
 
 (Source)[https://math.stackexchange.com/questions/2348807/is-there-any-connection-between-qr-and-svd-of-a-matrix]
 
+![Visual summary](/assets/images/2022-02-04-13-59-52.png)
+(Another correspondence)[https://intoli.com/blog/pca-and-svd/]
 
 # PCA ^pca
 [[science.stats.Dimensionality Reduction.PCA]]
