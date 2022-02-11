@@ -2,7 +2,7 @@
 id: XIkHzTaTzXowP2s1JUHyZ
 title: MLOps
 desc: ''
-updated: 1642374014884
+updated: 1644444083241
 created: 1642030099420
 ---
 
@@ -21,3 +21,5 @@ created: 1642030099420
  # summary
  * Scaling machines up and down
  *  increasing/ decreasing batch size, increasing latency in exchagne of efficiency etc.
+
+# 
