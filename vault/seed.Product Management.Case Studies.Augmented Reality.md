@@ -2,7 +2,7 @@
 id: 1QSOa1He63Mdpy8JqCtH7
 title: Augmented Reality
 desc: ''
-updated: 1644684046893
+updated: 1644684146457
 created: 1644682906929
 ---
 
@@ -22,6 +22,7 @@ Here are some that might seem interesting.
 
 [Usage in Foot Solider technology](https://www.economist.com/science-and-technology/tomorrows-soldiers-will-have-their-reality-augmented/21804963)
 
+[Surgeries/Other Medical Use Cases](https://www.economist.com/technology-quarterly/2001/03/24/the-cutting-edge-of-virtual-reality)
 
 [Which Game Company is Best Positioned](https://www.economist.com/graphic-detail/2016/10/14/which-gaming-company-will-dominate-the-virtual-reality-market)
 
@@ -35,6 +36,8 @@ Here are some that might seem interesting.
 [Virtual Property Prices Boom](https://www.economist.com/business/2022/01/01/virtual-property-prices-are-going-through-the-roof)
 
 [VR in Edtech](https://www.economist.com/united-states/2021/09/18/edtech-that-helps-teachers-beats-edtech-that-replaces-them).
+
+[More Healthcare](https://www.economist.com/technology-quarterly/2020/10/01/health-care-is-already-benefiting-from-vr)
 # Curated Lists
 [](https://github.com/dharmeshkakadia/awesome-AR)
 
