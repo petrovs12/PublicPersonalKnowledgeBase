@@ -2,12 +2,22 @@
 id: 1QSOa1He63Mdpy8JqCtH7
 title: Augmented Reality
 desc: ''
-updated: 1644684146457
+updated: 1644685005889
 created: 1644682906929
 ---
 
+# Curated List
+[Awesome-AR on Github](https://github.com/dharmeshkakadia/awesome-AR)
 
+__Click on the Videos There___
 # Use And Business Cases
+
+
+[Mckinsey Report-2017](https://www.mckinsey.com/industries/technology-media-and-telecommunications/our-insights/augmented-and-virtual-reality-the-promise-and-peril-of-immersive-technologies)
+
+
+[Baye Report on Customer Experience Based Tools](https://www.bain.com/insights/customer-experience-tools-augmented-or-virtual-reality/)
+
 
 
 [The economist has a bunch of articles on VR](https://www.economist.com/search?q=%22virtual+reality%22&sort=date)
@@ -37,9 +47,14 @@ Here are some that might seem interesting.
 
 [VR in Edtech](https://www.economist.com/united-states/2021/09/18/edtech-that-helps-teachers-beats-edtech-that-replaces-them).
 
+
 [More Healthcare](https://www.economist.com/technology-quarterly/2020/10/01/health-care-is-already-benefiting-from-vr)
+
+
+
 # Curated Lists
-[](https://github.com/dharmeshkakadia/awesome-AR)
+
+
 
 
 # System Design
@@ -47,3 +62,17 @@ Here are some that might seem interesting.
 
 [](https://www.youtube.com/watch?v=XJZpf0gk1ZM&ab_channel=Ekeeda)
 
+
+
+## Courses
+
+[Link To Brochure for MIT Course in XR Application Development](https://drive.google.com/file/d/1p7HUxKxOeJwtB1p_xuaiQ1H-qmguc85g/view?usp=sharing)
+
+# Videos
+
+* Redefining what is humanly possible with augmented reality
+* Augmented Reality | John Werner | TEDxAsburyPark
+* Augmented Reality, science fiction is now science fact | Ryan Groom | TEDxMoncton
+* Augmented reality storytelling how it will change the way we play forever | Devon Lyon | TEDxSalem
+* How Augmented Reality Will Change Education Completely | Florian Radke | TEDxGateway
+* Will virtual and augmented reality move us into the knowledge age? | Zenka | TEDxJacksonHole
