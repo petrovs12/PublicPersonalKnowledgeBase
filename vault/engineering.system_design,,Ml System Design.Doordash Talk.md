@@ -2,7 +2,7 @@
 id: CrAWkVsx2tCnJARRILuG4
 title: Doordash Talk
 desc: ''
-updated: 1644532437780
+updated: 1644626802651
 created: 1644531139053
 ---
 
@@ -83,4 +83,99 @@ Incentives
 reccomendation might be offline (in this case) so offline
 time prediction -online
 demand forecasting in the middle (multiple horizons).
+
+
+# Training Pipeline
+
+
+```mermaid
+graph LR;
+F[Common Features Store]-->B
+A[(Data)]-->B("Features Extractor")-->C("Model Training Jobs")-->D[(Model Repo)]
+
+```
+
+[[Feature Stores]] are great/super important.
+
+They serve as a single source of truth, store embeddings etc.
+
+
+# ML Performance goals
+
+* Accuracy SLAs
+* System SLAs  (latency)
+* Debuggability*
+* Time to Ship 
+
+# Debuggability goals
+ 
+ If some model is giving weird results, what do you do? What tooling do you need so you can quickly decide if it's a data issue, model going stale issue, or something else? What
+
+
+ # Stefan's own musings
+
+Let's have some such structure:
+
+```mermaid
+graph LR;
+
+D[Model Repository]--model-->I
+A[Request]-->B[Load Balancer]--"json_data{user_id:1,restaurant_id:2,type:parking,...,timestamp}"-->C[Predict]
+D[(Model Repository)]--Shadow Model-->I
+
+I[Model Service]-.-C
+
+F[(Feature Store)]--"fetch data for entities, last entry<=Timestamp"-->C
+E[(Model Log)]
+G[("Model Metrics and Monitoring")]
+E-.->G
+C--"features, predictions"-->E
+
+A1[Model Metadata]-.->D
+H[S3]--->D
+
+
+```
+
+The model log holds all request, feature values, predictions, and outcomes
+
+## Shadowing models
+
+Run models in parallel, as well as on the different groups. Use the parallel models for counterfactual stuff.
+
+## Use the model log to replay stuff
+
+
+## Use log for monitoring
+
+## Use log to train new models
+Thus making the training and prediction processes closer (modulo effect on customer behavior).
+
+
+
+# Monitor
+* Feature Distributions
+* Predictions
+* Response times
+
+track summary stats, plot distributions, alert.
+
+# Launching new models
+
+Much faser now, as now the process is as follows:
+```mermaid
+graph TD;
+a[Model Ready]--"Model Registry Knows how to serve model"-->B[Register Model Metadata]
+B--"Can test as shadow as a stage before AB test"-->C
+C["Enable Shadow/experiment"]-->D[Monitor Metrics]
+
+
+
+```
+
+
+# Data Preparation
+
+While doing data prep, it would be ideal to integrate with the feature store.
+
 

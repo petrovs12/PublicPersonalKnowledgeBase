@@ -2,7 +2,7 @@
 id: a9ZXsYbvCG7yndtOSmssU
 title: Functional Programming
 desc: ''
-updated: 1642037258881
+updated: 1644626496873
 created: 1642037138656
 ---
 
@@ -14,3 +14,8 @@ and then this was expanded to a bigger project, where the F# code compiles to ty
 whereas b4 it would open a new VM on Azure and will be super slow
 might be murky on the details, reference here:
 https://www.microsoft.com/en-us/research/podcast/advancing-excel-as-a-programming-language-with-andy-gordon-and-simon-peyton-jones/
+
+
+[[engineering.technologies.Spreadsheets]]
+
+[[science.CS.theory.Streams, Arrows, Reactive Programs]]
