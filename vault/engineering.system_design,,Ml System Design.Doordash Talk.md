@@ -2,7 +2,7 @@
 id: CrAWkVsx2tCnJARRILuG4
 title: Doordash Talk
 desc: ''
-updated: 1644626802651
+updated: 1644775346263
 created: 1644531139053
 ---
 
@@ -147,6 +147,7 @@ Run models in parallel, as well as on the different groups. Use the parallel mod
 
 
 ## Use log for monitoring
+[[science.stats.Distribution Drift]]
 
 ## Use log to train new models
 Thus making the training and prediction processes closer (modulo effect on customer behavior).

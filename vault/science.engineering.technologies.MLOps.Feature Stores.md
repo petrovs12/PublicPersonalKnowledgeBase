@@ -2,7 +2,7 @@
 id: 3coCU94D3OUfqD6I8EWoX
 title: Feature Stores
 desc: ''
-updated: 1644626069024
+updated: 1644790979860
 created: 1644588554746
 ---
 
@@ -10,17 +10,17 @@ created: 1644588554746
 Tl;dr
 Several perspectives:
 1. Implementational
-Layer on top of a db, supporting many writes, key-based retrieval, last-before-timestamp retrieval.
-Supports writing batch or streaming features [[plu]].
-read: can ask for a feature x for item/customer/etc id y at time t easily and get back correct result.
-Handles back-filling of these features.
-Can use for embedding
+Layer on top of a DB, supporting many writes, key-based retrieval, last-before-timestamp retrieval.
+Supports writing batch or streaming features.
+read: can ask for a feature x for item/customer/whatever id y at time t easily and get back the correct result.
+FS handles backfilling of these features.
+Useful for embedding maps as well.
 
 
 
 2. Semantic
-Have an 'easy and consistent' way to write something that generates features ppl or models can use.
-Then create models that take data directly from the feature store and it's easily portable to production...
+Have an 'easy and consistent way to write something that generates features ppl or models can use.
+Then create models that take data directly from the feature store, and it's easily portable to production.
 
 
 
@@ -30,30 +30,79 @@ Many of the points are from the [FEASTS Docs](https://docs.feast.dev/).
 
 Feature Stores are systems that support the following functionalities: 
 
-1. Consistent Access to Data During Model Ideation, Training, Testing, and Deploymnet
-Different roles in the organization have different objectives and data sources. It would be best if the path between 'prototype data source' and 'production data sources' is as short as possible.
+1. Consistent Access to Data During Model Ideation, Training, Testing, and Deployment.
+Different roles in the organization have divergent objectives and data sources. It would be best if the path between 'prototype data source' and 'production data sources' is as short as possible.
 2. Point-in-time correctness
-When the 'predict' call is made, latest allowable value of the feature is needed. Look bellow for the [[^timeTravel]]
+When the 'predict' call comes, we need the latest allowable value of the feature for the entity in question. Look below for the [[^timeTravel]]
+[[stats.Time Series]]
+[[stats.Data Leakage]]
+[[science.math.Stochastic Calculus.Filtration]]
+
+One of the __key value propositions__ when compared to a [[engineering.system_design.nosql databases]] like [[engineering.system_design.nosql databases.BigTable]] by itself.
+
 3. Deploying new features into prod is difficult
-For example, if a data scientist has created some long feature calculation pipeline during the script, it's possible to shoehorn this in production.
-But maybe it's computationally burdensome, especially if it's using a bunch of time/data to compute (e.g. rolling windows). 
-Then the prod system would have to make additional queries to fetch data for a week back, then aggregate over it- very slow. 
-Feature store can be 'db for kids' in this sense- a database ml ppl can experiment and put scripts/ ETL's for feature calculation withouth trouble.
-4. Features aren't re-used across projects/ ppl
+For example, if a data scientist has created some long feature calculation pipeline during the script, it's possible to shoehorn this into production.
+But maybe it's computationally burdensome, especially if it's using a bunch of time/data to compute (e.g. rolling windows).
+Then the prod system would have to make additional queries to fetch data for a week back, then aggregate over it- very slow.
+Feature store can be 'Database for kids' in this sense- a database ml ppl can experiment and put scripts/ ETL's for feature calculation without trouble.
+4. Features aren't reused across projects/ ppl ^reuse
 Clear what this means
 
 
 
+# Another perspective from [talk](https://www.youtube.com/watch?v=6OCUMbEtSLU&ab_channel=StanfordMLSysSeminars)
+
+## Challenges with data for ml
+
+ Data pipelines are messy.
+ Different between training and serving
+ Different data sources between training and serving
+ Lack of point-in-time correctness/information sets/ Filtrations
+
+ Models can be developed by DS, then re-developed and maintained by DE/MLE.
 
 
-They are usually built on top of existing data stores, e.g. dynamodb, redis, BigTable, etc.
+### Building Feature Pipelines is hard
+
+* Same semantics, adapted to different requirements, lead to __different production requirements__ - distributed compute, strem processing, low-latency transformations.
+* Reliable computation and __backfilling__ of features is a large investment
+
+### Consistent Data Access
+* Redevelopment of pipelines- inconsistencties in data
+*  [[science.engineering.technologies.MLOps.Training-Serving Skew]] 
+
+
+## Duplication of Effort
+This is covered in the [[#^reuse]] point above
+
+
+### Data Quality Monitoring
+* Logging serving times, computation times
+* Checking for [[science.stats.Distribution Drift]]
+* Checking for 'Freshness', i.e. have we re-computed the features recently
+
+
+
+ 
+
+## How feature stores help
+
+
+
+
+
+
+They are usually built on top of existing data stores, eg. DynamoDB, Redis, BigTable, etc.
 Normally the underlying storage system should support fast key lookup + timestamp range queries, e.g. BigTable style
 [[engineering.system_design.nosql databases.BigTable]]
 
 [[engineering.system_design.nosql]]
 
 
-Honestly, for features it does seem like something that is key-based, supports __appends__, range queries, and one can put secondary indices on, sounds perfect.
+Honestly, for ML features, it does seem like something that:
+* is key-based
+* supports __appends__, range queries, and one can put secondary indices on
+sounds perfect.
 
 
 
