@@ -2,7 +2,7 @@
 id: XGuPRH9frbFI57K3ZdqVw
 title: mics
 desc: ''
-updated: 1643394361635
+updated: 1644857146688
 created: 1641979954736
 ---
 
@@ -464,6 +464,16 @@ __Quickselect__ would be O(n^2) worst case, O(n) average case.
   Option 2:In the DFS code, add 2 parameters 'high' and 'low'. Depending on the passed  parameters, we can prune the tree and decide weather to go to left and/or right, changing the 'high' and 'low'. Values accordingly.
 
 
+
+# (Remove Duplicates from Sorted Array)[https://leetcode.com/problems/remove-duplicates-from-sorted-array-ii/]
+
+ I think the best approach would be similar to the merge 2 arrays problem.
+ So probabaly best way would be to first go forward and count the number of remaining elements $k$.
+ Then, go from front, initializing 2 pointers- one we write FROM, and another we WRITE TO. We advance both of them in an obvious way. The 
+ __write from__ pointer will always be >= to __write to__ pointer.
+ We can then never write to a place we haven't read from already.
+
+# ()[https://leetcode.com/problems/contiguous-array/]
 
 
 
