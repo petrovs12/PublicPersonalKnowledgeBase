@@ -2,7 +2,7 @@
 id: VG6JMpj1Lic8br5iTSvIL
 title: Recommender Systems
 desc: ''
-updated: 1642446759657
+updated: 1644859769394
 created: 1641997907947
 ---
 
@@ -175,7 +175,8 @@ model
 
 The actual loss function to minimize includes a general bias term and two bias for both the user and the item. L2 regularization is also used to prevent overfitting. The formulation is the following:
 
-![](/assets/images/2022-01-17-01-42-15.png) ^svd-loss-image
+![](/assets/images/2022-02-14-18-27-59.png)^svd-loss-image
+
 $min_{p,q,b}\Sigma_{u,i} (r_{ui}-\mu-b_u-b_i-p_u . q_i)^2+\lambda(||p_u||^2+||q_i||^2+b_u^2+b_i^2)$ ^svd-loss2
 
 Now, let $y_{u,i}$ are the implicit feedbacks of user $u$ and item $i$:

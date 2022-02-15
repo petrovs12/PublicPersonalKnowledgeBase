@@ -254,8 +254,8 @@ Can either model directly or just train algo and then test if erros same (ANOVA,
 
 Probably similar to how we split data for testing in [[science.stats.Deep Neural Networks.Graph Neural Networks]]
 
-![[stats.Train Test Splitting#^recsys-start:^recsys-end]]
-[[stats.Train Test Splitting]]
+![[science.stats.Train Test Splitting#^recsys-start]]
+[[science.stats.Train Test Splitting]]
 
 
 

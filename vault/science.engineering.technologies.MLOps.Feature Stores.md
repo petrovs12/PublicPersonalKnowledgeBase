@@ -34,8 +34,8 @@ Feature Stores are systems that support the following functionalities:
 Different roles in the organization have divergent objectives and data sources. It would be best if the path between 'prototype data source' and 'production data sources' is as short as possible.
 2. Point-in-time correctness
 When the 'predict' call comes, we need the latest allowable value of the feature for the entity in question. Look below for the [[^timeTravel]]
-[[stats.Time Series]]
-[[stats.Data Leakage]]
+[[science.stats.Time Series]]
+[[science.stats.Data Leakage]]
 [[science.math.Stochastic Calculus.Filtration]]
 
 One of the __key value propositions__ when compared to a [[engineering.system_design.nosql databases]] like [[engineering.system_design.nosql databases.BigTable]] by itself.

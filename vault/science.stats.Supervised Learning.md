@@ -22,7 +22,7 @@ expected loss of the model across the possible imputs.
  
  * Linear models [[science.stats.Regression.Linear Regression]]
  * Linear models, but with nonlinear fixed feature expansions
- * Reproducing Kernel Hilbert Spaces ([[stats.Support Vector Machines]]) 
+ * Reproducing Kernel Hilbert Spaces ([[science.stats.Support Vector Machines]]) 
 
 
 
