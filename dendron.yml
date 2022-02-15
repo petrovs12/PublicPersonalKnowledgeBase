@@ -12,7 +12,7 @@ site:
     siteRootDir: docs
     siteUrl: 'https://petrovs12.github.io'
     # assetsPrefix: /template.publish.github-action
-    assetsPrefix: /dendronPublishAttempt5
+    assetsPrefix: /PublicPersonalKnowledgeBase
     usePrettyRefs: true
     title: Dendron
     description: Personal knowledge space
