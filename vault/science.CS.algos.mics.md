@@ -2,7 +2,7 @@
 id: XGuPRH9frbFI57K3ZdqVw
 title: mics
 desc: ''
-updated: 1644857146688
+updated: 1644857401541
 created: 1641979954736
 ---
 
@@ -473,7 +473,12 @@ __Quickselect__ would be O(n^2) worst case, O(n) average case.
  __write from__ pointer will always be >= to __write to__ pointer.
  We can then never write to a place we haven't read from already.
 
-# ()[https://leetcode.com/problems/contiguous-array/]
+# (leetcode 525 Max Contignouse Array)[https://leetcode.com/problems/contiguous-array/]
+Given a binary array nums, return the maximum length of a contiguous subarray with an equal number of 0 and 1.
+let's first build the prefix sums with 0 =-1,1=1. Then, we're looking for 'maximal size array with balance 0'. I think we can do this in O(n) time with a 2-pointer approach.
+For example
+
+
 
 
 
