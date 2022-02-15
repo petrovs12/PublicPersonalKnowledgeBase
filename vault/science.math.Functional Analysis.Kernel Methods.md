@@ -47,7 +47,7 @@ So essentially, if K is positive definite in the above sense, there exists a fea
 
 # Kernel SVM
 
-[[stats.Support Vector Machines]]
+[[science.stats.Support Vector Machines]]
 
 We have an analogy of the original SVM dual formulation, with a generalized kernel at the place of the inner product function.
 

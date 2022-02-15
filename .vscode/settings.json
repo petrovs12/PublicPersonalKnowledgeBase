@@ -8,5 +8,21 @@
   "editor.snippetSuggestions": "inline",
   "editor.tabCompletion": "on",
   "markdown-preview-enhanced.enableWikiLinkSyntax": true,
-  "markdown-preview-enhanced.wikiLinkFileExtension": ".md"
+  "markdown-preview-enhanced.wikiLinkFileExtension": ".md",
+  "grammarly.overrides": [
+    {
+      "files": [
+        "**/vault/ML system design.Youtube Case Study.md"
+      ],
+      "config": {
+        "audience": "knowledgeable",
+        "dialect": "american",
+        "domain": "technical",
+        "emotions": [],
+        "goals": [
+          "inform"
+        ]
+      }
+    }
+  ]
 }

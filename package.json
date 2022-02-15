@@ -9,7 +9,8 @@
   "author": "Kevin <kevin@dendron.so>",
   "license": "MIT",
   "dependencies": {
-    "@dendronhq/dendron-cli": "^0.75.0"
+    "@dendronhq/dendron-11ty-legacy": "^0.81.0",
+    "@dendronhq/dendron-cli": "^0.81.0"
   },
   "description": "- [View the Demo Website](https://dendronhq.github.io/template.publish.github-action/)",
   "bugs": {
