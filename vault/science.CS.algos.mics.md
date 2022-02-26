@@ -2,7 +2,7 @@
 id: XGuPRH9frbFI57K3ZdqVw
 title: mics
 desc: ''
-updated: 1644857401541
+updated: 1645469034750
 created: 1641979954736
 ---
 
@@ -480,6 +480,19 @@ For example
 
 
 
+# [1065. Index Pairs of a string](https://leetcode.com/problems/index-pairs-of-a-string/)
+
+
+approach:
+
+Build a set out of the words. Then check if each pair in there 
+$O(n^2)$ time, $O(n*max(len(words)))$ space.
+
+Another approach?
+
+Variation of KMP?
+
+Trie? This will be like $O(n*log(n))$
 
 
 

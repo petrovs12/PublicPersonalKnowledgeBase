@@ -17,6 +17,6 @@ created: 1641865807608
 # MCMC and Sampling
 
 [[science.cs.theory.Code Transformations.Differentiable Programming.turing]]
-[[science.cs.theory.Code Transformations.Differentiable Programming.stan]]
+[[science.CS.theory.Code Transformations.Differentiable and Probabalistic Programming.stan]]
 
 

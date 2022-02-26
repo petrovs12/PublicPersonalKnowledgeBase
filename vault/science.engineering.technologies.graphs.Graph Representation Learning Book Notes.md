@@ -2,7 +2,7 @@
 id: 6ExSLfIOObjVKn0LLBH9e
 title: Graph Representation Learning Book Notes
 desc: ''
-updated: 1644952194563
+updated: 1645906027798
 created: 1644927461109
 ---
 
@@ -62,7 +62,7 @@ Doing the same thing on the level of graphs
 
 
 ## Node Features
-[[Node Features]]
+[[science.engineering.technologies.graphs.Graph Analysis.Node Features]]
 
 
 

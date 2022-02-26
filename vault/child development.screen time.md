@@ -2,9 +2,18 @@
 id: ermDthOLQKlRCqc9jqdNZ
 title: Screen Time
 desc: ''
-updated: 1643491335463
+updated: 1645913379564
 created: 1641840696950
 ---
+# Cribsheet
+The conclusion from the book is that limited screen time is not likely to be a problem. 
+This is true if TV is replacing low-value activities. When the parent/caregiver is tired or needs to do something  they can use the TV.
+Children below the age of 3 years are not likely to learn anything from TV. Older children (3-5) can get value from educational material, such as Sesame Street. Interaction w/ real humans is still a  higher value learning activity.
+
+It's likely that educational screen time (i.e. various games on the iPad) have similar properties, e.g. for very small children useless, but after 18-24 months, maybe useful.
+
+Watch out for reduced physical activity, as obesity is a risk w/ TV.
+
 
 # Oster Article ^Oster
 [emily oster about screentime](https://fivethirtyeight.com/features/screen-time-for-kids-is-probably-fine/) 

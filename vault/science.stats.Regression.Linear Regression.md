@@ -24,7 +24,7 @@ created: 1641834611902
 
 
 
-[[science.CS.theory.Code Transformations.Differentiable Programming.stan]]
+[[science.CS.theory.Code Transformations.Differentiable and Probabalistic Programming.stan]]
 [[science.cs.theory.Code Transformations.Differentiable Programming.turing]]
 
 

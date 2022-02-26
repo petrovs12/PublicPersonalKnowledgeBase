@@ -2,7 +2,7 @@
 id: Lb14IxEaTJ2U15FVVVG5Q
 title: Machine Learning
 desc: ''
-updated: 1643912669528
+updated: 1645910103193
 created: 1643912602824
 ---
 
@@ -16,3 +16,8 @@ created: 1643912602824
 
 
 Ml fitting
+
+
+
+# ML Process
+![[stats.Data Science and ML Process]]

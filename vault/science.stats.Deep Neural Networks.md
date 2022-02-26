@@ -117,7 +117,7 @@ Combine modular sets of feature extractors into 1 item embedding. E.g.
 
 
 # Frameworks/Libraries
- [[science.CS.theory.Code Transformations.Differentiable Programming]]
+ [[science.CS.theory.Code Transformations.Differentiable and Probabalistic Programming]]
  [[science.CS.theory.Code Transformations.Differentiable Programming.tensorflow]]
  [[science.CS.theory.Code Transformations.Differentiable Programming.pytorch]]
  [[science.CS.theory.Code Transformations.Differentiable Programming.jax]]
