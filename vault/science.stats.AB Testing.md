@@ -2,7 +2,7 @@
 id: JClhWanv6nT58jkwQvo3o
 title: AB Testing
 desc: ''
-updated: 1642528207796
+updated: 1646230981004
 created: 1642360312726
 ---
 
@@ -71,3 +71,17 @@ In social network:
 test on differennt 'clusters' of people.
 
 __Ego-network randomization__. A more scalable variation of the above.
+
+
+
+# AB testing for [[science.stats.Regression.Ranking]] 
+[[engineering.system_design.ML System Design.Recommender Systems]]
+
+Please also see [[science.stats.Regression.Loss Functions#^ranking-start]].
+
+Comparing two rankings via clicks.
+Say 2 algorithms give 2 rankings, Ranking A, ranking B.
+Merge-sort-remove-duplicates interleaving the rankings.
+Assign first element randomly.
+Count clicks from A and B. Better one will on average get more rankings.
+

@@ -2,7 +2,7 @@
 id: pBIMmRuN5zKHlVDIWn2wt
 title: Loss Functions
 desc: ''
-updated: 1644232568530
+updated: 1646230450457
 created: 1642432837032
 ---
 
@@ -38,8 +38,70 @@ For each user and each relevant item, compute
 the mean precision of the list __trough__ that item
 
  ```
-* Precision at K ("p@K").
-* DCG/NDCG (Normalized Discounted Gain)
+
+
+## Ranking- Binary Relevance
+### Mean Average Precision
+ Define 'precision trough k' to mean 'how many items until the $k-th$ are relevant. The average of these is the Average Precision. The mean of that is the loss of the ranker.
+
+ 0. **MAXIMIZE**
+ 1. For each query, compute $AP(q)$ (average precision). To compute average precision, compute first $P_1(q) = I(1_{\text{user clicked on 1st result}})$
+
+ $P_k(q) =\sum_{i=1..k} I(1_{\text{user clicked on i-th result}})$
+
+ $AP_k(q) =\frac{\sum_{i=1..k} P_k(q)}{k}$
+ 2. The MAP is the mean of these for a given ranking algorithm.
+
+
+
+### Mean Reciprocal Rank
+The 'performance' is $1/i$, where the highest option we click on is the $i$-th one. Then the avg of that is MRR
+
+0. **MAXIMIZE**
+1. Say we produce $k$ options for a query, and the __highest option__ ($HO(q)$) the  user interacts with is the $i$-th option. If they don't interact, assume $HO(q)=k+1$
+2. $MRR_recommender =\frac{\sum_{i=1..Q}\frac{1}{HO(q)}}{Q}$
+
+
+
+## Ranking- Beyond Binary Relevance
+ 
+ Assume we know the relevances of the documents. Note- this can be used to differentiate signals in ads between look, click, put in basket, purchase, etc.
+ So for each document there is a 'relevance ground truth' $rel_d$.
+ Now, let a query $q$ return the order $\pi_1,\pi_2,...,\pi_k$
+
+### Discounted Cumulative Gain ^DCG
+
+We discount things, lower on the list.
+$DCG_p = rel_{\pi_1}+sum_{i=2..k}(rel_{\pi_i}/(1+log(i)))$
+Can also use:
+
+$DCG_{[\pi(1),\pi(2),...]} = rel_{\pi_1}+sum_{i=2..k}(2^{rel_{\pi_i}}/(1+log(i)))$
+
+which puts very high emphasis on highly relevant documents.
+
+
+## Normalized Discounted Cumulative Gain ^NDCG
+
+normalize DCG by the ideal DCG.
+
+$ DCG_{best}(el_1,el_2,...) = DCG(sortDecsending([el_1,el_2,...])) $
+
+$ NDCG([e_1,e_2,...])= DCG([e_1,e_2,...])/DCG(sortDesc([e_1,e_2,...])) $
+
+
+
+
+
+
+
+## Precision at K ("p@K").
+
+ Precision @ 1: if first item is relevant, $P_1=1$, else 0.
+
+
+## What if no relevant results
+
+If user does more queries, then can find the reciprocal rank, MRR is the mean RR across multiple queries.
 
 ^ranking-end
 
