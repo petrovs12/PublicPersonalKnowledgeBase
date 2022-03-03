@@ -2,7 +2,7 @@
 id: QE1BddXlccbyYN1avaB4M
 title: Recommender Systems
 desc: ''
-updated: 1642521169022
+updated: 1646306385716
 created: 1642338149259
 ---
 
@@ -44,11 +44,14 @@ d["Top Recommendations(ordered))"]
 a--scoring-->b--complex re-scoring-->c--ranking,selection-->d
 ```
 # High-level description on priorities/ ML approach at each stage above
-# First Pass
+# First Pass ^candidate_generation
 To get from __Corpus__ to __Candidates__
 
 quick-ish models, fast collaborative filtering,etc.
+
 KNN w/ random projection or local hashing, etc.
+[[science.math.Functional Analysis.High Dimensional Neighborhood Search]]
+[[science.math.Functional Analysis.High Dimensional Neighborhood Search.Random Projections]]
 
 # Second Pass
 

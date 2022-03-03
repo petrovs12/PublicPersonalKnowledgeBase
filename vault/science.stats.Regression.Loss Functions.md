@@ -2,7 +2,7 @@
 id: pBIMmRuN5zKHlVDIWn2wt
 title: Loss Functions
 desc: ''
-updated: 1646296745491
+updated: 1646303485788
 created: 1642432837032
 ---
 
@@ -41,7 +41,7 @@ the mean precision of the list __trough__ that item
 
 
 ## Ranking- Binary Relevance
-### Mean Average Precision
+### Mean Average Precision ^ranking-map
  Define 'precision trough k' to mean 'how many items until the $k-th$ are relevant. The average of these is the Average Precision. The mean of that is the loss of the ranker.
 
  0. **MAXIMIZE**
@@ -54,7 +54,7 @@ the mean precision of the list __trough__ that item
 
 
 
-### Mean Reciprocal Rank
+### Mean Reciprocal Rank ^ranking-mar
 The 'performance' is $1/i$, where the highest option we click on is the $i$-th one. Then the avg of that is MRR
 
 0. **MAXIMIZE**
@@ -80,7 +80,7 @@ $DCG_{[\pi(1),\pi(2),...]} = rel_{\pi_1}+sum_{i=2..k}(2^{rel_{\pi_i}}/(1+log(i))
 which puts very high emphasis on highly relevant documents.
 
 
-## Normalized Discounted Cumulative Gain ^NDCG
+## Normalized Discounted Cumulative Gain ^ranking-NDCG
 
 normalize DCG by the ideal DCG.
 
@@ -113,5 +113,3 @@ L_{\delta }(a)={\begin{cases}{\frac  {1}{2}}{a^{2}}&{\text{for }}|a|\leq \delta 
 This function is quadratic for small values of a, and linear for large values, with equal values and slopes of the different sections at the two points where {\displaystyle |a|=\delta }|a|=\delta . The variable a often refers to the residuals, that is to the difference between the observed and predicted values {\displaystyle a=y-f(x)}a=y-f(x), so the former can be expanded to[2]
 
 {\displaystyle L_{\delta }(y,f(x))={\begin{cases}{\frac {1}{2}}(y-f(x))^{2}&{\textrm {for}}|y-f(x)|\leq \delta ,\\\delta \,(|y-f(x)|-{\frac {1}{2}}\delta ),&{\textrm {otherwise.}}\end{cases}}}{\displaystyle L_{\delta }(y,f(x))={\begin{cases}{\frac {1}{2}}(y-f(x))^{2}&{\textrm {for}}|y-f(x)|\leq \delta ,\\\delta \,(|y-f(x)|-{\frac {1}{2}}\delta ),&{\textrm {otherwise.}}\end{cases}}}
-
-

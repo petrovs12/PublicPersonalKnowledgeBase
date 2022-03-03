@@ -2,12 +2,12 @@
 id: mrutVzfoYT6wrHEOKLrWf
 title: Classification
 desc: ''
-updated: 1643150192383
+updated: 1646305231916
 created: 1641862643445
 ---
 
 
 
+# Multiple Label Classification
 
-# MultiLabel Classification ^multilabel
-https://machinelearningmastery.com/multi-label-classification-with-deep-learning/
+![[science.stats.Regression.Classification.Multiple Labels]]

@@ -2,21 +2,25 @@
 id: kWzR0yolsu5D1FBzQDiZE
 title: User Based Metrics (Digital Products)
 desc: ''
-updated: 1642522459793
+updated: 1646303328368
 created: 1642430529527
 ---
 
 # Impressions
 
 
-# CTR
+# CTR ^ctr
+
+
+# Task Success  ^task_success
+Dwell time, not 
 
 
 # Active Users ^active-users
 ## Daily
 ## Monthly
 
-# Depth Of scroll
+# Depth Of scroll 
 
 # User Stickiness
 
