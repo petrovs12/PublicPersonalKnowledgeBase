@@ -2,7 +2,7 @@
 id: v4bhymavtwv0dpnzw0klwwa
 title: Search Ranking
 desc: ''
-updated: 1646305335732
+updated: 1646307880109
 created: 1646303114356
 ---
 
@@ -82,15 +82,39 @@ Can see the intent dataset by manual labelling and then proceed.
  
 
 
+# Relevance Scoring Scheme
+
+Create different models for relevance for:
+1. Terms match
+2. Document popularity
+3. Query intent match
+4. Personalization match
+
+And maybe do a function on that to decide what to show
 
 
+# Feature Engineering
+
+The 'agent types' in this system are:
+1. Searcher
+2. Query
+4. Documents
+5. 'Context' (includes session length, current intent, etc)
+
+In addition, we can think about 
+* Searcher-Document Interactions
+* Query-Document Interactions
 
 
+## Searcher Features
+Demographic data. Historical intents. Interests.
 
+## Query Features 
+Keywords, query embedding. Temporal features (time of day).
+Query historical engagement.
 
-
-
-
+## Document Features
+Document Embedding. Pagerank/popularity measures.
 
 
 

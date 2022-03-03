@@ -2,7 +2,7 @@
 id: x6WJBarY2rinq6LZVpoAE
 title: KNN
 desc: ''
-updated: 1646306636473
+updated: 1646306704015
 created: 1642424901985
 ---
 
@@ -14,11 +14,13 @@ Particularly important if we have user/item embeddings and want to quickly fetch
 
 [[engineering.system_design.ML System Design.Recommender Systems]]
 # Approaches and Tools
-[LSH Algorithm For Nearest Neighborhood search](https://en.wikipedia.org/wiki/Locality-sensitive_hashing#LSH_algorithm_for_nearest_neighbor_search)
+### [LSH Algorithm For Nearest Neighborhood search](https://en.wikipedia.org/wiki/Locality-sensitive_hashing#LSH_algorithm_for_nearest_neighbor_search)
+### KD-Trees
 
-[Microsoft](https://github.com/Microsoft/SPTAG)
-[Facebook](https://engineering.fb.com/2017/03/29/data-infrastructure/faiss-a-library-for-efficient-similarity-search/)
-[Github Benchmarks](https://github.com/erikbern/ann-benchmarks)
+### [Microsoft](https://github.com/Microsoft/SPTAG)
+### [Facebook](https://engineering.fb.com/2017/03/29/data-infrastructure/faiss-a-library-for-efficient-similarity-search/)
+### [Github Benchmarks](https://github.com/erikbern/ann-benchmarks)
+
 
 
 
