@@ -2,7 +2,7 @@
 id: DXLiLGTveXMnlFQGLKG3b
 title: Regularizations
 desc: ''
-updated: 1644232992006
+updated: 1646298983624
 created: 1641864475560
 ---
 # $L_1$or $L_2$ regularizations in regression
@@ -23,7 +23,9 @@ Ridge regression has a closed form solution.
 
 [[science.math.Norms and Metrics]]
 
-#
+# Dropout
+![[science.math.Optimization.Regularizations.Dropout]]
+
 
 
 

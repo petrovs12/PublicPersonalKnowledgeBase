@@ -2,7 +2,7 @@
 id: 0eavyyB1FV31znYjoX6hE
 title: Attention Mechanisms
 desc: ''
-updated: 1646179094183
+updated: 1646244441357
 created: 1644708670411
 ---
 
@@ -34,3 +34,76 @@ This gives a way to generate $y$.
 
 
 Simulate 'time flow' with masking.
+
+
+
+
+# Transformer Tutorial from 
+https://www.jku.at/fileadmin/gruppen/173/Research/Introduction_to_Transformers.pdf
+
+### RNN Recap
+Output $h^{(t)}$ is a function of input $e^{(t)}$ and the
+output of the previous time step $h^{(t-1)}$.
+$h(t) = RNN(h(t-1), e(t))$
+
+$h^t$ - is hidden state
+
+If part of a whole, we can say $h^t$ is a contextualized embedding of $e^t$.
+
+
+## Attention Networks
+
+General Form :
+$O=Att(Q,V)$
+where all of the above are whole matrices:
+
+![](/assets/images/2022-03-02-17-10-22.png)
+
+![](/assets/images/2022-03-02-17-10-41.png)
+
+Given a set of vector values $V$, and a set of vector
+queries $Q$, attention is a technique to compute a
+weighted sum of the values, dependent on each query.
+
+The weights in the weighted sums are called __attentions__
+and denoted by $\alpha$.
+
+So, then:
+
+$\alpha_{i,j}$ - weight for "query" $i$ on "value" $j$.
+$alpha_i$ - attention for "query" $i$.  
+$\sum(\alpha_i)=1$.
+$\alpha_{i,j} = f(q_i,v_j)$ 
+
+where $f$ is some neural network.
+
+The output $o_i= \sum_{j=1..|V|}alpha_{i,j}*v_j$
+
+### Attention Variants
+ 
+Unnormalized dot product attention.
+
+Let 
+$\bar{a}_{i,j} = q_i*v_j$
+
+$a_{i,j} = \frac{exp(a_{i,j})}{\sum_j(exp(a_{i,j}))}$
+
+$v^{out}_j = \sum_{j=1..}a_{i,j}*v_j$
+is then the contextual representation
+The scaled version would be:
+
+$\bar{a}_{i,j} = \frac{q_i*v_j}{\sqrt(d)}$
+
+Another version w/ some paramters would be:
+
+$\bar{a}_{i,j} = q_i*\bold{W}*v_j$ where **W** is a parameter matrix.
+
+
+
+Problem w/ single- head attention is that softmax is quite 'sharp' and maybe there are multiple 'concepts' to learn (e.g. one is subject-object relation, another subject-verb, etc).
+
+In multi-head attention, we can pre-project the embedding into a smaller space, and then concat the outputs.
+
+
+
+

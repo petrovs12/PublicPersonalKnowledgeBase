@@ -2,11 +2,14 @@
 id: F4qDUpHVv34wdYvQu0h2O
 title: Linear Algebra
 desc: ''
-updated: 1643980418123
+updated: 1646295950729
 created: 1641835038170
 ---
 
 Summary from [here](https://minireference.com/static/tutorials/linear_algebra_in_4_pages.pdf).
+
+Also this is interesting [cheat sheet](https://www.cs.cornell.edu/~tomf/notes/cs421-cheat-sheet.pdf), which is a bit more concise and goes somewhat deeper.
+
 
 # Vectors
 A vector $\vec{v}\in R^n$ is a tuple $(v_1,v_2,...,v_n)$.

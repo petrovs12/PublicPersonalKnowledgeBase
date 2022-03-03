@@ -2,7 +2,7 @@
 id: pBIMmRuN5zKHlVDIWn2wt
 title: Loss Functions
 desc: ''
-updated: 1646230450457
+updated: 1646296745491
 created: 1642432837032
 ---
 
@@ -113,3 +113,5 @@ L_{\delta }(a)={\begin{cases}{\frac  {1}{2}}{a^{2}}&{\text{for }}|a|\leq \delta 
 This function is quadratic for small values of a, and linear for large values, with equal values and slopes of the different sections at the two points where {\displaystyle |a|=\delta }|a|=\delta . The variable a often refers to the residuals, that is to the difference between the observed and predicted values {\displaystyle a=y-f(x)}a=y-f(x), so the former can be expanded to[2]
 
 {\displaystyle L_{\delta }(y,f(x))={\begin{cases}{\frac {1}{2}}(y-f(x))^{2}&{\textrm {for}}|y-f(x)|\leq \delta ,\\\delta \,(|y-f(x)|-{\frac {1}{2}}\delta ),&{\textrm {otherwise.}}\end{cases}}}{\displaystyle L_{\delta }(y,f(x))={\begin{cases}{\frac {1}{2}}(y-f(x))^{2}&{\textrm {for}}|y-f(x)|\leq \delta ,\\\delta \,(|y-f(x)|-{\frac {1}{2}}\delta ),&{\textrm {otherwise.}}\end{cases}}}
+
+
