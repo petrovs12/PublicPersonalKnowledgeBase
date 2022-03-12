@@ -2,7 +2,7 @@
 id: gImPQvOVGCsqgPnkpuVfC
 title: System Design
 desc: ''
-updated: 1647079571111
+updated: 1647079843146
 created: 1641827611219
 ---
 
@@ -24,10 +24,7 @@ These are good ones:
 [Design Messenger](https://www.youtube.com/watch?v=uzeJb7ZjoQ4&ab_channel=Exponent)
 [Design Build System](https://www.youtube.com/watch?v=q0KGYwNbf-0&ab_channel=Cl%C3%A9mentMihailescu)
 
-1. Join the [discord](https://discord.gg/SZBFMZen)
- There's a channel for system design with some resources.
- The following ones are pretty comprehensive (I personally didn't use them, though):
-
+1. Join a discussion group. 
 2. [Grokking is pretty classic](https://www.educative.io/courses/grokking-the-machine-learning-interview).
 Can do the free trial and or get the pdf for free
  Read trough it. I [this system design Interview book](https://www.amazon.de/-/en/Frank-Kane/dp/B09M172JQK/ref=sr_1_1?crid=24YZRAKE14LBZ&keywords=mastersystem+design+vorstellungsgespr%C3%A4ch&qid=1647079294&sprefix=sennheiser+450bt+battery%2Caps%2C92&sr=8-1) was a bit better, but maybe it was ergonomic issue(reading on kindle).
@@ -39,13 +36,14 @@ Some nice Quora Discussions I've found:
 [RDBMS-over-nosql](https://www.quora.com/What-are-some-reasons-to-use-traditional-RDBMS-over-NoSQL>)
 [Relational-Disadvantages](https://www.quora.com/What-are-disadvantages-of-relational-databases)
 [Time Complexity of Joins](https://www.quora.com/What-is-time-complexity-of-Join-algorithm-in-Database?share=1)
+[Shopify Data Store Blog](https://shopify.engineering/five-common-data-stores-usage)
 
 Papers:
 [Google Big Table Paper](https://static.googleusercontent.com/media/research.google.com/en//archive/bigtable-osdi06.pdf)
 
 
 3. Practice the drawing tool you'll use during the interview. Do a bunch of drawings/designs with it.
-[Some drawings I've made-private, so the link would work only several times](https://app.excalidraw.com/redeem/1o3Skjxn05c/7utWk67h1HI).
+
 
 
 4. Rememeber to mention [[engineering.system_design.CAP and PACELC Theorems]].
