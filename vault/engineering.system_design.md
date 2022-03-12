@@ -2,7 +2,7 @@
 id: gImPQvOVGCsqgPnkpuVfC
 title: System Design
 desc: ''
-updated: 1647079843146
+updated: 1647080400423
 created: 1641827611219
 ---
 
@@ -32,10 +32,12 @@ Can do the free trial and or get the pdf for free
 3. When I would hit a point I don't understand re: performance and choice of DB, I would go around to google stuff about sql/nosql/ usage patterns of different DB's.
 Some notes here:
 [[engineering.system_design.nosql databases]]
-Some nice Quora Discussions I've found:
+Some nice Quora Discussions/blogs I've found:
+
 [RDBMS-over-nosql](https://www.quora.com/What-are-some-reasons-to-use-traditional-RDBMS-over-NoSQL>)
 [Relational-Disadvantages](https://www.quora.com/What-are-disadvantages-of-relational-databases)
 [Time Complexity of Joins](https://www.quora.com/What-is-time-complexity-of-Join-algorithm-in-Database?share=1)
+[Logs and Real Time Data](https://engineering.linkedin.com/distributed-systems/log-what-every-software-engineer-should-know-about-real-time-datas-unifying)
 [Shopify Data Store Blog](https://shopify.engineering/five-common-data-stores-usage)
 
 Papers:
