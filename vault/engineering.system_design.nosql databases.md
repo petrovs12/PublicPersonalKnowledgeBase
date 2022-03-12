@@ -2,7 +2,7 @@
 id: ku6IjaM8VZscHWIneLNJv
 title: Nosql Databases
 desc: ''
-updated: 1643200872616
+updated: 1647078023910
 created: 1641827261064
 ---
 
@@ -44,6 +44,9 @@ Health trackers, weather data, tracking of orders, and time series data are some
 
 Use case is clear- want recursive joins and long-range relationships.
 It's kind of clear when we want it...
+
+# Column Oriented Databases:
+Support fast appends, use [[science.CS.algos.Run Length Encoding]] to compress data. Great for massive time series (e.g. sensor data, [[engineering.technologies.Internet Of Things]]).
 
 
 # List Of popular NoSQL databases w/ some notes... 

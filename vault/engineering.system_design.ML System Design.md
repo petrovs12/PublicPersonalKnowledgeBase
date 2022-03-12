@@ -2,7 +2,7 @@
 id: DndQcYSP0k8LoajaxpnX5
 title: ML System Design
 desc: ''
-updated: 1643813946735
+updated: 1647078847871
 created: 1642338141330
 ---
 
@@ -67,3 +67,16 @@ Features:
 * Post History/ action history
 * Friends and following -  info from the graph
 
+
+
+
+# Some Videos to Watch
+[OneNote Links](https://onedrive.live.com/view.aspx?resid=A6A13EED7FFACAB8%215824&id=documents&wd=target%28meta%20notes.one%7C5A0AC04E-9E8E-4CFF-A157-0BCC01CE8AC7%2F%29
+onenote:https://d.docs.live.net/a6a13eed7ffacab8/Документи/Leetcode%20Problems/meta%20notes.one#section-id={5A0AC04E-9E8E-4CFF-A157-0BCC01CE8AC7}&end)
+
+https://www.youtube.com/watch?v=7VFoLDN3apI&ab_channel=DataScienceJay
+https://www.youtube.com/watch?v=sEZsIUBIhNk&list=PLmGsNPZGeM5D8fgr2scwe8wZih4SYB7Vt&ab_channel=InfoQ
+
+https://www.youtube.com/watch?v=4mG7morAasw&ab_channel=DataScienceJay
+https://www.youtube.com/watch?v=sEZsIUBIhNk&list=PLmGsNPZGeM5D8fgr2scwe8wZih4SYB7Vt&ab_channel=InfoQ
+https://www.youtube.com/watch?v=HREeLryOh4Q&list=PLmGsNPZGeM5D8fgr2scwe8wZih4SYB7Vt&index=3&ab_channel=ArtificialIntelligence-AllinOne
