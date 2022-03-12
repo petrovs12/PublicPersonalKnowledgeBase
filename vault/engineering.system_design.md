@@ -2,7 +2,7 @@
 id: gImPQvOVGCsqgPnkpuVfC
 title: System Design
 desc: ''
-updated: 1647080400423
+updated: 1647080507066
 created: 1641827611219
 ---
 
@@ -15,6 +15,9 @@ https://www.educative.io/courses/grokking-the-system-design-interview
 If using the course, maybe jump between the case studies and the concepts towards the back.
 from here or the system design interview book, read the concepts first, then go trough the use cases one by one and when you don't understand something, google around.
 After reading through 3-4 of the design use cases, try to replicate by doing them in the drawing tool for the interview. Rinse and repeat.
+
+
+[Designing Data-Intensive Applications](https://dataintensive.net/) is also great, but maybe a bit of a londer-term read, depening on your background and time.
 
 
 # My Study Path
