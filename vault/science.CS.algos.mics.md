@@ -2,7 +2,7 @@
 id: XGuPRH9frbFI57K3ZdqVw
 title: mics
 desc: ''
-updated: 1645469034750
+updated: 1647343025989
 created: 1641979954736
 ---
 
@@ -473,7 +473,7 @@ __Quickselect__ would be O(n^2) worst case, O(n) average case.
  __write from__ pointer will always be >= to __write to__ pointer.
  We can then never write to a place we haven't read from already.
 
-# (leetcode 525 Max Contignouse Array)[https://leetcode.com/problems/contiguous-array/]
+# [leetcode 525 Max Contignouse Array](https://leetcode.com/problems/contiguous-array/)
 Given a binary array nums, return the maximum length of a contiguous subarray with an equal number of 0 and 1.
 let's first build the prefix sums with 0 =-1,1=1. Then, we're looking for 'maximal size array with balance 0'. I think we can do this in O(n) time with a 2-pointer approach.
 For example
@@ -493,6 +493,93 @@ Another approach?
 Variation of KMP?
 
 Trie? This will be like $O(n*log(n))$
+
+
+# [1060. Missing Element in Sorted Array](https://leetcode.com/problems/missing-element-in-sorted-array/)
+
+Notice that if the array $a$ is sorted, then the number of missing elements up to 
+index $i$ is $f(i)= a[i]-a[0]-i$!!
+
+Now, use binary search to find $i$, such that
+$f(i)<=k<f(i+1)$
+Take care of corner cases $i=n-1$.
+Now we can return $a[i]+(k-f(i))$.
+
+# [Find Peak Element 2D](https://leetcode.com/problems/find-a-peak-element-ii/)
+**No two adjanced cells are equal !!**
+
+A peak element is one that's strictly greater than its neighbors to left, right,
+top, and bottom.
+
+Approach:
+1. There is a maximal element.
+2. a. There is a maximal element in the leftmost column, on the 
+rightmost column, or in the middle column
+Check them
+
+2. Take the max element in the middle column. Check numbers in the same row on both sides. Now, if we're increasing in one of these directions, we must have 
+at least 1 local maximum in that direction... Thus recurse there
+Why? Starting from the max in the middle, we can build up an increasing chain of values.
+This chain won't cross to the other half, cause by design we took the max element of the boundary.
+
+
+
+
+# [1231. Divide Chocolate](https://leetcode.com/problems/divide-chocolate/)
+
+Approach: 
+maximin of consequtive chunks...
+Let sweetness be $s$.
+Min we can possibly get is $min(s)$. Max is $floor(sum(s)/k)$.
+Stepsize is maybe min(s).
+Can we do efficient binary search in this interval?
+
+Form the cumsum array.
+
+Checking for feasibility:
+We can do k bisect calls for a given number and see if it works.
+Complexity: $k*log(n)$.
+Total Complexity:
+O(log(sum(s))-min(s)*log(n)*k)
+
+Another solution:
+
+same binary search, but linear check.
+Complexity O(n*log(sum()/min(s)))
+
+
+
+# [Shortest Distance To Target Color](https://leetcode.com/problems/shortest-distance-to-target-color/)
+
+We're given a 1-d array of colors. 
+Then we have a bunch of queries, asking the shortest distance from a given point 
+to a given color.
+
+We can prep some stuff that makes queries fast.
+
+Idea:
+For each color, keep 2 Arrays:
+```
+{'color':[start_index,end_index]} 
+```
+
+of the intervals in question. Then do binary search on both intervals.
+If you get 'same' interval, which would correspond to bisect_right returning 
+say $k+1$ on the start and $k$ on the end, return 0.
+
+Else return min(abs(pos-dat[col][0][k]) # start to the right
+,abs(pos-dat[col][1][k-1])# end to the left
+)
+
+Be careful about the indices!!! Above might have off-by-1 error. 
+
+
+
+# [1229 Meeting Scheduler](https://leetcode.com/problems/meeting-scheduler/)
+
+Given availability time intervals for 2 people and a meeting duration of __duration__, return the earliest time they can meet.
+
+Idea: use merge to figure out 
 
 
 
