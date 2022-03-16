@@ -108,7 +108,8 @@ publishing:
     siteHierarchies:
         - root
     enableSiteLastModified: true
-    siteRootDir: docs
+    # siteRootDir: docs
+    siteRootDir: vault
     siteUrl: 'https://petrovs12.github.io'
     enableFrontmatterTags: true
     enableHashesForFMTags: false
