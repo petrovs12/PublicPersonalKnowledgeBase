@@ -2,7 +2,7 @@
 id: 2UAl3oCLpwxHfTuKY397U
 title: Baby Shopping List
 desc: ''
-updated: 1643491458588
+updated: 1647462028342
 created: 1643486967208
 ---
 
@@ -60,3 +60,5 @@ I went trough first 5 chapters of [Baby 411](https://www.amazon.de/-/en/Ari-Brow
 
 
 ## Consider nannies/ au pair/etc.
+
+
