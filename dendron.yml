@@ -10,7 +10,7 @@ site:
     copyAssets: true
     siteHierarchies:
         - root
-    siteRootDir: docs
+    siteRootDir: vault
     siteUrl: 'https://petrovs12.github.io'
     # assetsPrefix: /template.publish.github-action
     assetsPrefix: /PublicPersonalKnowledgeBase
