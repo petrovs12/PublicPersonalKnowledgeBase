@@ -1,6 +1,29 @@
 version: 5
+useFMTitle: true
+useNoteTitleForLink: true
+mermaid: true
+useKatex: true
 dev:
     enablePreviewV2: true
+
+site:
+    copyAssets: true
+    siteHierarchies:
+        - root
+    siteRootDir: docs
+    siteUrl: 'https://petrovs12.github.io'
+    # assetsPrefix: /template.publish.github-action
+    assetsPrefix: /PublicPersonalKnowledgeBase
+    usePrettyRefs: true
+    title: Dendron
+    description: Personal knowledge space
+    siteLastModified: true
+    gh_edit_branch: main
+    duplicateNoteBehavior:
+        action: useVault
+        payload:
+            - vault
+
 commands:
     lookup:
         note:
