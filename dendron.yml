@@ -21,6 +21,7 @@ site:
         action: useVault
         payload:
             - vault
+    ga_tracking: 307235830
 commands:
     lookup:
         note:
