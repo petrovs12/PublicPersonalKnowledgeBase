@@ -2,7 +2,7 @@
 id: DndQcYSP0k8LoajaxpnX5
 title: ML System Design
 desc: ''
-updated: 1647078847871
+updated: 1647515880110
 created: 1642338141330
 ---
 
@@ -34,6 +34,8 @@ Examples:
 
 # Clarify Objectives And Constraints (requirements)
 
+
+[[seed.Product Management.Product School Book#^companygoals]]
 1. What are we optimizing?
  Engagement+ revenue are common ones.
 2. Timing SLA (batch or real-time)?

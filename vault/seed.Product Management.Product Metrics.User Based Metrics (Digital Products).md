@@ -2,9 +2,12 @@
 id: kWzR0yolsu5D1FBzQDiZE
 title: User Based Metrics (Digital Products)
 desc: ''
-updated: 1646303328368
+updated: 1647515779201
 created: 1642430529527
 ---
+
+
+see also [[seed.Product Management.Product School Book#^companygoals]]
 
 # Impressions
 

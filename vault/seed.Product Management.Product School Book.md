@@ -2,7 +2,7 @@
 id: c7rsts0s84pjnj28m21ee3s
 title: Product School Book
 desc: ''
-updated: 1647505936823
+updated: 1647516433064
 created: 1647470207314
 ---
 
@@ -155,7 +155,31 @@ I don't need it to work in space or underwater? But it's good if it works upside
 
 
 
+## Product Goals ^companygoals
 
+See Also [[seed.Product Management.UX Research and KPI's#^heart]]
+
+Broadly, product goals could be in 3 main categories:
+1. Revenue: 
+How does the company currently monetize it's products? How do you make them more valuable to customers to make them more willing to pay for the product.
+ 
+2. User Satisfaction : do you want users to be happier
+ What can you deliver that they would love, but couldn't expect?
+
+3. Growth : Do you want more customers
+ What's stopping the customers from using the product? What is lacking in the product to reduce friction?
+
+
+In addition, a company should consider it's context, i.e. what it excels at, what it can't do as well, what it's competitors are doing and what is the market share.
+
+[[Strategy]]
+* What is the company building now?
+
+* Who are the key customers you want to solve a problem for?
+
+* What do you excel at, compared to it's competitors?
+
+* What's the company vision, and more importantly, why does the company exist?
 
 
 
@@ -188,5 +212,6 @@ cadence and flexibility.
 
 
 #TODO - finish chapter 1 and 2 - up to page 13 atm
+
 
 
