@@ -21,7 +21,7 @@ site:
         action: useVault
         payload:
             - vault
-    ga_tracking: 307235830
+    ga_tracking: "G-W9J7FCBWVL"
 commands:
     lookup:
         note:
