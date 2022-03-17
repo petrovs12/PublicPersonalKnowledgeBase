@@ -2,7 +2,7 @@
 id: c7rsts0s84pjnj28m21ee3s
 title: Product School Book
 desc: ''
-updated: 1647518793163
+updated: 1647531585880
 created: 1647470207314
 ---
 
@@ -211,6 +211,80 @@ Investigate layout and information ordering.
 
 Taking on technical debt- must manage that, considering current needs (i.e. build this now) vs future development
 cadence and flexibility.
+
+
+Related to
+
+
+* Prioritizing buglss
+* Testing Software
+* Do whatever's needed to help product ship
+
+* **NOT** writing code or telling people what to write.
+* Design might figure out most common use cases, but many edge cases will appear.
+* Find ways to share prototypes/MVP's to get feedback.
+* Negotiate taking on tehcnical debt.
+* New information about technologies/competitor features.
+
+
+Building is done when a working product has been tested and is ready to release.
+
+### Sharing the Solution 
+
+[[seed.Product Management.Product Marketing]]
+
+Let customers know how the product would help them.
+More PMM(Product Marketing Management)- externally focused.
+
+Even before [[#scoping-and-seedproduct-managementminimum-viable-product]] you should kno wthe 'why ' of the product. 
+
+What problem does it solve?
+Succinctly and effectively communicate what problem is being solved and how it 
+helps the customer **be awesome**.
+Storytelling/[[seed.Product Management.Messaging]]
+
+CNN Example:
+360 VR view- ???
+Rather, say 'be on the ground/scene with our reporters!'
+
+Also, here we plan the release.
+* Plan Beta Test
+*Create marketing assets for web/ads
+* briefing press, launch events, etc
+
+Many things to let people know about the product.
+
+
+### Assessing Solution Impact
+
+At least 2 Parts
+Most importantly, Product impact:
+* Would you success in hitting [[seed.Product Management.Product Metrics]] targets?
+* assess how the product is being used/recieved by customers, etc.
+
+
+
+'Process' metrics
+Assess how the process went internally and how people feel about it.
+* Postmortem about dev process- how does team feel, are they quitting, tec
+* What are the updates about our (Bayesian) belief in team strength how do we use that to re-assess for the future?
+* Deadlines, budget, etc
+
+
+
+
+
+
+
+
+
+
+* 
+
+
+
+
+
 
 
 
