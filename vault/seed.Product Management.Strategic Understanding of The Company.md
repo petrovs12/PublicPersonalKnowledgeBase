@@ -2,7 +2,7 @@
 id: nebipgh2jbwp0qaatg3e4us
 title: Strategic Understanding of The Company
 desc: ''
-updated: 1647534178635
+updated: 1647534229436
 created: 1647471923140
 ---
 Notes from 2nd chapter of __The Product Book__.
@@ -98,7 +98,7 @@ a[Investors]-->b[Early Adopters]-->c[Adoption gap]-->d[Early Majority]-->e[Late 
 
 Must jump over adoption gap before mass maarket adoption
 
-# Make Personas REal with Empathy
+# Make Realistic Personas, get under their skin
 
 
 
