@@ -2,7 +2,7 @@
 id: c7rsts0s84pjnj28m21ee3s
 title: Product School Book
 desc: ''
-updated: 1647516433064
+updated: 1647518793163
 created: 1647470207314
 ---
 
@@ -84,7 +84,7 @@ Customers dont' want to give you money. Customers want to be awesome. You help t
 lots of planning
 
 ### Agile
-fast iteration, MVP's
+fast iteration, MVP's ([[seed.Product Management.Minimum Viable Product]])
 
 ### Hybrid (recommended)
 
@@ -113,16 +113,6 @@ Broken down to:
 * Create [[seed.Product Management.Opportunity#^create]]
 * Validate [[seed.Product Management.Opportunity#^validate]]
 
-How to get ideas?
-
-Look at [[seed.Product Management.Product Metrics]] on how users are using the product. What are they engaging with?
-Does this contradict with data from surveys?
-
-For example, it might be that in a CNN app users engage more with videos that text articles. Maybe they watch the whole video,
-but dont' scroll down as much. This is an __opportunity__ to make them engage more with the content (and show more ads).
-
-
-
 
 ### [[seed.Product Management.Product Metrics]]
 
@@ -136,22 +126,6 @@ Ask yourself 'Why does the company exist??'
 After identifying the right opportunity, you need to [[seed.Product Management.Opportunity#^validate]] validate it.
 
 After validating, need to turn it into something build-able.
-
-#### Scoping and [[seed.Product Management.Minimum Viable Product]]
-
-Define goals and non-goals.
-Clearly define the opportunity, customers you want to target (and don't want to target), and product requirements .
-
-
-Example:
-
-Opportunity:
-Build a Pen
-Customers:
-Students
-
-Non-goals
-I don't need it to work in space or underwater? But it's good if it works upside-down?
 
 
 
@@ -169,10 +143,10 @@ How does the company currently monetize it's products? How do you make them more
 3. Growth : Do you want more customers
  What's stopping the customers from using the product? What is lacking in the product to reduce friction?
 
-
 In addition, a company should consider it's context, i.e. what it excels at, what it can't do as well, what it's competitors are doing and what is the market share.
 
-[[Strategy]]
+This is covered in: 
+[[seed.Product Management.Strategic Understanding of The Company]]
 * What is the company building now?
 
 * Who are the key customers you want to solve a problem for?
@@ -181,19 +155,49 @@ In addition, a company should consider it's context, i.e. what it excels at, wha
 
 * What's the company vision, and more importantly, why does the company exist?
 
+## Creating Oportunity Hypothesis 
+
+How to get good ideas?
+
+[[seed.Product Management.Opportunity#^hypothesis]]
+
+Current [[seed.Product Management.Product Metrics]] could help you identify the right opportunity.
 
 
 
-###  
+Look at the metrics to on how users are using the product. What are they engaging with?
+Does this contradict with data from surveys?
+
+For example, it might be that in a CNN app users engage more with videos that text articles. Maybe they watch the whole video,
+but dont' scroll down as much. This is an __opportunity__ to make them engage more with the content (and show more ads).
+
+### Scoping and [[seed.Product Management.Minimum Viable Product]] ^scoping
+
+Define goals and non-goals.
+Clearly define the opportunity, customers you want to target (and don't want to target), and product requirements .
 
 
+Example:
+
+Opportunity:
+
+Build a Pen
+
+Customers:
+Students
+
+Non-goals
+I don't need it to work in space or underwater? But it's good if it works upside-down?
 
 
+Create [[seed.Product Management.Minimum Viable Product]].
+
+contrast MVP-driven vs waterfall development.
+Comment on hardware vs software projects.
+
+[[seed.Product Management.Design Document]]
 
 
-
-
- 
 
 
 #### Designing
