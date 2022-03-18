@@ -2,7 +2,7 @@
 id: nebipgh2jbwp0qaatg3e4us
 title: Strategic Understanding of The Company
 desc: ''
-updated: 1647534229436
+updated: 1647594829796
 created: 1647471923140
 ---
 Notes from 2nd chapter of __The Product Book__.
