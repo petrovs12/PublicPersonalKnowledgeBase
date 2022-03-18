@@ -2,7 +2,7 @@
 id: c7rsts0s84pjnj28m21ee3s
 title: Product School Book
 desc: ''
-updated: 1647531585880
+updated: 1647641490000
 created: 1647470207314
 ---
 
@@ -273,6 +273,13 @@ Assess how the process went internally and how people feel about it.
 
 
 
+# Chapter 2- Strategic Understanding of The Company
+
+![[seed.Product Management.Strategic Understanding of The Company]]
+
+
+
+
 
 
 
@@ -289,7 +296,12 @@ Assess how the process went internally and how people feel about it.
 
 
 
-#TODO - finish chapter 1 and 2 - up to page 13 atm
 
 
 
+
+
+
+# Other Resources
+
+[How to develop product sense - blog post](https://www.lennysnewsletter.com/p/product-sense?s=r)

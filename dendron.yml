@@ -22,6 +22,8 @@ site:
         payload:
             - vault
     ga_tracking: "G-W9J7FCBWVL"
+    ga:
+      tracking: G-W9J7FCBWVL 
 commands:
     lookup:
         note:
@@ -91,3 +93,6 @@ preview:
     enablePrettyRefs: true
     enableKatex: true
     automaticallyShowPreview: false
+publishing:
+    ga:
+      tracking: G-W9J7FCBWVL 
