@@ -579,7 +579,132 @@ Be careful about the indices!!! Above might have off-by-1 error.
 
 Given availability time intervals for 2 people and a meeting duration of __duration__, return the earliest time they can meet.
 
-Idea: use merge to figure out 
+Idea:
+ sort ALL time slots. then go trough them;
+ if there is an overlap as we go, they can't be for the same person!
+
+
+
+
+# [287. Find the Duplicate Number](https://leetcode.com/problems/find-the-duplicate-number/)
+
+Use only constant extra space.
+Don't modify the array nums.
+
+sol1:
+Sort, then go.
+Idea 2 : negative marking.
+Idea 3: Tortoise and hare.
+  1. step 1: detect cycle
+  2. Step 2: start from there, do single steps to find the 'entrance' of the cycle.
+    Can do some modular arithmetics to prove it...
+
+
+# [42. Trapping Rain Water](https://leetcode.com/problems/trapping-rain-water/)
+
+For each cell, what we're trapping is:
+
+
+ $trapped_i = max(maxToLeft_i,maxToRight_i)-height_i$
+ So can do it in $O(n)$ time and $O(n)$ extra memory.
+
+ # [1868. Product of Two Run-Length Encoded Arrays
+](https://leetcode.com/problems/product-of-two-run-length-encoded-arrays/)
+
+Just take care of the bookkeepign quite carefully...
+
+# [340. Longest Substring with at most k distinct characters](https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/)
+
+
+Given a string s and an integer k, return the length of the longest substring of s that contains at most k distinct characters.
+
+Sliding window + hashmap.
+In the hashmap, map character-> it's rightmost position.
+When The hashmap gets full, get the character with minimal rightmost position. Delete this, new start is this+1.
+
+#
+#  [1004. Max Consecutive Ones III](https://leetcode.com/problems/max-consecutive-ones-iii/)
+
+Give an array of binary numbers, return the maximum number of consecutive 1s if you're allowed to flip at most $k$ 0's.
+
+Idea:
+Try to calculate 'maximum number to flip if 1'seq' ends
+at a given index...
+
+Say we build a cumsum of 0's. 
+
+Then $maxUntil_i = i-min(j| cumsum_1(j)>=i-k)$
+
+this can be found w/ binary search.
+
+# [1886. Determine Whether Matrix Can Be Obtained By Rotation](https://leetcode.com/problems/determine-whether-matrix-can-be-obtained-by-rotation/)
+
+Note the clockwise rotations of $R^{m*m}$ matrix transforms the coordinates as follows:
+
+
+$(i,j)\rightarrow (j,m-i) \rightarrow (m-i,m-j) \rightarrow (m-j,i) \rightarrow (i,j)$
+
+and with the 0-based indexing:
+
+$(i,j)\rightarrow (j,m-i-1) \rightarrow (m-i-1,m-j-1) \rightarrow (m-j-1,i) \rightarrow (i,j)$
+
+We can use this directly to check if the matrix is a rotation of the original matrix.
+
+![[science.math.Linear Algebra.Rotation Matrices#2D]]
+
+
+
+# [739. Daily Temperatures](https://leetcode.com/problems/daily-temperatures/)
+
+ Use monotonously decresing stack of temperatures (temp,ind) starting from the back.
+
+# [48. Rotate Image](https://leetcode.com/problems/rotate-image/)
+
+![](/assets/images/2022-04-01-12-31-37.png)
+So iterate over the right-top indices and do the swap w/ some intermediate variables.
+Take care of the 0-indexing and of the ranges.
+
+Second option:
+Note that:
+
+$\mathbf{R}(\pi/2) = \left[\begin{array}
+{rrr}
+0 & -1  \\
+1 & 0  \\
+\end{array}\right] = \left[\begin{array}
+{rrr}
+0 & 1  \\
+1 & 0  \\
+\end{array}\right]*\left[\begin{array}
+{rrr}
+1 & 0  \\
+0 & -1  \\
+\end{array}\right]
+$
+
+the first part is the 'transpose', so simply $(i,j)->(j,i)$
+The second part is a left-to-right flip.
+
+
+# [54. Spiral Matrix<!--  -->](https://leetcode.com/problems/spiral-matrix/)
+
+Let the matrix be $m*n$.
+Algorithm:
+1.Initialize the top, right, bottom, and left boundaries as up, right, down, and left.
+2. Traverse from left boundary to right boundary (direction (0,1)). Update right boundary
+3. Go from bottom to top (direction(1,0)). update top. 
+... etc
+when traversing right-to-left or top-to-bottom, check if we're already at the bottom or left, respectively (to check if we have to finish).
+
+
+
+
+
+```
+
+
+
+
 
 
 
