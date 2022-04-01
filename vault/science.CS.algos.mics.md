@@ -686,7 +686,7 @@ the first part is the 'transpose', so simply $(i,j)->(j,i)$
 The second part is a left-to-right flip.
 
 
-# [54. Spiral Matrix<!--  -->](https://leetcode.com/problems/spiral-matrix/)
+# [54. Spiral Matrix](https://leetcode.com/problems/spiral-matrix/)
 
 Let the matrix be $m*n$.
 Algorithm:
