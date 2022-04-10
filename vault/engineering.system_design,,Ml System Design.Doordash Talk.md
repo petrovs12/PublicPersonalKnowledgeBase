@@ -27,14 +27,17 @@ Robust tools + templatzize best practices
 * 1600 cities by end of 2018
 
 Technology company
+
 Connecting the 3-sided marketplace.
+
 Mostly restaurant delivery.
 
 100000+ resraurants.
 300000 delivery drivers.
 10^10^6 deliveries.
-### Goals of users:
+### Goals of users: ^usergoals
 
+[[seed.Product Management.Personas]]
 ### Restaurants:
 reach and revenie
 

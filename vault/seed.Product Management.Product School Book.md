@@ -278,6 +278,9 @@ Assess how the process went internally and how people feel about it.
 ![[seed.Product Management.Strategic Understanding of The Company]]
 
 
+# Chapter 2: Creating Opportunity Hypothesis
+
+
 
 
 
