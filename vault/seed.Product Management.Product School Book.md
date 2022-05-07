@@ -2,7 +2,7 @@
 id: c7rsts0s84pjnj28m21ee3s
 title: Product School Book
 desc: ''
-updated: 1647641490000
+updated: 1649603604489
 created: 1647470207314
 ---
 
@@ -81,7 +81,7 @@ Customers dont' want to give you money. Customers want to be awesome. You help t
 ## Planning Cadence
 
 ### Waterfall
-lots of planning
+Lots of planning, long execution time.
 
 ### Agile
 fast iteration, MVP's ([[seed.Product Management.Minimum Viable Product]])
@@ -278,8 +278,9 @@ Assess how the process went internally and how people feel about it.
 ![[seed.Product Management.Strategic Understanding of The Company]]
 
 
-# Chapter 2: Creating Opportunity Hypothesis
+# Chapter 3: Creating Opportunity Hypothesis
 
+![[seed.Product Management.Opportunity]]
 
 
 
