@@ -2,7 +2,7 @@
 id: 17wPJ84v4MoKBWHDLZsgf
 title: Duality
 desc: ''
-updated: 1644233619575
+updated: 1654523615999
 created: 1644233053625
 ---
 
@@ -31,3 +31,7 @@ if D is empty, $g(\lambda,\mu) = \infty$.
 
 [[science.math.Optimization.Linear Programming]]
 [[science.math.optimization.Dynamic Programming.Approximate Dynamic Programming]]
+
+
+
+# [[science.math.Optimization.Linear Programming#^Duality]]
