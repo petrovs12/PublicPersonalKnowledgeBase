@@ -2,8 +2,7 @@
 id: 8tp5l11ilnvtq0gj8a0hy9u
 title: Habits
 desc: ''
-updated: 1656584099820
-created: 1656582599712
+updated: 1656589245870 created: 1656582599712
 ---
 
 
@@ -77,6 +76,13 @@ Good cause slightly dehydrated
 20/20/20 rule- every 20 minutes, for 20 seconds, look at something 20 feet away.
 
 ### Making your bed
+
+### Being mindful of your posture
+A weird habit in a sense, since it's acombination of other hings.
+
+
+### Watching self-improvement videos
+Worse than reading/podcasts/blogging, as videos  and games prioritize making you feel better about yourself to information density.
 
 ## Not Really a Habit
 
