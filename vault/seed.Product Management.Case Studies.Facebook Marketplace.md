@@ -2,7 +2,7 @@
 id: 6KwfLyWF2Rg2FkxZPXXCW
 title: Facebook Marketplace
 desc: ''
-updated: 1644284018271
+updated: 1647515743447
 created: 1644282947222
 ---
 
@@ -11,7 +11,9 @@ created: 1644282947222
 
 It's a 2-sided market. Anyone can buy(find items) and sell items(+ attract buyers).
 
-# Metrics, Story
+# Metrics, Story ^
+
+[[seed.Product Management.Product School Book#^companygoals]]
 
 Facebook Mission- create community and bring people closer together.
 
@@ -20,10 +22,11 @@ Technology- discover items, buy items; accessible to everyone.
 Main goal- allow ppl to buy and sell products...
 
 First goal-engagement
-## Engagement
+## Engagement ^engagement
 How are people using it and getting value.
 
-Secondary goals- revenue?
+## Secondary goals
+ revenue?
 
 # What does success look like?
 

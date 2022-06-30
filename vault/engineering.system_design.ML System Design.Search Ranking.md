@@ -2,7 +2,7 @@
 id: v4bhymavtwv0dpnzw0klwwa
 title: Search Ranking
 desc: ''
-updated: 1646307880109
+updated: 1647515920722
 created: 1646303114356
 ---
 
@@ -110,6 +110,7 @@ In addition, we can think about
 Demographic data. Historical intents. Interests.
 
 ## Query Features 
+[[seed.Product Management.Product School Book#^companygoals]]
 Keywords, query embedding. Temporal features (time of day).
 Query historical engagement.
 

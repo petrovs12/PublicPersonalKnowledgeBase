@@ -2,7 +2,7 @@
 id: 7N29gmizh7Ks2JbsvDOdF
 title: Ads Evaluation Framework
 desc: ''
-updated: 1642875780362
+updated: 1647440870925
 created: 1642536498536
 ---
 
@@ -78,3 +78,42 @@ Offline data is not representative of the online use case.
 
  e.g. tiny percentage of population w/o spam filter.
  
+
+
+
+# Questions
+
+## 
+
+ ## Reading list/Topics to read
+
+ * EducativeIO Grokking ML list
+ * Attribtuion Modelling for Google and Facebook Ads
+ * https://www.amazon.com/Attribution-Modelling-Google-Ads-Facebook/dp/1792911394
+
+ ## Classification/ranking based approaches
+ ## Optimization/Game Theory/ Bidding
+ ## Technologies
+ He has background in graphs, e-commerce, multi-agent distributed planning, trust,
+ etc
+
+
+
+
+ ## Technology Stack
+
+ ## What are you looking for in terms of skill set?
+
+ How is the team matching done?
+
+
+ # Onboarding
+ # Team Integration
+
+ # Pct of People Working Off-Site
+  How many ppl work 
+
+
+Commerce Area.
+
+##
