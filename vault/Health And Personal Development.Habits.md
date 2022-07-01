@@ -2,10 +2,9 @@
 id: 8tp5l11ilnvtq0gj8a0hy9u
 title: Habits
 desc: ''
-updated: 1656589245870 created: 1656582599712
+updated: 1656589245870 
+created: 1656582599712
 ---
-
-
 # Habit Tier List
 
 From [This youtube video](https://www.youtube.com/watch?v=GriR73kSvPY&ab_channel=ImprovementPill)

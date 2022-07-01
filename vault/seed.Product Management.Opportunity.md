@@ -2,7 +2,7 @@
 id: 7oast75ks9bwvv4r5vlp9yc
 title: Opportunity
 desc: ''
-updated: 1649604374349
+updated: 1651952205155
 created: 1647471947278
 ---
 
@@ -42,7 +42,7 @@ What does it mean to __fail__? To not move the metrics you set out in the beginn
 ## Bug Reports and Data Analysis
 
 
-# 
+
 
 
 
