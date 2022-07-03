@@ -2,7 +2,7 @@
 id: xy6zfr0qbfzn3zvt4um1s6g
 title: QMK Notes
 desc: ''
-updated: 1656879534771
+updated: 1656883245542
 created: 1656838045147
 ---
 
@@ -17,8 +17,9 @@ Notes, following the [official QMK documentation](https://docs.qmk.fm/).
 
 
 From [QMK docs](https://docs.qmk.fm/#/newbs)
-Your computer **keyboard has a processor** inside of it, similar to the one inside your computer. This processor **runs software** that is responsible for **detecting button presses** and informing the computer when keys are pressed. **QMK Firmware** fills the role of **that software**, detecting button presses and passing that information on to the host computer. When you build your **custom keymap**, you are creating an **executable program for your keyboard**.
-
+Your computer **keyboard has a processor** inside of it, similar to the one inside your computer. This processor **runs software** that is responsible for **detecting button pr
+sesses** and informing the computer when keys are pressed. **QMK Firmware** fills the role of **that software**, detecting button presses and passing that information on to the host computer. When you build your **custom keymap**, you are creating an **executable program for your keyboard**.
+jkll
 
 
 
