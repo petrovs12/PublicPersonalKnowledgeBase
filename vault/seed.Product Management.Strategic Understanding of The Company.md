@@ -2,7 +2,7 @@
 id: nebipgh2jbwp0qaatg3e4us
 title: Strategic Understanding of The Company
 desc: ''
-updated: 1647641492930
+updated: 1656924040539
 created: 1647471923140
 ---
 Notes from 2nd chapter of __The Product Book__.
@@ -15,7 +15,7 @@ Notes from 2nd chapter of __The Product Book__.
 [Start with Why](https://www.youtube.com/watch?v=qp0HIF3SfI4&ab_channel=TED)
 There's a book as well.
 
-## _Why_ is guiding light
+##  _Why_  is guiding light
 
 If the product is told as a story, __why__ is the theme.  
 
@@ -65,7 +65,7 @@ Such company could be moderately successful, but may be hard to grow, as it's no
 
 Thus subsequent products may feel disjointed, may start to solve too many different problems, etc.
 
-For many of the in the [[^5C]] analysis you wouldn't be able to produce specific enough answers.
+For many of the in the [[#^5C]] analysis you wouldn't be able to produce specific enough answers.
 
 
 ### __Figure out at least a common implicit/latent value proposition.__
@@ -175,6 +175,3 @@ $NPC = \frac{numPromoters-numDetractors}{TotalVoters}$
 * Collaborators
 * Competitors
 * Culture/Climate - macroeconomics or cultural things that are current
-
-
-
