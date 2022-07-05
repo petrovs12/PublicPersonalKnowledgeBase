@@ -2,7 +2,7 @@
 id: wvih6jmvz02pj960ufl1h6b
 title: Stokes Theorem
 desc: ''
-updated: 1657010078347
+updated: 1657010186216
 created: 1657007830412
 ---
 
@@ -52,3 +52,8 @@ Now, let's calculate this limit in a 2d setting, assuming we cut into rectangles
 Bellow is the solution in cartesian coordinates.
 
 ![](/assets/images/2022-07-05-10-34-17.png)
+
+
+
+Very important:
+[[science.math.calculus.Conservative Forces]]
