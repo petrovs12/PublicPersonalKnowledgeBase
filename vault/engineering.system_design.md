@@ -2,12 +2,14 @@
 id: gImPQvOVGCsqgPnkpuVfC
 title: System Design
 desc: ''
-updated: 1647184967044
+updated: 1656925528703
 created: 1641827611219
 ---
 
 
 # TL;DR Path For Interview
+
+
 Read and practice from either [this system design Interview book](https://www.amazon.de/-/en/Frank-Kane/dp/B09M172JQK/ref=sr_1_1?crid=24YZRAKE14LBZ&keywords=mastersystem+design+vorstellungsgespr%C3%A4ch&qid=1647079294&sprefix=sennheiser+450bt+battery%2Caps%2C92&sr=8-1)
 
 or the grokking course
