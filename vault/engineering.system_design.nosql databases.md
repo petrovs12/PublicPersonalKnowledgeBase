@@ -2,7 +2,7 @@
 id: ku6IjaM8VZscHWIneLNJv
 title: Nosql Databases
 desc: ''
-updated: 1647078023910
+updated: 1657528785297
 created: 1641827261064
 ---
 
@@ -61,6 +61,13 @@ graph LR;
 a[a]-->b[b]
 
 ```
+
+# Time Series
+
+Have some common properties with [[#column-oriented-databases]]
+
+[[engineering.system_design.InfluxDB]]
+
 
 
 

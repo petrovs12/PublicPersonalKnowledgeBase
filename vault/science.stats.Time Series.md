@@ -2,7 +2,7 @@
 id: 9g50kaYv8jpHHgyrpKHyF
 title: Time Series
 desc: ''
-updated: 1647598048330
+updated: 1657536597782
 created: 1644773126915
 ---
 
@@ -76,3 +76,13 @@ RNN: This is a seq2seq model with a similar architecture of @Arthur Suilin's sol
 
 [Favorita EDA](https://www.kaggle.com/headsortails/shopping-for-insights-favorita-eda)
 [Favorita Restaurant](https://www.kaggle.com/headsortails/be-my-guest-recruit-restaurant-eda/notebook)
+
+
+
+# [Operators on Inhomogenous Time Series](https://papers.ssrn.com/sol3/papers.cfm?abstract_id=208278)
+
+
+Interesting bunch of operators. 
+It's good to get a good mathematical foothold of them...
+
+
