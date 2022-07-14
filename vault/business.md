@@ -1,9 +1,9 @@
 ---
-id: 0x84S3hPE2IVkaWtShJZ7
+id: '138666663'
 title: Business
 desc: ''
-updated: 1644925452331
+updated: 1657826059702
 created: 1644925452331
-stub: true
 ---
 
+ Some stuff from the [Organic Growth Playbook](https://www.amazon.com/Organic-Growth-Playbook-Extraordinary-Results-Every/dp/0877573689).
