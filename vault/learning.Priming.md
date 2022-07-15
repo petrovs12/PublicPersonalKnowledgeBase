@@ -2,7 +2,7 @@
 id: wlclce0s020vvgiayqembzu
 title: Priming
 desc: ''
-updated: 1657827595117
+updated: 1657868017352
 created: 1657826787057
 ---
 
@@ -24,4 +24,15 @@ Read ToC first.
 
 **Try to ask deep questions as you go, even if you don't know the wods. Try to guess possible answers/ideas.**
 
+
+Focus on the conceptual understanding, ignoring the stuff that makes no sense.
+
+Go back and forth between pages.
+
+As long as you feel like you're learning, should feel pretty happy with that by itself.
+
+
+Go trough the pages briefly to finish the priming...
+
+Doesn't really work with math (?)
 

@@ -2,7 +2,7 @@
 id: v9lsla60iscdtaj6kcsb2lo
 title: Learing Techniques
 desc: ''
-updated: 1657831450897
+updated: 1657868433548
 created: 1657825099971
 ---
 
@@ -50,7 +50,6 @@ Always handwritten, always non-written if possible (?).
 * 12:10 - Sensory Distraction or Sensory Deprivation 
 Keep your focus on reading, maybe rythim. Play pen/etc. 
 
-
 * 13:25 - What he is reading atm for priming
 When you read a sentence during priming, even if you don't know the words, play with it, think what it could mean,etc.
 * 14:03 - Learning in your head is slow
@@ -66,10 +65,20 @@ Mental model - no words, but images. Turn words into images. Re-express it as a 
 * 23:34 - Drawing out what he is imagining
 So the point is just to try to right away connect stuff, enrich the image and as you go correct it if needed.
 * 25:30 - Embracing the confusion
+
+**Go back and forth with things.**
+[[Health And Personal Development.Progressive Overload]]
+
+
+Try to keep as many things in your mind as long as comfortable, then keep in mind a bit longer [[Health And Personal Development.Progressive Overload]].
 * 28:37 - Page 1 + Priming + If I don't remember something, how do I overcome it
+So it's quite different than the second brain stuff in many ways...
 * 31:21 - Priming through the pages
+he thinks that his initial framework was accurate. Having a visual aid might be good.
 * 33:57 - Finished priming
+
 * 35:04 - Do you listen to study music?
+maybe/probably not...
 * 35:55 - Going through from the beginning being curious and inquisitive (why am I reading this, for what purpose, how can I apply it and how can I simplify it) - Blooms Taxonomy
 * 37:42 - Are you reading backwards?
 * 38:40 - A relaxing process; a well-oiled habit
