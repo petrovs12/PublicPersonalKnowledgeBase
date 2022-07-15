@@ -2,7 +2,7 @@
 id: v9lsla60iscdtaj6kcsb2lo
 title: Learing Techniques
 desc: ''
-updated: 1657868433548
+updated: 1657892382909
 created: 1657825099971
 ---
 
@@ -76,14 +76,17 @@ So it's quite different than the second brain stuff in many ways...
 * 31:21 - Priming through the pages
 he thinks that his initial framework was accurate. Having a visual aid might be good.
 * 33:57 - Finished priming
-
 * 35:04 - Do you listen to study music?
 maybe/probably not...
 * 35:55 - Going through from the beginning being curious and inquisitive (why am I reading this, for what purpose, how can I apply it and how can I simplify it) - Blooms Taxonomy
 * 37:42 - Are you reading backwards?
 * 38:40 - A relaxing process; a well-oiled habit
+Go back and forth with the things you're reading. Be quite active with it in your mind. If using kindle or something,
+figure out how to quickly go back and forth w/ the reading...
 * 41:00 - How can I apply it?
+**Always think "how would I apply this"?  Why is this useful to create other stuff...**
 * 42:40 - Loosing any detail when skimming
+Losing detail is fine. Don't care.
 * 46:06 - Annotating while reading - is it valid?
 * 47:32 - Is this the only study technique that you use?
 * 49:24 - Bullet Points - Memorizing specifics
