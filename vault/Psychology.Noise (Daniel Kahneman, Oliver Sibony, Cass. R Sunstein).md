@@ -2,7 +2,7 @@
 id: ie8gb3id450smszhoj11qht
 title: ' R Sunstein)'
 desc: ''
-updated: 1658054148972
+updated: 1658056298563
 created: 1658050673388
 ---
 
@@ -171,4 +171,21 @@ But if you:
 
 and then use KNN, you can get a lot of 'pattern' noise (as per the classification above).
 
+
+
+
+# How noise happens
+
+## Matching 'Story' to Number s( Part IV)
+
+Lots of noise there.
+
+## Heuristics, Bias, Noise
+
+Another type of 'group' contagion.
+Historical reasons, different [[science.math.Optimization.Objective Functions]] maybe?
+
+
+
+##
 
