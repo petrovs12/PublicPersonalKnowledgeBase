@@ -124,6 +124,4 @@ Nuclear. Germans not willing to embrace Nuclear as part of the long-term solutio
 Phisical chemistry - batteries.
 
 ## What should we do?
-
-
-
+Some suggestions about american foreign policy...
