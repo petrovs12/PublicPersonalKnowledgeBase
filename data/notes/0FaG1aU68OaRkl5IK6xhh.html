@@ -1,0 +1,48 @@
+<h1 id="graph-traversal"><a aria-hidden="true" class="anchor-heading" href="#graph-traversal"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Graph Traversal</h1>
+<h1 id=""><a aria-hidden="true" class="anchor-heading" href="#"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a></h1>
+<h1 id="basic-tree-traversals"><a aria-hidden="true" class="anchor-heading" href="#basic-tree-traversals"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Basic Tree Traversals</h1>
+<h2 id="dfs"><a aria-hidden="true" class="anchor-heading" href="#dfs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>DFS</h2>
+<p>T-top(or root)
+L=left
+R=right</p>
+<p><a href="https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/">Tree traversals</a></p>
+<h3 id="pre-order"><a aria-hidden="true" class="anchor-heading" href="#pre-order"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Pre-order</h3>
+<p>T, L , R </p>
+<h3 id="in-order"><a aria-hidden="true" class="anchor-heading" href="#in-order"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>In-order</h3>
+<p>L, T, R</p>
+<h3 id="post-order-"><a aria-hidden="true" class="anchor-heading" href="#post-order-"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Post-order :</h3>
+<p>L R T</p>
+<h2 id="bfs"><a aria-hidden="true" class="anchor-heading" href="#bfs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>BFS</h2>
+<h3 id="iteratively-deepening-bfs"><a aria-hidden="true" class="anchor-heading" href="#iteratively-deepening-bfs"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Iteratively deepening BFS</h3>
+<h2 id="heuristic-search"><a aria-hidden="true" class="anchor-heading" href="#heuristic-search"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Heuristic Search</h2>
+<h3 id="a"><a aria-hidden="true" class="anchor-heading" href="#a"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>A*</h3>
+<p> consisten heuristic</p>
+<h1 id="dfs-notes"><a aria-hidden="true" class="anchor-heading" href="#dfs-notes"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>DFS Notes</h1>
+<p>Exploring w/ dfs</p>
+<pre class="language-{python}"><code class="language-{python}">
+seen = set()
+def explore(V:List[Int],E:Dict[Int,Set[int]],v):
+    if v in seen:  #optionally!!!
+        return
+    seen.add(v)
+    previsit(v) # optionally! use if need to detect cycles, other stuff 
+    for w in E[v]:
+        explore(V,E,w)
+    postvisit(v) # optionally! useful to keep track of cycles and other stuff
+
+</code></pre>
+<p>Intuition:
+Explore labyrinth: need some <strong>rope</strong> (stack) and <strong>piece of chalk</strong>(visited set). Go along the <strong>rightmost path without chalk marks</strong> (dfs ordering), and return when
+you reach a dead end.</p>
+<h3 id="previsit-and-connected-components"><a aria-hidden="true" class="anchor-heading" href="#previsit-and-connected-components"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Previsit and connected components</h3>
+<pre class="language-{python}"><code class="language-{python}">#...
+cc=dict()
+def previsit(v,cc):
+   ccnum[v] = cc
+</code></pre>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/4FIxH4rGwMUvVyCogNmHe">Optimization</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/iiXbMCqdkdfEMqpCPWrpY">Graphs</a></li>
+</ul>

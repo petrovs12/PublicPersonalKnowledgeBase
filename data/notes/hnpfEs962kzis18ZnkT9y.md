@@ -1,0 +1,1 @@
+[[science.probability.Distributions.bernoulli]]

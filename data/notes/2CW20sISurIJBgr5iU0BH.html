@@ -1,0 +1,83 @@
+<h1 id="twitter-search"><a aria-hidden="true" class="anchor-heading" href="#twitter-search"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Twitter Search</h1>
+<p>.</p>
+<p><a href="https://docs.google.com/drawings/d/1qOdTbwsBYQ65XtxucVac01HI8a5yHMNB3i-mKD570XE/edit">Twitter Search</a>.</p>
+<p>Mostly taken from <a href="https://www.youtube.com/watch?v=KUmFJc3fFuM&#x26;ab_channel=Lucidworks">This conference talk</a>.</p>
+<ul>
+<li>Tweets- per-seconds: 150k</li>
+<li>more than 2*10^9 search queries per day</li>
+<li>Latency between tweeting and them beeing searchable &#x3C;10 seconds</li>
+</ul>
+<h2 id="search-architecture"><a aria-hidden="true" class="anchor-heading" href="#search-architecture"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>search ARchitecture</h2>
+<h1 id="basics-of-lucene-and-inverted-indiex"><a aria-hidden="true" class="anchor-heading" href="#basics-of-lucene-and-inverted-indiex"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Basics Of Lucene and Inverted Indiex</h1>
+<p>Creating an inverted index.
+Sorted index - tree map in java?</p>
+<h2 id="treemap-"><a aria-hidden="true" class="anchor-heading" href="#treemap-"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a aria-hidden="true" class="block-anchor anchor-heading" id="^treemap" href="#^treemap"><svg viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>TreeMap </h2>
+<p>Can be implemented as a  balanced Binary tree (like red-black tree)</p>
+<p>Sr. No.	Algorithm	Time Complexity</p>
+<ol>
+<li>Search	O(log n)</li>
+<li>Insert	O(log n)</li>
+<li>Delete	O(log n)</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>Operation</th><th>Time</th></tr></thead><tbody><tr><td>Search</td><td>O(logn)</td></tr><tr><td>Insert</td><td>(O(logn))</td></tr><tr><td>Delete</td><td>O(logn)</td></tr></tbody></table>
+<p>Can do range queries...</p>
+<h2 id="another-index"><a aria-hidden="true" class="anchor-heading" href="#another-index"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Another index</h2>
+<p><a href="https://www.youtube.com/watch?v=T5RmMNDR5XI&#x26;ab_channel=LuceneSolrRevolution">Lucene Internals Talk</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<table><thead><tr><th>termNo</th><th>Terms</th><th>docids</th></tr></thead><tbody><tr><td>0</td><td>data</td><td>0,1</td></tr><tr><td>1</td><td>index</td><td>0,1</td></tr><tr><td>2</td><td>lucene</td><td>1</td></tr></tbody></table>
+<p>But difficult to update...
+So same data as in a tree</p>
+<h1 id=""><a aria-hidden="true" class="anchor-heading" href="#"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a></h1>
+<p>Check out also <a href="https://app.excalidraw.com/s/1o3Skjxn05c/4C5rccysS5A">General Search</a></p>
+<p>and
+<a href="https://app.excalidraw.com/s/1o3Skjxn05c/66MrgTm9HMM">Twitters search in a bit more detail</a></p>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/tbUgJDCWXinWcW5o65u3U">ElasticSearch</a></li>
+</ul>

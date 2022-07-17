@@ -1,0 +1,109 @@
+<h1 id="search-ranking"><a aria-hidden="true" class="anchor-heading" href="#search-ranking"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Search Ranking</h1>
+<h1 id="problem-statement"><a aria-hidden="true" class="anchor-heading" href="#problem-statement"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Problem Statement</h1>
+<p>General Query, return results</p>
+<h2 id="scale"><a aria-hidden="true" class="anchor-heading" href="#scale"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Scale</h2>
+<h2 id="personalization"><a aria-hidden="true" class="anchor-heading" href="#personalization"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Personalization</h2>
+<h2 id="internationalization"><a aria-hidden="true" class="anchor-heading" href="#internationalization"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Internationalization</h2>
+<h1 id="metrics"><a aria-hidden="true" class="anchor-heading" href="#metrics"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Metrics</h1>
+<h2 id="online-metrics"><a aria-hidden="true" class="anchor-heading" href="#online-metrics"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Online Metrics</h2>
+<h3 id="end-to-end-metrics"><a aria-hidden="true" class="anchor-heading" href="#end-to-end-metrics"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>End To End Metrics</h3>
+<h3 id="user-engagement"><a aria-hidden="true" class="anchor-heading" href="#user-engagement"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>User engagement</h3>
+<p> <a href="/PublicPersonalKnowledgeBase/notes/kWzR0yolsu5D1FBzQDiZE">User Based Metrics (Digital Products)</a>
+<a href="/PublicPersonalKnowledgeBase/notes/kWzR0yolsu5D1FBzQDiZE#^ctr">User Based Metrics (Digital Products)</a></p>
+<h3 id="query-succcess"><a aria-hidden="true" class="anchor-heading" href="#query-succcess"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Query Succcess</h3>
+<p> Dwell time, not re-doing search after short time.</p>
+<p> <a href="/PublicPersonalKnowledgeBase/notes/kWzR0yolsu5D1FBzQDiZE#^task_success">User Based Metrics (Digital Products)</a></p>
+<h1 id="offline-metrics"><a aria-hidden="true" class="anchor-heading" href="#offline-metrics"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Offline Metrics</h1>
+<p> Classification metrics
+<a href="/PublicPersonalKnowledgeBase/notes/C0xQGR2tHaA6spLh3IAiw">Metrics</a>
+AUC, precision, recall, etc.
+Ranking Metrics:
+</p><p></p><div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">Loss Functions</span></div>
+<a href="/PublicPersonalKnowledgeBase/notes/pBIMmRuN5zKHlVDIWn2wt" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div><h2 id="normalized-discounted-cumulative-gain-"><a aria-hidden="true" class="anchor-heading" href="#normalized-discounted-cumulative-gain-"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a aria-hidden="true" class="block-anchor anchor-heading" id="^ranking-NDCG" href="#^ranking-NDCG"><svg viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Normalized Discounted Cumulative Gain </h2>
+</div></div><p></p>,
+<p></p><div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">Loss Functions</span></div>
+<a href="/PublicPersonalKnowledgeBase/notes/pBIMmRuN5zKHlVDIWn2wt" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div><h3 id="mean-average-precision-"><a aria-hidden="true" class="anchor-heading" href="#mean-average-precision-"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a aria-hidden="true" class="block-anchor anchor-heading" id="^ranking-map" href="#^ranking-map"><svg viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Mean Average Precision </h3>
+</div></div><p></p>,<p></p>
+<h1 id="architectural-components"><a aria-hidden="true" class="anchor-heading" href="#architectural-components"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Architectural Components</h1>
+<p> Draw the usual Picture - think about multiple models etc.</p>
+<h1 id="document-selection-algorithm"><a aria-hidden="true" class="anchor-heading" href="#document-selection-algorithm"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Document Selection Algorithm</h1>
+<p> We can give multiple semi-independent scores of different aspects of the user-query-document match.</p>
+<ol>
+<li>
+<p>Intent-document match</p>
+</li>
+<li>
+<p>Document Pagerank</p>
+</li>
+<li>
+<p>Keyword Match</p>
+</li>
+<li>
+<p>User-Document Topic Match</p>
+</li>
+<li>
+<p>Location Match </p>
+<p>We will have independent models, estimating all these scores, and combine them w/ some function to estimate the best score.</p>
+</li>
+</ol>
+<h1 id="ml-architectural-parts"><a aria-hidden="true" class="anchor-heading" href="#ml-architectural-parts"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>ML Architectural Parts</h1>
+<h2 id="query-rewriting"><a aria-hidden="true" class="anchor-heading" href="#query-rewriting"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Query Rewriting</h2>
+<h3 id="spell-checking"><a aria-hidden="true" class="anchor-heading" href="#spell-checking"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Spell Checking</h3>
+<h3 id="query-expansion"><a aria-hidden="true" class="anchor-heading" href="#query-expansion"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Query Expansion</h3>
+<p>Add synonyms and nearby phrases.</p>
+<h4 id="query-relaxation"><a aria-hidden="true" class="anchor-heading" href="#query-relaxation"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Query Relaxation</h4>
+<p>Remove redundant words (e.g. <strong>good italian restaurants</strong> --> <strong>italian restaurant</strong>).</p>
+<h3 id="query"><a aria-hidden="true" class="anchor-heading" href="#query"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Query</h3>
+<h2 id="query-understanding"><a aria-hidden="true" class="anchor-heading" href="#query-understanding"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Query Understanding</h2>
+<h3 id="intent-understanding"><a aria-hidden="true" class="anchor-heading" href="#intent-understanding"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Intent Understanding</h3>
+<p> Embed query?
+Create an 'intent' embedding for the query- 'earthquake' is 'news-y', 'food' is 'local', etc.
+Can see the intent dataset by manual labelling and then proceed.</p>
+<h2 id="inverted-index-lookup"><a aria-hidden="true" class="anchor-heading" href="#inverted-index-lookup"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Inverted Index Lookup</h2>
+<h2 id=""><a aria-hidden="true" class="anchor-heading" href="#"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a></h2>
+<h1 id="relevance-scoring-scheme"><a aria-hidden="true" class="anchor-heading" href="#relevance-scoring-scheme"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Relevance Scoring Scheme</h1>
+<p>Create different models for relevance for:</p>
+<ol>
+<li>Terms match</li>
+<li>Document popularity</li>
+<li>Query intent match</li>
+<li>Personalization match</li>
+</ol>
+<p>And maybe do a function on that to decide what to show</p>
+<h1 id="feature-engineering"><a aria-hidden="true" class="anchor-heading" href="#feature-engineering"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Feature Engineering</h1>
+<p>The 'agent types' in this system are:</p>
+<ol>
+<li>Searcher</li>
+<li>Query</li>
+<li>Documents</li>
+<li>'Context' (includes session length, current intent, etc)</li>
+</ol>
+<p>In addition, we can think about </p>
+<ul>
+<li>Searcher-Document Interactions</li>
+<li>Query-Document Interactions</li>
+</ul>
+<h2 id="searcher-features"><a aria-hidden="true" class="anchor-heading" href="#searcher-features"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Searcher Features</h2>
+<p>Demographic data. Historical intents. Interests.</p>
+<h2 id="query-features"><a aria-hidden="true" class="anchor-heading" href="#query-features"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Query Features</h2>
+<p><a href="/PublicPersonalKnowledgeBase/notes/c7rsts0s84pjnj28m21ee3s#^companygoals">Product School Book</a>
+Keywords, query embedding. Temporal features (time of day).
+Query historical engagement.</p>
+<h2 id="document-features"><a aria-hidden="true" class="anchor-heading" href="#document-features"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Document Features</h2>
+<p>Document Embedding. Pagerank/popularity measures.</p>

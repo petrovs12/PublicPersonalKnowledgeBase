@@ -1,0 +1,54 @@
+<h1 id="time-series"><a aria-hidden="true" class="anchor-heading" href="#time-series"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Time Series</h1>
+<h1 id="hyndman-book"><a aria-hidden="true" class="anchor-heading" href="#hyndman-book"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Hyndman Book</h1>
+<h1 id="data-skeptic-season"><a aria-hidden="true" class="anchor-heading" href="#data-skeptic-season"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Data Skeptic Season</h1>
+<h2 id="matrix-profiles"><a aria-hidden="true" class="anchor-heading" href="#matrix-profiles"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Matrix Profiles</h2>
+<p><a href="https://pypi.org/project/stumpy/">Stumpy</a></p>
+<p>(Site)[https://pypi.org/project/stumpy/]</p>
+<p><a href="/PublicPersonalKnowledgeBase/notes/hJLWp5xZ02jjLzJz2sw2w">Matrix Profile</a>
+Computes:</p>
+<ul>
+<li>patterns/motifs</li>
+<li>GPU- scaleable</li>
+<li>approximate computation</li>
+<li>on-line(incremental) updates</li>
+<li>finding discord/anomalies</li>
+<li>snippets for summarizing time series</li>
+<li>Time Series EDA</li>
+</ul>
+<h1 id="general-references-and-articles"><a aria-hidden="true" class="anchor-heading" href="#general-references-and-articles"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>General References And Articles</h1>
+<p>*<a href="https://otexts.com/fpp3/">Hyndman's online textbook</a></p>
+<h1 id="single-time-series-models"><a aria-hidden="true" class="anchor-heading" href="#single-time-series-models"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Single Time Series Models</h1>
+<h3 id="ets"><a aria-hidden="true" class="anchor-heading" href="#ets"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://www.rdocumentation.org/packages/forecast/versions/8.16/topics/ets">ETS</a></h3>
+<h3 id="autoarima"><a aria-hidden="true" class="anchor-heading" href="#autoarima"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://www.rdocumentation.org/packages/forecast/versions/8.16/topics/auto.arima">AutoArima</a></h3>
+<h3 id="multiple-seasonalities"><a aria-hidden="true" class="anchor-heading" href="#multiple-seasonalities"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Multiple Seasonalities</h3>
+<ul>
+<li><a href="https://www.rdocumentation.org/packages/forecast/versions/8.16/topics/tbats">TBATS</a></li>
+<li><a href="https://www.rdocumentation.org/packages/forecast/versions/8.16/topics/mstl">MSTL</a></li>
+</ul>
+<h1 id="kaggle-state-of-the-art-stuff"><a aria-hidden="true" class="anchor-heading" href="#kaggle-state-of-the-art-stuff"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Kaggle/ State of The Art Stuff</h1>
+<p>Some comments from the forum for the Favorita case:</p>
+<h2 id="1th-place-solution-model-overview"><a aria-hidden="true" class="anchor-heading" href="#1th-place-solution-model-overview"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>1th place solution: model Overview</h2>
+<p>I build 3 models: a lightGBM, a CNN+DNN and a seq2seq RNN model. Final model was a weighted average of these models (where each model is stabilized by training multiple times with different random seeds then take the average), with special dealing with promotion, which I will discuss later. Each model separately can stay in top 1% in the private leaderboard.</p>
+<p>LGBM: It is an upgraded version of the public kernels. More features, data and periods were fed to the model.</p>
+<p>CNN+DNN: This is a traditional NN model, where the CNN part is a dilated causal convolution inspired by WaveNet, and the DNN part is 2 FC layers connected to raw sales sequences. Then the inputs are concatenated together with categorical embeddings and future promotions, and directly output to 16 future days of predictions.</p>
+<p>RNN: This is a seq2seq model with a similar architecture of <a title="Private" style="color: brown" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank">@Arthur (Private)</a> Suilin's solution for the web traffic prediction. Encoder and decoder are both GRUs. The hidden states of the encoder are passed to the decoder through an FC layer connector. This is useful to improve the accuracy significantly.</p>
+<p><a href="https://www.kaggle.com/headsortails/shopping-for-insights-favorita-eda">Favorita EDA</a>
+<a href="https://www.kaggle.com/headsortails/be-my-guest-recruit-restaurant-eda/notebook">Favorita Restaurant</a></p>
+<h1 id="operators-on-inhomogenous-time-series"><a aria-hidden="true" class="anchor-heading" href="#operators-on-inhomogenous-time-series"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=208278">Operators on Inhomogenous Time Series</a></h1>
+<p>Interesting bunch of operators.
+It's good to get a good mathematical foothold of them...</p>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/PublicPersonalKnowledgeBase/notes/D7lbTUdp5hyQ7Ry6mZIBt">ASAP Time Series Paper</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/8po23yqsof1hx8vx1xm4uhv">KATS</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/hJLWp5xZ02jjLzJz2sw2w">Matrix Profile</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/u4lsq2czkmz5n1iwb8dbcp7">Visualization</a></li>
+</ol>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/9zrdj2dhauqiuoizrh4z696">Forecasting</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/hiuvax4qcz63e0zseg5c8ai">Industry Applications</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/3coCU94D3OUfqD6I8EWoX">Feature Stores</a></li>
+</ul>

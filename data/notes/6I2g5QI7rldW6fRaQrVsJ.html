@@ -1,0 +1,23 @@
+<h1 id="train-test-splitting"><a aria-hidden="true" class="anchor-heading" href="#train-test-splitting"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Train Test Splitting</h1>
+<h1 id="random-sampling"><a aria-hidden="true" class="anchor-heading" href="#random-sampling"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Random Sampling</h1>
+<h1 id="stratified-sampling"><a aria-hidden="true" class="anchor-heading" href="#stratified-sampling"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Stratified sampling</h1>
+<p>If we have some set of characteristics, we want to be able to split the set into two subsets, one with the characteristics that are most similar to the characteristics of the other subset.</p>
+<h1 id="time-series-sampling"><a aria-hidden="true" class="anchor-heading" href="#time-series-sampling"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Time series sampling</h1>
+<p> Split by expanding time windows (information set)</p>
+<h1 id="recommender-system-test-set-split-"><a aria-hidden="true" class="anchor-heading" href="#recommender-system-test-set-split-"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a><a aria-hidden="true" class="block-anchor anchor-heading" id="^recsys-start" href="#^recsys-start"><svg viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Recommender System test set split </h1>
+<p> For collaborative filtering if we <strong>don't want to deal with cold starts</strong> directly with this model, use approach similar to stratified sampling. So we just mask some entries in the matrix randomly, should put roughly all items and all users in both the train and test set. Related to <a title="Private" style="color: brown" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank">^transductive-gnn (Private)</a></p>
+<p><a aria-hidden="true" class="block-anchor anchor-heading" id="^recSys-traintestsplit" href="#^recSys-traintestsplit"><svg viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>If we want to deal with the cold start in integrated way (idk of possible), then maybe can just split as we wish by rows/columns/connected components etc.
+<img src="/PublicPersonalKnowledgeBase/assets/images/2022-01-17-15-31-56.png" alt="RecSys traintestsplit"> </p>
+<p>Cold start problem is related to <sup id="fnref-inductive-gnn"><a href="#fn-inductive-gnn" class="footnote-ref">inductive-gnn</a></sup>.</p>
+<p><a aria-hidden="true" class="block-anchor anchor-heading" id="^recsys-end" href="#^recsys-end"><svg viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a> </p>
+<h1 id="graph-neural-nets"><a aria-hidden="true" class="anchor-heading" href="#graph-neural-nets"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Graph Neural Nets:</h1>
+<h2 id="transductive"><a aria-hidden="true" class="anchor-heading" href="#transductive"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Transductive</h2>
+<p><a aria-hidden="true" class="block-anchor anchor-heading" id="^transductive-gnn" href="#^transductive-gnn"><svg viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a> In transductive learning in graphs, we see the whole graph structure, and want to learn something
+about unobserved node/edge labels/features. </p>
+<h2 id="inductive-learning"><a aria-hidden="true" class="anchor-heading" href="#inductive-learning"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Inductive Learning</h2>
+<p><a aria-hidden="true" class="block-anchor anchor-heading" id="^inductive-gnn" href="#^inductive-gnn"><svg viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a> In transductive learning, we have access to both the node features and topology of test nodes while inductive learning requires testing on graphs unseen in the training. </p>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/QE1BddXlccbyYN1avaB4M">Recommender Systems</a></li>
+</ul>

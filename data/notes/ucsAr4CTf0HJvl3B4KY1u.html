@@ -1,0 +1,38 @@
+<h1 id="vision-models"><a aria-hidden="true" class="anchor-heading" href="#vision-models"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Vision Models</h1>
+<p><a href="/PublicPersonalKnowledgeBase/notes/1oUqI7ql4EuPu9Ml94Xe1#^cnn">Deep Neural Networks</a></p>
+<h1 id="image-classification"><a aria-hidden="true" class="anchor-heading" href="#image-classification"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Image Classification</h1>
+<p>Normally these models are trained on ImageNet and top-5 classification accuracy is reported.</p>
+<p>Here are some of the current champions that are also available as <a href="/PublicPersonalKnowledgeBase/notes/fwJbQKdytxvuwjuehkoXf">ONNX</a> models.</p>
+<h2 id="vgg-16"><a aria-hidden="true" class="anchor-heading" href="#vgg-16"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>VGG-16</h2>
+<p><img src="/PublicPersonalKnowledgeBase/assets/images/2022-02-12-23-49-48.png">
+<a href="https://keras.io/api/applications/vgg/">Keras Link</a></p>
+<h2 id="resnet"><a aria-hidden="true" class="anchor-heading" href="#resnet"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>ResNet</h2>
+<p>Uses Shortcut connections</p>
+<h2 id="efficientnet-lite4"><a aria-hidden="true" class="anchor-heading" href="#efficientnet-lite4"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>EfficientNet-Lite4</h2>
+<p><a href="https://arxiv.org/abs/1905.11946">Paper Link</a>
+<a href="https://github.com/onnx/models/tree/main/vision/classification/efficientnet-lite4">ONXX</a></p>
+<h1 id="object-detection-and-image-segmentation"><a aria-hidden="true" class="anchor-heading" href="#object-detection-and-image-segmentation"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Object detection and Image Segmentation</h1>
+<p>Object detection and image segmentation algorithms draw rectangles on a picture and put labels on them.</p>
+<h2 id="evaluation-metrics"><a aria-hidden="true" class="anchor-heading" href="#evaluation-metrics"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Evaluation metrics</h2>
+<p>A common evaluation metric are (from <a href="https://medium.com/@vijayshankerdubey550/evaluation-metrics-for-object-detection-algorithms-b0d6489879f3">here</a>):</p>
+<h3 id="intersection-over-union-iou"><a aria-hidden="true" class="anchor-heading" href="#intersection-over-union-iou"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Intersection over Union (IoU):</h3>
+<p> Evaluate the overlap of the two bounding boxes. Requires a true and predicted bounding box. So then we have something like:</p>
+<p> Intersection Over Union on top 5 Labels.</p>
+<h3 id="coco-map"><a aria-hidden="true" class="anchor-heading" href="#coco-map"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>COCO mAP</h3>
+<p>For the COCO 2017 challenge, the mAP was calculated by averaging the AP over all 80 object categories AND all 10 IoU thresholds from 0.5 to 0.95 with a step size of 0.05. The authors hypothesize that averaging over IoUs rewards detectors with better localization.</p>
+<h2 id="modelsalgorithms"><a aria-hidden="true" class="anchor-heading" href="#modelsalgorithms"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Models/Algorithms</h2>
+<h3 id="yolo3"><a aria-hidden="true" class="anchor-heading" href="#yolo3"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Yolo3</h3>
+<p><a href="https://github.com/onnx/models/tree/main/vision/object_detection_segmentation/yolov3">YoloV4</a></p>
+<h1 id="body-face-and-gesture-analysis"><a aria-hidden="true" class="anchor-heading" href="#body-face-and-gesture-analysis"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Body, Face, And Gesture Analysis</h1>
+<h1 id="image-mnanipulation"><a aria-hidden="true" class="anchor-heading" href="#image-mnanipulation"><svg aria-hidden="true" viewBox="0 0 16 16"><use xlink:href="#svg-link"></use></svg></a>Image MNanipulation</h1>
+<ul>
+<li>Unpaired Image To Image Translation</li>
+<li>Super REsolution </li>
+<li>Fast Neural Style Transfer</li>
+</ul>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/V4exKlI4VAWINpSZOytYw">Transfer Learning</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/hiuvax4qcz63e0zseg5c8ai">Industry Applications</a></li>
+</ul>
