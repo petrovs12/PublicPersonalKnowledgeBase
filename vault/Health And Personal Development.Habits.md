@@ -79,7 +79,6 @@ Good cause slightly dehydrated
 ### Being mindful of your posture
 A weird habit in a sense, since it's acombination of other hings.
 
-
 ### Watching self-improvement videos
 Worse than reading/podcasts/blogging, as videos  and games prioritize making you feel better about yourself to information density.
 
