@@ -2,7 +2,7 @@
 id: ylepk15iub1sb8kqmxom67i
 title: String hashing
 desc: ''
-updated: 1659107161425
+updated: 1659172345593
 created: 1659106935436
 ---
 
@@ -19,4 +19,19 @@ We can also quickly calsulate the hashes of substrings.
 Idk if we can also quickly check for partial matches (i.e. given a string and a potential partial string, check if really is partial).
 I suppose it's not difficult...
 #todo think about this and read more from [the cp algorithms page](https://cp-algorithms.com/string/string-hashing.html#search-for-duplicate-strings-in-an-array-of-strings)
-s
+
+
+# Rabin-Karp for string matching...s
+
+Given a string $s$ and a text (alsostring) $t$ find if thereare matches of $s$ in $t$ and if so, enumerate them
+
+Algorithm - calculate the hash of $s$ and the hashes of all $len(s)$ substrings of $t$, and compare them...
+
+details for exercise...
+
+# KMP, DP and preprocessing...
+
+
+we make a partial match table, which allows us to see where the next possible match starts from, and start matching only from there...
+
+
