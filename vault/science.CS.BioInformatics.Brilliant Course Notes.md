@@ -2,9 +2,10 @@
 id: u0fyvypmzukrz40gzdhi50q
 title: Brilliant Course Notes
 desc: ''
-updated: 1659647058037
+updated: 1659648121865
 created: 1659207995947
 ---
+
 
 
 
