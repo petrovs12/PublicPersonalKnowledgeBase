@@ -2,7 +2,7 @@
 id: u0fyvypmzukrz40gzdhi50q
 title: Brilliant Course Notes
 desc: ''
-updated: 1659209113805
+updated: 1659647058037
 created: 1659207995947
 ---
 
@@ -43,4 +43,9 @@ Like heat, alcohol breaks protein fold...
 
 Different bonds hold different amount of energy, so counting bonds is not an acceptable way to estimate energy...
 
-s
+
+
+# PCR, Genome reading, etc
+
+
+## PCR is doubleing a piDNA
