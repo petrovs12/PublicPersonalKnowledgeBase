@@ -2,7 +2,7 @@
 id: 84toe2l372vlttydmfdd55g
 title: Course Notes
 desc: ''
-updated: 1659781983131
+updated: 1659802807841
 created: 1659775555023
 ---
 
@@ -93,6 +93,10 @@ They claim it's super optimized and gaps will appear and bottleneck you later.
 ## Encoding vs PKM
 
 The course focuses on learning how to learn and encode/understand things better, rahter than  \\
+#TODO think about the difference a bit, even though there are huge overlaps I would say...
+
+
+s
 
 
 
@@ -153,7 +157,74 @@ Failure is Success...
 Try many things...
 
 
-##
+
+## Mind Maps and Spatial organization is more important
+
+One needs Very big mind maps, so then you need infinite canvas.
+
+More processing of the information is better/more important...s
+
+Digital mind-mapping is not as good, as you're consitriced by the options of thr pgoram.
+but much more legible, otherwise I'm consitricted in the retrieval by mydexterity.
+
+Also much harder to edit/ correct later.
+
+So excalidraw is nice...s
+
+
+## What do you do when you have holidays so techniques don't get too rusty...
+
+
+
+### Differentiate between actual cognitive Load and one sucking/catastrophising
+
+
+How do you know if it's cognitive load or if it's just too much.
+Expert recycle. Try to do some measurements, gather feedback, etc.
+s
+## Pure Math
+there is a help article...
+procedural plus declarative knowledge components...
+
+
+
+# Rapid Fire Modules Summary
+
+### Urgency Trapping and Eisenhower Matrix
+
+Have to make time for the important, but not urgent stuff.
+
+Human biological tendencies are to do the urgent stuff, as it's difficult to find joules...
+
+Prioritize important stuff, instead of urgent.
+
+
+
+### Theory VS Practice Times
+
+It should be a ratio of 1:5 for simpler things, and 1:30-1:40 for more complex topics...
+
+So it's very very important to practice skills.
+
+**Doing too much theory without practice can lead to cognitive overload and be worse than just doing nothing**
+
+
+Summary:
+
+Problem: 
+
+We have day to day urges and distractions (like hw) that don’t translate to long term successes like doing well on tests.
+
+Cause: 
+
+We don’t prioritize more “important” tasks like proper studying over urgent tasks like “hw” or maybe even personal urges like loneliness or addiction.
+
+
+Solution: 
+
+We must recognize the tasks on the Eisenhower Matrix and reorganize our time to include the theory:practice ratio. We must organize by importance instead of urgency.
+
+
 
 
 

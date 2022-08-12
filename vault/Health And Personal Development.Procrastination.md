@@ -2,14 +2,25 @@
 id: z9447pkdubkm2s7i2nem2vf
 title: Procrastination
 desc: ''
-updated: 1659776424447
+updated: 1659813249352
 created: 1659776066545
 ---
 
 # Wait but Why? (Tim Urban)
-
 * Future you
 * Impulsive Monkey
+
+# Rapid Anti-Procrastination Techniques
+1. Make a List, broken down by smaller tasks
+ -- have to know the topic first!!!
+2. Set your environment - distractions, etc
+3. get started early 
+4. Group up find yourself a buddy to keep accoutables
+5. Aim for a PB (againhave to have a goal) - meet yourself where you are, not where you should be
+6. Something is better than nothing (done is better than perfect)
+7. Try things outs
+
+
 
 # BEDS-M system
 ## B-Burn Bridges
@@ -31,5 +42,4 @@ If I want to study for 2 hours, but this seems daunting, then force myself to st
 Move the bottleneck from motivation to environment. This requires setting up the enviromnnt, but the motivation for that can be lower cause it's easier to automate and doesn't require cognitive power, and thus doesn't require much willpower.
 
 
-s
 
