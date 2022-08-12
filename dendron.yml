@@ -10,7 +10,7 @@ site:
     siteHierarchies:
         - root
     siteRootDir: docs
-    siteUrl: 'https://petrovs12.github.io'
+    siteUrl: https://petrovs12.github.io
     assetsPrefix: /PublicPersonalKnowledgeBase
     usePrettyRefs: true
     title: Dendron
@@ -21,9 +21,9 @@ site:
         action: useVault
         payload:
             - vault
-    ga_tracking: "G-W9J7FCBWVL"
+    ga_tracking: G-W9J7FCBWVL
     ga:
-      tracking: G-W9J7FCBWVL 
+        tracking: G-W9J7FCBWVL
 commands:
     lookup:
         note:
@@ -32,6 +32,7 @@ commands:
             leaveTrace: false
             bubbleUpCreateNew: true
             fuzzThreshold: 0.2
+            vaultSelectionModeOnCreate: smart
     insertNote:
         initialValue: templates
     insertNoteLink:
@@ -40,6 +41,8 @@ commands:
     insertNoteIndex:
         enableMarker: false
     randomNote: {}
+    copyNoteLink: {}
+    templateHierarchy: template
 workspace:
     vaults:
         -
@@ -55,6 +58,7 @@ workspace:
         addBehavior: asOwnDomain
     graph:
         zoomSpeed: 1
+        createStub: false
     enableAutoCreateOnDefinition: false
     enableXVaultWikiLink: false
     enableRemoteVaultInit: true
@@ -82,10 +86,15 @@ workspace:
             L: low
         todoIntegration: false
         createTaskSelectionType: selection2link
+        taskCompleteStatus:
+            - done
+            - x
     enableUserTags: true
     enableHashTags: true
     dendronVersion: 0.70.0
     enableEditorDecorations: true
+    enableFullHierarchyNoteTitle: false
+    enableSmartRefs: false
 preview:
     enableFMTitle: true
     enableNoteTitleForLink: true
@@ -93,6 +102,32 @@ preview:
     enablePrettyRefs: true
     enableKatex: true
     automaticallyShowPreview: false
+    enableFrontmatterTags: true
+    enableHashesForFMTags: false
 publishing:
     ga:
-      tracking: G-W9J7FCBWVL 
+        tracking: G-W9J7FCBWVL
+    enableFMTitle: true
+    enableNoteTitleForLink: true
+    enableMermaid: true
+    enablePrettyRefs: true
+    enableKatex: true
+    copyAssets: true
+    siteHierarchies:
+        - root
+    writeStubs: false
+    siteRootDir: docs
+    seo:
+        title: Dendron
+        description: Personal Knowledge Space
+    github:
+        enableEditLink: true
+        editLinkText: Edit this page on GitHub
+        editBranch: main
+        editViewMode: tree
+    enableSiteLastModified: true
+    enableFrontmatterTags: true
+    enableHashesForFMTags: false
+    enableRandomlyColoredTags: true
+    enableTaskNotes: true
+    enablePrettyLinks: true
