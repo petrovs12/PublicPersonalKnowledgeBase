@@ -2,7 +2,7 @@
 id: v9lsla60iscdtaj6kcsb2lo
 title: Learing Techniques
 desc: ''
-updated: 1657892382909
+updated: 1660342015925
 created: 1657825099971
 ---
 
@@ -123,4 +123,93 @@ In a bit of time, either as a prompt or work towards it. Either way, it's a prob
 Sounds difficult...
 
 relies on you being able to remember quite a bit...
+
+
+# Live session with Justing Sung
+
+Talkign about Interleaveing...
+
+Declarative vs Procedural...
+
+Spacing and Interleaving effects.
+Research on Interleaving is quite large.
+
+
+## Interleaving - Varying up your practice, looking at somethign from multiple angles...
+
+Orders of learning:
+
+1. repeat
+2. understand and can apply basics to familiar concept, and remember.
+This is kind of isolated...
+3. Can Apply
+4. Can apply to varying contexts, how it relates to other things
+...
+7. Can produce new things.
+
+-----
+
+
+Higher order learning - learn how to use the concept in a highly creative concept...
+
+
+Interleaving 'Table'
+
+Best things to do are: 
+
+for declarative:
+
+Brain dump, generated isolated questions, isolated teaching, , teachingw/ relations, chunkmaps, peer/groupd discussion.
+
+**So basically studying with people is the best...***
+
+
+# Good Techniques
+
+3C- cover-copy, check - ow level
+
+Practice questions- extended method. - solve a problem sheet, then for everything you're unsure, re-solve while looking at the material. Then compare answers vs original answers and book answers...
+
+REBIM -(Repetitive execution Beyond Initial Mastery).
+
+
+Brain Dump (MindMap) - just make a mind map/excalidraw of everything you know...
+
+Generated Questions (Isolated, Broad).
+
+Teaching (Isolated, simple relational)...
+
+## Feynman Technique
+
+There are four key steps to the Feynman Technique:
+
+
+1. Choose a concept you want to learn about
+2. Explain it to a 12 year old
+3. Reflect, Refine, and Simplify
+4. Organize and Review
+
+
+
+Creating an answer sheet by itself can consolidate learning...
+
+Retrieved execution (applied).
+
+
+
+Challenges with the topic...
+
+Later mastery levels basically is 'How to be a good researcher...'a
+
+
+
+Solution - 
+while reading some tutorials, add some variation, but on the variables of interest.
+
+So for example, if there is 
+
+
+
+
+
 

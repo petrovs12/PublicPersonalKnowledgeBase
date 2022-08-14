@@ -21,6 +21,8 @@ site:
         action: useVault
         payload:
             - vault
+            - private
+            - privateVault
     ga_tracking: G-W9J7FCBWVL
     ga:
         tracking: G-W9J7FCBWVL
@@ -45,6 +47,11 @@ commands:
     templateHierarchy: template
 workspace:
     vaults:
+        -
+            fsPath: privateVaulf
+            name: privateVault
+        -
+            fsPath: private
         -
             fsPath: vault
     journal:

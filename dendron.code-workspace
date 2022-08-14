@@ -1,6 +1,13 @@
 {
     "folders": [
         {
+            "path": "privateVaulf",
+            "name": "privateVault"
+        },
+        {
+            "path": "private"
+        },
+        {
             "path": "vault"
         },
         {
