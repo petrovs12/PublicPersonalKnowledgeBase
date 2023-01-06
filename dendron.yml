@@ -1,31 +1,6 @@
-version: 4
-useFMTitle: true
-useNoteTitleForLink: true
-mermaid: true
-useKatex: true
+version: 5
 dev:
     enablePreviewV2: true
-site:
-    copyAssets: true
-    siteHierarchies:
-        - root
-    siteRootDir: docs
-    siteUrl: https://petrovs12.github.io
-    assetsPrefix: /PublicPersonalKnowledgeBase
-    usePrettyRefs: true
-    title: Dendron
-    description: Personal knowledge space
-    siteLastModified: true
-    gh_edit_branch: main
-    duplicateNoteBehavior:
-        action: useVault
-        payload:
-            - vault
-            - private
-            - privateVault
-    ga_tracking: G-W9J7FCBWVL
-    ga:
-        tracking: G-W9J7FCBWVL
 commands:
     lookup:
         note:
@@ -43,7 +18,8 @@ commands:
     insertNoteIndex:
         enableMarker: false
     randomNote: {}
-    copyNoteLink: {}
+    copyNoteLink:
+        aliasMode: title
     templateHierarchy: template
 workspace:
     vaults:
@@ -98,14 +74,12 @@ workspace:
             - x
     enableUserTags: true
     enableHashTags: true
-    dendronVersion: 0.70.0
+    dendronVersion: 0.83.0
     enableEditorDecorations: true
     enableFullHierarchyNoteTitle: false
-    enableSmartRefs: false
 preview:
     enableFMTitle: true
     enableNoteTitleForLink: true
-    enableMermaid: true
     enablePrettyRefs: true
     enableKatex: true
     automaticallyShowPreview: false
@@ -116,7 +90,6 @@ publishing:
         tracking: G-W9J7FCBWVL
     enableFMTitle: true
     enableNoteTitleForLink: true
-    enableMermaid: true
     enablePrettyRefs: true
     enableKatex: true
     copyAssets: true
@@ -138,3 +111,12 @@ publishing:
     enableRandomlyColoredTags: true
     enableTaskNotes: true
     enablePrettyLinks: true
+    assetsPrefix: /PublicPersonalKnowledgeBase
+    siteUrl: https://petrovs12.github.io
+    duplicateNoteBehavior:
+        action: useVault
+        payload:
+            - vault
+            - private
+            - privateVault
+    searchMode: lookup
