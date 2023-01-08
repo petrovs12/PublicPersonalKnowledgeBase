@@ -10,8 +10,6 @@ commands:
             bubbleUpCreateNew: true
             fuzzThreshold: 0.2
             vaultSelectionModeOnCreate: smart
-    insertNote:
-        initialValue: templates
     insertNoteLink:
         aliasMode: none
         enableMultiSelect: false
