@@ -3,26 +3,16 @@
   "pasteImage.prefix": "/",
   "editor.suggest.snippetsPreventQuickSuggestions": false,
   "editor.suggest.showSnippets": true,
-  "files.autoSave": "onFocusChange",
-  "pasteImage.path": "${currentFileDir}/assets/images",
   "editor.snippetSuggestions": "inline",
   "editor.tabCompletion": "on",
   "markdown-preview-enhanced.enableWikiLinkSyntax": true,
   "markdown-preview-enhanced.wikiLinkFileExtension": ".md",
-  "grammarly.overrides": [
-    {
-      "files": [
-        "**/vault/ML system design.Youtube Case Study.md"
-      ],
-      "config": {
-        "audience": "knowledgeable",
-        "dialect": "american",
-        "domain": "technical",
-        "emotions": [],
-        "goals": [
-          "inform"
-        ]
-      }
-    }
+  "files.autoSave": "onFocusChange",
+  "pasteImage.path": "${currentFileDir}/assets/images",
+  "editor.snippetSuggestions": "inline",
+  "editor.tabCompletion": "on",
+  "cSpell.words": [
+    "leetcode",
+    "subquery"
   ]
 }
