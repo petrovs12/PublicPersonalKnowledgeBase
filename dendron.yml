@@ -10,22 +10,17 @@ commands:
             bubbleUpCreateNew: true
             fuzzThreshold: 0.2
             vaultSelectionModeOnCreate: smart
+    insertNote:
+        initialValue: templates
     insertNoteLink:
         aliasMode: none
         enableMultiSelect: false
     insertNoteIndex:
         enableMarker: false
     randomNote: {}
-    copyNoteLink:
-        aliasMode: title
-    templateHierarchy: template
+    copyNoteLink: {}
 workspace:
     vaults:
-        -
-            fsPath: privateVaulf
-            name: privateVault
-        -
-            fsPath: private
         -
             fsPath: vault
     journal:
@@ -39,7 +34,6 @@ workspace:
         addBehavior: asOwnDomain
     graph:
         zoomSpeed: 1
-        createStub: false
     enableAutoCreateOnDefinition: false
     enableXVaultWikiLink: false
     enableRemoteVaultInit: true
@@ -72,49 +66,50 @@ workspace:
             - x
     enableUserTags: true
     enableHashTags: true
-    dendronVersion: 0.83.0
+    dendronVersion: 0.95.0
     enableEditorDecorations: true
     enableFullHierarchyNoteTitle: false
+    enableHandlebarTemplates: false
+    templateHierarchy: template
 preview:
     enableFMTitle: true
     enableNoteTitleForLink: true
+    enableMermaid: true
     enablePrettyRefs: true
     enableKatex: true
     automaticallyShowPreview: false
     enableFrontmatterTags: true
     enableHashesForFMTags: false
 publishing:
-    ga:
-        tracking: G-W9J7FCBWVL
     enableFMTitle: true
     enableNoteTitleForLink: true
+    enableMermaid: true
     enablePrettyRefs: true
     enableKatex: true
+    assetsPrefix: /PublicPersonalKnowledgeBase
     copyAssets: true
     siteHierarchies:
         - root
-    writeStubs: false
+    enableSiteLastModified: true
     siteRootDir: docs
+    siteUrl: https://petrovs12.github.io
+    enableFrontmatterTags: true
+    enableHashesForFMTags: false
+    enableRandomlyColoredTags: true
+    duplicateNoteBehavior:
+        action: useVault
+        payload:
+            - vault
+    writeStubs: false
     seo:
         title: Dendron
-        description: Personal Knowledge Space
+        description: Personal knowledge space
     github:
         enableEditLink: true
         editLinkText: Edit this page on GitHub
         editBranch: main
         editViewMode: tree
-    enableSiteLastModified: true
-    enableFrontmatterTags: true
-    enableHashesForFMTags: false
-    enableRandomlyColoredTags: true
-    enableTaskNotes: true
     enablePrettyLinks: true
-    assetsPrefix: /PublicPersonalKnowledgeBase
-    siteUrl: https://petrovs12.github.io
-    duplicateNoteBehavior:
-        action: useVault
-        payload:
-            - vault
-            - private
-            - privateVault
-    searchMode: lookup
+    theme: dark
+    enableTaskNotes: true
+    templateVersion: 0.97.0
