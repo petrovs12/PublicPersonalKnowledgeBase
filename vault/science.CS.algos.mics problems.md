@@ -2,7 +2,7 @@
 id: BOy4GLBQlse9SzjLAlwqp
 title: mics problems
 desc: ''
-updated: 1643307913447
+updated: 1675413442485
 created: 1641981602342
 ---
 
@@ -593,6 +593,43 @@ Explanation:
 Now you have 3 ribbons of length 5.
 
 
+# Lc 4 Median of Two Sorted Arrays
 
+
+Probably have to do it quickly...
+let's try 'binary search' approach.
+The median is the 50th pctile...
+
+```python
+
+def get_order_statistic(arr1,arr2,k):
+    m = len(arr1)
+    n = len(arr2)
+    # corner cases- m or n =0, k = 0, 
+    # k = m,k = n
+    # then
+    a1 = arr1[k//2-1]
+    a2 = arr2[k//2-1]
+    #then make 2 cuts as follows:
+    
+```
+
+
+# LC 1071. GCD of strings
+
+string 'division with reminder?'
+
+ is it 'just take the common prefix'?
+ no, actually the solution is quite fun:
+```{python}
+# note that thegdc is non-empty iff a+b = b+a
+# so we can just check if a+b = b+a
+# and take the a[gdc(len(a),len(b)):] as the answer
+
+return a[gdc[len(a),len(b)]:] if a+b == b+a else ""
+```
+
+# verify alien dictionary
+learend about itertools zip_longest.
 
 
