@@ -2,7 +2,7 @@
 id: CLujm4Ho6RVqNTGxIZkxa
 title: Algorithms
 desc: ''
-updated: 1642386100114
+updated: 1676633463677
 created: 1641811513625
 ---
 
@@ -43,3 +43,37 @@ Then at seat i, the closest person is min(i - prev, future - i), with one except
 # [Word Pattern](https://leetcode.com/problems/word-pattern/)
 
 Very stupid, solved w/ the 2 hash map approach
+
+# 783. Minimum Distance Between BST Nodes
+
+Solution- can walk over the tree, record thing 
+in a array, sort it, return smallest diff.
+simplest approach:
+walk, push, heapsort while doing it, then walk.
+
+in-order traversal, but the best one can be
+'rightmost' on one side,vs 'leftmost' on the other...
+
+So it's wrong... 
+lets'a analyse a solution.
+use in-order traversal, and while doing it,
+keep track of the current and next, 
+and update the best distance accordingly:
+
+```python
+class Solution:
+    def minDiffInBST(self, root: Optional[TreeNode]) -> int:
+        
+        self.cur = None 
+        self.minimum = float('inf')
+        def inorder(node):
+            if node:
+                inorder(node.left)
+                if self.cur:
+                    self.minimum = min(self.minimum,node.val-self.cur.val)
+                self.cur = node
+                res.append(node.val)
+                inorder(node.right)
+        inorder(root)
+        return self.minimum
+```
