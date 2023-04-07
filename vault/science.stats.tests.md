@@ -2,7 +2,7 @@
 id: uxwwYYzCji7ljiWWT4zif
 title: Tests
 desc: ''
-updated: 1642360068013
+updated: 1678107773606
 created: 1641980075621
 ---
 
@@ -18,6 +18,9 @@ created: 1641980075621
  [Technical Description](https://stats.stackexchange.com/questions/175246/why-is-anova-equivalent-to-linear-regression).
  
 ""Somewhat aphoristically one can describe ANOVA as a regression with dummy variables.""
+
+In one-day anova things are normally distibuted, with common variance...
+
 
 
 # Jarque-Bera Test. ^jbtest

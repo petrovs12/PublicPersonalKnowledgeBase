@@ -2,7 +2,7 @@
 id: CLujm4Ho6RVqNTGxIZkxa
 title: Algorithms
 desc: ''
-updated: 1676633463677
+updated: 1676814536653
 created: 1641811513625
 ---
 
@@ -50,6 +50,12 @@ Solution- can walk over the tree, record thing
 in a array, sort it, return smallest diff.
 simplest approach:
 walk, push, heapsort while doing it, then walk.
+TAP_DANCE_ENABLE = yes
+QMK_SETTINGS = yes
+LTO_ENABLE = yes
+
+VIA_ENABLE = yes
+VIAL_ENABLE = yes
 
 in-order traversal, but the best one can be
 'rightmost' on one side,vs 'leftmost' on the other...

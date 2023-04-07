@@ -2,7 +2,7 @@
 id: epi5112gll0ent70rwcljh7
 title: ChatBots
 desc: ''
-updated: 1676284922564
+updated: 1676814595455
 created: 1673017238080
 ---
 
@@ -12,6 +12,7 @@ ChatGPT is a chatbot by OpenAI, and it's optimized for context-aware conversatio
 
 
 # LLM's and ChatGPT
+
 
 [ben's bites]() is a nice aggregator for applications, reserach and tooling about AI, mostly around LLm's lately...
  
