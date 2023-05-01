@@ -2,7 +2,7 @@
 id: uJNUEXAf3XTxH26LxIUq6
 title: Scientific Method
 desc: ''
-updated: 1682933721729
+updated: 1682938688294
 created: 1644923541099
 ---
 
