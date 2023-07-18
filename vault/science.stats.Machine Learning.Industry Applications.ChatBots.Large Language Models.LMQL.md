@@ -2,7 +2,7 @@
 id: axbhdgw3famw4py1hy1fywg
 title: LMQL
 desc: ''
-updated: 1689689397495
+updated: 1689691102039
 created: 1689680593676
 ---
 # LMQL
@@ -76,3 +76,14 @@ sample, beam_sample, beam_var,...
 
 ## from clause
 specify the model to use
+
+
+# Related work
+
+### Language Model Programming
+
+All sorts of chain-of-thought and similar things can be considered as part of language model programming...
+
+Chain of thought prompting, tree of thought, and others are all part of this and instantiations of it.
+
+
