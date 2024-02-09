@@ -1,0 +1,75 @@
+<h1 id="ml-system-design">ML System Design<a aria-hidden="true" class="anchor-heading icon-link" href="#ml-system-design"></a></h1>
+<h1 id="ml-system-design-interview-structure">ML System Design Interview Structure<a aria-hidden="true" class="anchor-heading icon-link" href="#ml-system-design-interview-structure"></a></h1>
+<p>Signals they're looking for</p>
+<ul>
+<li>Theoretical knowledge of ML</li>
+<li>Methods/ algorithms </li>
+<li>How it's done in the industry/ state of the art solutions</li>
+<li>Practical Experience </li>
+<li>Implementation: development and model serving </li>
+<li>Technical leadership</li>
+<li>Product leadership: </li>
+</ul>
+<p> People ask about recommendation systems, as it:</p>
+<ol>
+<li>Huge impact/ big part.</li>
+<li>Many approaches, very creative methods, could go in different directions.</li>
+<li>Non-trivial model serving.</li>
+<li>Tricky product stuff.</li>
+</ol>
+<p>Examples:</p>
+<ol>
+<li>Recommend new trips to take.</li>
+<li>Recomend restaurants on Google Maps.</li>
+</ol>
+<h1 id="design-process">Design Process<a aria-hidden="true" class="anchor-heading icon-link" href="#design-process"></a></h1>
+<h1 id="clarify-objectives-and-constraints-requirements">Clarify Objectives And Constraints (requirements)<a aria-hidden="true" class="anchor-heading icon-link" href="#clarify-objectives-and-constraints-requirements"></a></h1>
+<p><a href="/PublicPersonalKnowledgeBase/notes/c7rsts0s84pjnj28m21ee3s#^companygoals">Product School Book</a></p>
+<ol>
+<li>What are we optimizing?
+Engagement+ revenue are common ones.</li>
+<li>Timing SLA (batch or real-time)?</li>
+<li>Scale (whole product/all users, is it decomposeable,etc)?</li>
+<li>Multiple languages? </li>
+<li>Recency of content to show?</li>
+</ol>
+<p><strong>Look for buy in...</strong></p>
+<h1 id="user-feedrecommendations">User Feed/recommendations<a aria-hidden="true" class="anchor-heading icon-link" href="#user-feedrecommendations"></a></h1>
+<div class="mermaid">
+  graph LR;
+a[Universe of possible items] -->b[Candidate Generations]-->c[Ranking, scoring, re-ranking]
+</div>
+<h1 id="inputs-and-features">Inputs and Features<a aria-hidden="true" class="anchor-heading icon-link" href="#inputs-and-features"></a></h1>
+<p>Sources:</p>
+<ul>
+<li>User profile</li>
+<li>Item profiles (e.g. videos)</li>
+<li>User-item interactions.</li>
+<li>The search query</li>
+</ul>
+<p>Features:</p>
+<ul>
+<li>Session information (length, number of viewed items)</li>
+<li>Item profiles (e.g. videos): NumViews, weighted number of views, description, features from the video, text, data2vec, etc</li>
+<li>User demographics info - age, gender, nationality, location</li>
+<li>Post History/ action history</li>
+<li>Friends and following -  info from the graph</li>
+</ul>
+<h1 id="some-videos-to-watch">Some Videos to Watch<a aria-hidden="true" class="anchor-heading icon-link" href="#some-videos-to-watch"></a></h1>
+<p>[OneNote Links](<a href="https://onedrive.live.com/view.aspx?resid=A6A13EED7FFACAB8%215824&#x26;id=documents&#x26;wd=target%28meta%20notes.one%7C5A0AC04E-9E8E-4CFF-A157-0BCC01CE8AC7%2F%29">https://onedrive.live.com/view.aspx?resid=A6A13EED7FFACAB8%215824&#x26;id=documents&#x26;wd=target%28meta%20notes.one%7C5A0AC04E-9E8E-4CFF-A157-0BCC01CE8AC7%2F%29</a>
+onenote:<a href="https://d.docs.live.net/a6a13eed7ffacab8/%D0%94%D0%BE%D0%BA%D1%83%D0%BC%D0%B5%D0%BD%D1%82%D0%B8/Leetcode%20Problems/meta%20notes.one#section-id=%7B5A0AC04E-9E8E-4CFF-A157-0BCC01CE8AC7%7D&#x26;end">https://d.docs.live.net/a6a13eed7ffacab8/Документи/Leetcode%20Problems/meta%20notes.one#section-id={5A0AC04E-9E8E-4CFF-A157-0BCC01CE8AC7}&#x26;end</a>)</p>
+<p><a href="https://www.youtube.com/watch?v=7VFoLDN3apI&#x26;ab_channel=DataScienceJay">https://www.youtube.com/watch?v=7VFoLDN3apI&#x26;ab_channel=DataScienceJay</a>
+<a href="https://www.youtube.com/watch?v=sEZsIUBIhNk&#x26;list=PLmGsNPZGeM5D8fgr2scwe8wZih4SYB7Vt&#x26;ab_channel=InfoQ">https://www.youtube.com/watch?v=sEZsIUBIhNk&#x26;list=PLmGsNPZGeM5D8fgr2scwe8wZih4SYB7Vt&#x26;ab_channel=InfoQ</a></p>
+<p><a href="https://www.youtube.com/watch?v=4mG7morAasw&#x26;ab_channel=DataScienceJay">https://www.youtube.com/watch?v=4mG7morAasw&#x26;ab_channel=DataScienceJay</a>
+<a href="https://www.youtube.com/watch?v=sEZsIUBIhNk&#x26;list=PLmGsNPZGeM5D8fgr2scwe8wZih4SYB7Vt&#x26;ab_channel=InfoQ">https://www.youtube.com/watch?v=sEZsIUBIhNk&#x26;list=PLmGsNPZGeM5D8fgr2scwe8wZih4SYB7Vt&#x26;ab_channel=InfoQ</a>
+<a href="https://www.youtube.com/watch?v=HREeLryOh4Q&#x26;list=PLmGsNPZGeM5D8fgr2scwe8wZih4SYB7Vt&#x26;index=3&#x26;ab_channel=ArtificialIntelligence-AllinOne">https://www.youtube.com/watch?v=HREeLryOh4Q&#x26;list=PLmGsNPZGeM5D8fgr2scwe8wZih4SYB7Vt&#x26;index=3&#x26;ab_channel=ArtificialIntelligence-AllinOne</a></p>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/PublicPersonalKnowledgeBase/notes/7N29gmizh7Ks2JbsvDOdF">Ads Evaluation Framework</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/dzt4mpeh7l9dg2lgsj5pjy7">Ads Within Newsfeed Pasc</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/4pK8u9oyNJUJQXRjeq1Xl">Local Search Ranking</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/QE1BddXlccbyYN1avaB4M">Recommender Systems</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/v4bhymavtwv0dpnzw0klwwa">Search Ranking</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/GNXIZwCP8BdYPEsGMvUYO">Youyube Video Recommendation</a></li>
+</ol>

@@ -1,0 +1,56 @@
+<h1 id="algorithms">Algorithms<a aria-hidden="true" class="anchor-heading icon-link" href="#algorithms"></a></h1>
+<h2 id="leetcode-problems">Leetcode Problems<a aria-hidden="true" class="anchor-heading icon-link" href="#leetcode-problems"></a></h2>
+<h3 id="1-two-sum"><a href="https://leetcode.com/problems/two-sum/">1. Two Sum</a><a aria-hidden="true" class="anchor-heading icon-link" href="#1-two-sum"></a></h3>
+<div class="mermaid">
+  
+graph TD;
+a-->b;
+
+</div>
+<p><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi></mrow><annotation encoding="application/x-tex">x</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.4306em;"></span><span class="mord mathnormal">x</span></span></span></span></span></p>
+<div class="math math-display"><span class="katex-display"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML" display="block"><semantics><mtable rowspacing="0.25em" columnalign="right" columnspacing=""><mtr><mtd class="mtr-glue"></mtd><mtd><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>x</mi><mo>=</mo><mn>2</mn></mrow></mstyle></mtd><mtd class="mtr-glue"></mtd><mtd class="mml-eqn-num"></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{align} x=2 \end{align}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.5em;vertical-align:-0.5em;"></span><span class="mtable"><span class="col-align-r"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1em;"><span style="top:-3.16em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathnormal">x</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mord">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5em;"><span></span></span></span></span></span></span></span><span class="tag"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1em;"><span style="top:-3em;"><span class="pstrut" style="height:2.84em;"></span><span class="eqn-num"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.5em;"><span></span></span></span></span></span></span></span></span></div>
+<h1 id="max-distance-to-closest-person"><a href="https://leetcode.com/problems/maximize-distance-to-closest-person/">Max Distance to closest person</a><a aria-hidden="true" class="anchor-heading icon-link" href="#max-distance-to-closest-person"></a></h1>
+<p>Solved w/ O(n) space...
+<a class="color-tag" style="--tag-color: #fbdd7e;" href="/PublicPersonalKnowledgeBase/notes/vYWCmlO6WVQQZUTowUlHT">#TODO</a>
+Check this solution:</p>
+<p>2: Two Pointer [Accepted]
+Intuition</p>
+<p>As we iterate through seats, we'll update the closest person sitting to our left, and closest person sitting to our right.</p>
+<p>Algorithm</p>
+<p>Keep track of prev, the filled seat at or to the left of i, and future, the filled seat at or to the right of i.</p>
+<p>Then at seat i, the closest person is min(i - prev, future - i), with one exception. i - prev should be considered infinite if there is no person to the left of seat i, and similarly future - i is infinite if there is no one to the right of seat i.</p>
+<h1 id="word-pattern"><a href="https://leetcode.com/problems/word-pattern/">Word Pattern</a><a aria-hidden="true" class="anchor-heading icon-link" href="#word-pattern"></a></h1>
+<p>Very stupid, solved w/ the 2 hash map approach</p>
+<h1 id="783-minimum-distance-between-bst-nodes">783. Minimum Distance Between BST Nodes<a aria-hidden="true" class="anchor-heading icon-link" href="#783-minimum-distance-between-bst-nodes"></a></h1>
+<p>Solution- can walk over the tree, record thing
+in a array, sort it, return smallest diff.
+simplest approach:
+walk, push, heapsort while doing it, then walk.
+TAP_DANCE_ENABLE = yes
+QMK_SETTINGS = yes
+LTO_ENABLE = yes</p>
+<p>VIA_ENABLE = yes
+VIAL_ENABLE = yes</p>
+<p>in-order traversal, but the best one can be
+'rightmost' on one side,vs 'leftmost' on the other...</p>
+<p>So it's wrong...
+lets'a analyse a solution.
+use in-order traversal, and while doing it,
+keep track of the current and next,
+and update the best distance accordingly:</p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">class</span> <span class="token class-name">Solution</span><span class="token punctuation">:</span>
+    <span class="token keyword">def</span> <span class="token function">minDiffInBST</span><span class="token punctuation">(</span>self<span class="token punctuation">,</span> root<span class="token punctuation">:</span> Optional<span class="token punctuation">[</span>TreeNode<span class="token punctuation">]</span><span class="token punctuation">)</span> <span class="token operator">-</span><span class="token operator">></span> <span class="token builtin">int</span><span class="token punctuation">:</span>
+        
+        self<span class="token punctuation">.</span>cur <span class="token operator">=</span> <span class="token boolean">None</span> 
+        self<span class="token punctuation">.</span>minimum <span class="token operator">=</span> <span class="token builtin">float</span><span class="token punctuation">(</span><span class="token string">'inf'</span><span class="token punctuation">)</span>
+        <span class="token keyword">def</span> <span class="token function">inorder</span><span class="token punctuation">(</span>node<span class="token punctuation">)</span><span class="token punctuation">:</span>
+            <span class="token keyword">if</span> node<span class="token punctuation">:</span>
+                inorder<span class="token punctuation">(</span>node<span class="token punctuation">.</span>left<span class="token punctuation">)</span>
+                <span class="token keyword">if</span> self<span class="token punctuation">.</span>cur<span class="token punctuation">:</span>
+                    self<span class="token punctuation">.</span>minimum <span class="token operator">=</span> <span class="token builtin">min</span><span class="token punctuation">(</span>self<span class="token punctuation">.</span>minimum<span class="token punctuation">,</span>node<span class="token punctuation">.</span>val<span class="token operator">-</span>self<span class="token punctuation">.</span>cur<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+                self<span class="token punctuation">.</span>cur <span class="token operator">=</span> node
+                res<span class="token punctuation">.</span>append<span class="token punctuation">(</span>node<span class="token punctuation">.</span>val<span class="token punctuation">)</span>
+                inorder<span class="token punctuation">(</span>node<span class="token punctuation">.</span>right<span class="token punctuation">)</span>
+        inorder<span class="token punctuation">(</span>root<span class="token punctuation">)</span>
+        <span class="token keyword">return</span> self<span class="token punctuation">.</span>minimum
+</code></pre>

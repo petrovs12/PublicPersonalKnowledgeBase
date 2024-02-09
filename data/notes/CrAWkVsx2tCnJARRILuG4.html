@@ -1,0 +1,131 @@
+<h1 id="doordash-talk">Doordash Talk<a aria-hidden="true" class="anchor-heading icon-link" href="#doordash-talk"></a></h1>
+<p>from <img src="https://www.youtube.com/watch?v=sEZsIUBIhNk&#x26;list=PLmGsNPZGeM5D8fgr2scwe8wZih4SYB7Vt&#x26;ab_channel=InfoQ"></p>
+<p>Real world ML systems:</p>
+<div class="mermaid">
+  graph LR;
+A(Data Pipeline)-->B(Model Deployment/Management)-->C(Model Monitoring/Evaluation)
+</div>
+<p>Real world ML systems:
+10% algorithms
+90% ml systems</p>
+<p>How to return the focus to the algorithms:</p>
+<h1 id="ml-systems">ML Systems<a aria-hidden="true" class="anchor-heading icon-link" href="#ml-systems"></a></h1>
+<p>Robust tools + templatzize best practices</p>
+<h2 id="doordash-overview">DoorDash overview<a aria-hidden="true" class="anchor-heading icon-link" href="#doordash-overview"></a></h2>
+<ul>
+<li>Last mile on-demand logistics</li>
+<li>3 sided marketplace (users, restaurants, delivery service)</li>
+<li>1600 cities by end of 2018</li>
+</ul>
+<p>Technology company</p>
+<p>Connecting the 3-sided marketplace.</p>
+<p>Mostly restaurant delivery.</p>
+<p>100000+ resraurants.
+300000 delivery drivers.
+10^10^6 deliveries.</p>
+<h3 id="goals-of-users-"><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^usergoals" href="#^usergoals"></a>Goals of users: <a aria-hidden="true" class="anchor-heading icon-link" href="#goals-of-users-"></a></h3>
+<p><a href="/PublicPersonalKnowledgeBase/notes/5e3lyw7ea2a9fjxm4y3hlqp">Personas</a></p>
+<h3 id="restaurants">Restaurants:<a aria-hidden="true" class="anchor-heading icon-link" href="#restaurants"></a></h3>
+<p>reach and revenie</p>
+<h3 id="delivery-service">Delivery Service:<a aria-hidden="true" class="anchor-heading icon-link" href="#delivery-service"></a></h3>
+<p>Flexibility and earnings</p>
+<h3 id="users">Users:<a aria-hidden="true" class="anchor-heading icon-link" href="#users"></a></h3>
+<p>Convenience and seleciton</p>
+<p>Between the above sides, there are multiple ml algorithms:</p>
+<h2 id="users-restaurants">Users-Restaurants:<a aria-hidden="true" class="anchor-heading icon-link" href="#users-restaurants"></a></h2>
+<p>Recyss- recommendation/personalization, search ranking, demand prediction.</p>
+<h2 id="merchants---drivers">Merchants - Drivers:<a aria-hidden="true" class="anchor-heading icon-link" href="#merchants---drivers"></a></h2>
+<p>Core dispatch algorithm
+Hotspots
+Batching of orders/etc</p>
+<p>Seems like the usual VRP stuff...</p>
+<h1 id="merchants">Merchants:<a aria-hidden="true" class="anchor-heading icon-link" href="#merchants"></a></h1>
+<p>food prep time
+parking prediction
+selection intelligence (e.g. what things are ppl going to order, how to structure the menu maybe, etc..)
+combine demand spikes etc</p>
+<h1 id="users-1">Users<a aria-hidden="true" class="anchor-heading icon-link" href="#users-1"></a></h1>
+<p>lifetime value
+promotions
+aquisition</p>
+<h1 id="delivery-service-1">Delivery Service<a aria-hidden="true" class="anchor-heading icon-link" href="#delivery-service-1"></a></h1>
+<p>Supply calculation
+Pay calculation (effort-based)
+Incentives</p>
+<h1 id="offline-batch-to-online-on-demand-axis">Offline (batch) to online (on-demand) axis<a aria-hidden="true" class="anchor-heading icon-link" href="#offline-batch-to-online-on-demand-axis"></a></h1>
+<p>reccomendation might be offline (in this case) so offline
+time prediction -online
+demand forecasting in the middle (multiple horizons).</p>
+<h1 id="training-pipeline">Training Pipeline<a aria-hidden="true" class="anchor-heading icon-link" href="#training-pipeline"></a></h1>
+<div class="mermaid">
+  graph LR;
+F[Common Features Store]-->B
+A[(Data)]-->B("Features Extractor")-->C("Model Training Jobs")-->D[(Model Repo)]
+
+</div>
+<p><a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">Feature Stores (Private)</a> are great/super important.</p>
+<p>They serve as a single source of truth, store embeddings etc.</p>
+<h1 id="ml-performance-goals">ML Performance goals<a aria-hidden="true" class="anchor-heading icon-link" href="#ml-performance-goals"></a></h1>
+<ul>
+<li>Accuracy SLAs</li>
+<li>System SLAs  (latency)</li>
+<li>Debuggability*</li>
+<li>Time to Ship </li>
+</ul>
+<h1 id="debuggability-goals">Debuggability goals<a aria-hidden="true" class="anchor-heading icon-link" href="#debuggability-goals"></a></h1>
+<p> If some model is giving weird results, what do you do? What tooling do you need so you can quickly decide if it's a data issue, model going stale issue, or something else? What</p>
+<h1 id="stefans-own-musings">Stefan's own musings<a aria-hidden="true" class="anchor-heading icon-link" href="#stefans-own-musings"></a></h1>
+<p>Let's have some such structure:</p>
+<div class="mermaid">
+  graph LR;
+
+D[Model Repository]--model-->I
+A[Request]-->B[Load Balancer]--"json_data{user_id:1,restaurant_id:2,type:parking,...,timestamp}"-->C[Predict]
+D[(Model Repository)]--Shadow Model-->I
+
+I[Model Service]-.-C
+
+F[(Feature Store)]--"fetch data for entities, last entry&#x3C;=Timestamp"-->C
+E[(Model Log)]
+G[("Model Metrics and Monitoring")]
+E-.->G
+C--"features, predictions"-->E
+
+A1[Model Metadata]-.->D
+H[S3]--->D
+
+
+</div>
+<p>The model log holds all request, feature values, predictions, and outcomes</p>
+<h2 id="shadowing-models">Shadowing models<a aria-hidden="true" class="anchor-heading icon-link" href="#shadowing-models"></a></h2>
+<p>Run models in parallel, as well as on the different groups. Use the parallel models for counterfactual stuff.</p>
+<h2 id="use-the-model-log-to-replay-stuff">Use the model log to replay stuff<a aria-hidden="true" class="anchor-heading icon-link" href="#use-the-model-log-to-replay-stuff"></a></h2>
+<h2 id="use-log-for-monitoring">Use log for monitoring<a aria-hidden="true" class="anchor-heading icon-link" href="#use-log-for-monitoring"></a></h2>
+<p><a href="/PublicPersonalKnowledgeBase/notes/Zh0txnUCi8NGy872tQhGN">Distribution Drift</a></p>
+<h2 id="use-log-to-train-new-models">Use log to train new models<a aria-hidden="true" class="anchor-heading icon-link" href="#use-log-to-train-new-models"></a></h2>
+<p>Thus making the training and prediction processes closer (modulo effect on customer behavior).</p>
+<h1 id="monitor">Monitor<a aria-hidden="true" class="anchor-heading icon-link" href="#monitor"></a></h1>
+<ul>
+<li>Feature Distributions</li>
+<li>Predictions</li>
+<li>Response times</li>
+</ul>
+<p>track summary stats, plot distributions, alert.</p>
+<h1 id="launching-new-models">Launching new models<a aria-hidden="true" class="anchor-heading icon-link" href="#launching-new-models"></a></h1>
+<p>Much faser now, as now the process is as follows:</p>
+<div class="mermaid">
+  graph TD;
+a[Model Ready]--"Model Registry Knows how to serve model"-->B[Register Model Metadata]
+B--"Can test as shadow as a stage before AB test"-->C
+C["Enable Shadow/experiment"]-->D[Monitor Metrics]
+
+
+
+</div>
+<h1 id="data-preparation">Data Preparation<a aria-hidden="true" class="anchor-heading icon-link" href="#data-preparation"></a></h1>
+<p>While doing data prep, it would be ideal to integrate with the feature store.</p>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/5e3lyw7ea2a9fjxm4y3hlqp">Personas</a></li>
+</ul>

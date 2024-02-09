@@ -1,0 +1,13 @@
+<h1 id="training-serving-skew">Training-Serving Skew<a aria-hidden="true" class="anchor-heading icon-link" href="#training-serving-skew"></a></h1>
+<p>Training-Serving Skew is a problem, which might happen in Data science projects. A mixture of organizational and computational/latency-driven problems may cause it.</p>
+<p>During both Model Development and Serving, we need to do <a href="/PublicPersonalKnowledgeBase/notes/aYLwy5992vOVZ8qaUjjvO">Feature Engineering</a>. But during model development, we have no computational limitations on what features to use, what data to connect to, etc.</p>
+<p>Sometimes can do the Feature Engineering in such a way that's unviable for production serving. For example, we might need the full data in order to compute rolling features, we might need to connect to <a href="/PublicPersonalKnowledgeBase/notes/Mpti59S0Ojcf5Ti5FLZcW">Spark</a> or a bunch of databases, etc.</p>
+<p>In this situation, we should re-implement the code that computes the features. Then we have 2 versions of this code, potentially using different
+data stores. This may lead to training-serving skew, i.e. serving predictions we are surprised to serve.</p>
+<p>There are ways to solve it on a case-by-case basis. It is one of the problems <a href="/PublicPersonalKnowledgeBase/notes/3coCU94D3OUfqD6I8EWoX">Feature Stores</a> aim to solve in an automated way.</p>
+<p><a href="https://ploomber.io/blog/train-serve-skew/">One reference</a></p>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/3coCU94D3OUfqD6I8EWoX">Feature Stores</a></li>
+</ul>

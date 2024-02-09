@@ -1,0 +1,104 @@
+<h1 id="greedy-algorithms">Greedy Algorithms<a aria-hidden="true" class="anchor-heading icon-link" href="#greedy-algorithms"></a></h1>
+<p><a href="/PublicPersonalKnowledgeBase/notes/cM8t2nF5lMGDVZpoOe79x">Matroids</a></p>
+<h1 id="huffman-coding">Huffman Coding:<a aria-hidden="true" class="anchor-heading icon-link" href="#huffman-coding"></a></h1>
+<p>Minimizes Entropy:</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>m</mi><mi>i</mi><mi>n</mi><mi>E</mi><mo stretchy="false">(</mo><mi>p</mi><mo stretchy="false">(</mo><mi>s</mi><mi>y</mi><mi>m</mi><mi>b</mi><mo stretchy="false">)</mo><mo>∗</mo><mi>l</mi><mi>e</mi><mi>n</mi><mo stretchy="false">(</mo><mi>e</mi><mi>n</mi><mi>c</mi><mo stretchy="false">(</mo><mi>s</mi><mi>y</mi><mi>m</mi><mi>b</mi><mi>o</mi><mi>l</mi><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo stretchy="false">)</mo><mo>=</mo><mi>E</mi><mo stretchy="false">(</mo><mo>−</mo><mi>l</mi><mi>o</mi><msub><mi>g</mi><mn>2</mn></msub><mi>p</mi><mo>∗</mo><mi>p</mi><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">min E(p(symb)*len(enc(symbol))) = E(-log_2 p*p)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">min</span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mopen">(</span><span class="mord mathnormal">p</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">sy</span><span class="mord mathnormal">mb</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mord mathnormal">c</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">sy</span><span class="mord mathnormal">mb</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mclose">)))</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mopen">(</span><span class="mord">−</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">o</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3011em;"><span style="top:-2.55em;margin-left:-0.0359em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">p</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">∗</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal">p</span><span class="mclose">)</span></span></span></span></span>
+<span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>l</mi><mi>e</mi><mi>n</mi><mo stretchy="false">(</mo><mi>s</mi><mi>y</mi><mi>m</mi><mi>b</mi><mi>o</mi><mi>l</mi><mo stretchy="false">)</mo><mo>=</mo><mi>d</mi><mi>e</mi><mi>p</mi><mi>t</mi><mi>h</mi></mrow><annotation encoding="application/x-tex">len(symbol)= depth</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mord mathnormal">e</span><span class="mord mathnormal">n</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.03588em;">sy</span><span class="mord mathnormal">mb</span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2778em;"></span></span><span class="base"><span class="strut" style="height:0.8889em;vertical-align:-0.1944em;"></span><span class="mord mathnormal">d</span><span class="mord mathnormal">e</span><span class="mord mathnormal">pt</span><span class="mord mathnormal">h</span></span></span></span></span></p>
+<p>can solve by greedy:
+build up tree bottom-up
+every time join symbols w/ minimum prob/freq (and make another symbol for the join).
+recover tree in the end
+use priority queue to pop smallest frequency every time.</p>
+<p>huffman coding also minimizes entropy.</p>
+<hr>
+<p>greedy algo</p>
+<hr>
+<h2 id="dijkstra">Dijkstra:<a aria-hidden="true" class="anchor-heading icon-link" href="#dijkstra"></a></h2>
+<h2 id=""><a aria-hidden="true" class="anchor-heading icon-link" href="#"></a></h2>
+<p>negative edges:
+combine op on edges
+repeat |V|-1 times
+if wanna detect negative CYCLEs repeat once more and obs is fixed point changes.
+dijkstra wants prio queue</p>
+<h2 id="minimum-spanning-tree">Minimum Spanning Tree:<a aria-hidden="true" class="anchor-heading icon-link" href="#minimum-spanning-tree"></a></h2>
+<p>invariant: add minimal edge that doesn't add a cycle</p>
+<h2 id="kruskal--do-that-need-prio-queue-and-union-find-to-keep-track-of-partial-forests">kruskal- do that, need prio queue and union find to keep track of partial forests<a aria-hidden="true" class="anchor-heading icon-link" href="#kruskal--do-that-need-prio-queue-and-union-find-to-keep-track-of-partial-forests"></a></h2>
+<h2 id="prim-algorithm">Prim Algorithm<a aria-hidden="true" class="anchor-heading icon-link" href="#prim-algorithm"></a></h2>
+<p>keep track of tree only; then use priority queue (similar to dijkstra then, almost same.</p>
+<p>Vazirani algos:</p>
+<h2 id="horn-clauses">Horn clauses<a aria-hidden="true" class="anchor-heading icon-link" href="#horn-clauses"></a></h2>
+<p> Implications, whose left-hand side is an AND of anynumber of positive literals and whose
+right-hand side is a single positive literal. These express statements of the form “if the
+conditions on the left hold, then the one on the right must also be true.” For instance,
+(z ∧ w) => u
+might mean “if the colonel was asleep at 8 pm and the murder took place at 8 pm then
+the colonel is innocent.” A degenerate type of implication is the singleton “⇒ x,” meaning
+simply that x is true: “the murder definitely occurred in the kitchen.”
+2. Pure negative clauses, consisting of an OR of any number of negative literals, as in
+(!u ∨ !v ∨ !y)
+(“they can’t all be innocent”).
+Given a set of clauses of these two types, the goal is to determine whether there is a consis-
+tent explanation: an assignment of true/false values to the variables that satisfies all the
+clauses. This is also called a satisfying assignment.</p>
+<p>So SAT is in general np-hard
+but if instead set of horn clauses, greedy efficient
+<a href="https://tryalgo.org/en/satisfiability/2016/12/04/horn-sat/">https://tryalgo.org/en/satisfiability/2016/12/04/horn-sat/</a>
+linear time algo for horn clauses (horn-sat, instead of SAT).
+Another mention here:
+<a href="https://people.eecs.berkeley.edu/~sseshia/219c/lectures/SATSolving.pdf">https://people.eecs.berkeley.edu/~sseshia/219c/lectures/SATSolving.pdf</a></p>
+<p>2-sat</p>
+<p>Special Cases of 3-SAT that are
+polynomial-time solvable
+• 2-SAT
+– T. Larrabee observed that many clauses in
+ATPG tend to be 2-CNF
+• Horn-SAT
+– A clause is a Horn clause if at most one literal
+is positive
+– If all clauses are Horn, then problem is HornSAT
+– E.g. Application:- Checking that one finitestate system refines (implements) anoth</p>
+<p><a href="https://www.geeksforgeeks.org/2-satisfiability-2-sat-problem/">https://www.geeksforgeeks.org/2-satisfiability-2-sat-problem/</a>
+so horn-sat and 2-sat
+To understand this better, first let us see what is Conjunctive Normal Form (CNF) or also known as Product of Sums (POS).
+CNF : CNF is a conjunction (AND) of clauses, where every clause is a disjunction (OR).</p>
+<h2 id="now-2-sat-limits-the-problem-of-sat-to-only-those-boolean-formula-which-are-expressed-as-a-cnf-with-every-clause-having-only-2-termsalso-called-2-cnf">Now, 2-SAT limits the problem of SAT to only those Boolean formula which are expressed as a CNF with every clause having only 2 terms(also called 2-CNF).<a aria-hidden="true" class="anchor-heading icon-link" href="#now-2-sat-limits-the-problem-of-sat-to-only-those-boolean-formula-which-are-expressed-as-a-cnf-with-every-clause-having-only-2-termsalso-called-2-cnf"></a></h2>
+<p>so 2-sat is if we can make cnf w/ 2 clauses everywhere...</p>
+<hr>
+<p>The two kinds of clauses pull us in different directions. The implications tell us to set
+some of the variables to true, while the negative clauses encourage us to make them false.
+Our strategy for solving a Horn formula is this: We start with all variables false. We then
+proceed to set some of them to true, one by one, but very reluctantly, and only if we absolutely
+have to because an implication would otherwise be violated. Once we are done with this phase
+and all implications are satisfied, only then do we turn to the negative clauses and make sure
+they are all satisfied</p>
+<hr>
+<p>this scheme is linear-time and 'greedy' in the negative sense (we want many literals to be false cuase of the negative clauses.</p>
+<hr>
+<p>horn clause thing:
+2 types of clauses:
+Positive Implicative:
+rhs is single positive
+lhs is any number of positive :
+(a and b)=>c
+=>c
+.. etc
+(a and b and c)=>d
+pure negative:</p>
+<h2 id="or-with-negatives">OR with negatives:<a aria-hidden="true" class="anchor-heading icon-link" href="#or-with-negatives"></a></h2>
+<p>'greedy' :start with all false, then only make true is some implication is broken.
+when all implications are ok, check all pure negatives.'</p>
+<hr>
+<p>5.4. Set cover greedy approximation:</p>
+<hr>
+<p>Pick the set w/ largest number of uncovered elements has ln(n) approximation ratio.</p>
+<hr>
+<p>Shortest paths in dags are easy</p>
+<hr>
+<p>dag-> can linearize</p>
+<p>'</p>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/rKkRfVi4X4JfJCVHHiGfY">Information Theory</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/Xtfmm6UoEH3509PDjc007">Decision Trees</a></li>
+</ul>

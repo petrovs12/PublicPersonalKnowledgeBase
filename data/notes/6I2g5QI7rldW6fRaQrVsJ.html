@@ -1,0 +1,23 @@
+<h1 id="train-test-splitting">Train Test Splitting<a aria-hidden="true" class="anchor-heading icon-link" href="#train-test-splitting"></a></h1>
+<h1 id="random-sampling">Random Sampling<a aria-hidden="true" class="anchor-heading icon-link" href="#random-sampling"></a></h1>
+<h1 id="stratified-sampling">Stratified sampling<a aria-hidden="true" class="anchor-heading icon-link" href="#stratified-sampling"></a></h1>
+<p>If we have some set of characteristics, we want to be able to split the set into two subsets, one with the characteristics that are most similar to the characteristics of the other subset.</p>
+<h1 id="time-series-sampling">Time series sampling<a aria-hidden="true" class="anchor-heading icon-link" href="#time-series-sampling"></a></h1>
+<p> Split by expanding time windows (information set)</p>
+<h1 id="recommender-system-test-set-split-"><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^recsys-start" href="#^recsys-start"></a>Recommender System test set split <a aria-hidden="true" class="anchor-heading icon-link" href="#recommender-system-test-set-split-"></a></h1>
+<p> For collaborative filtering if we <strong>don't want to deal with cold starts</strong> directly with this model, use approach similar to stratified sampling. So we just mask some entries in the matrix randomly, should put roughly all items and all users in both the train and test set. Related to <a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">^transductive-gnn (Private)</a></p>
+<p><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^recSys-traintestsplit" href="#^recSys-traintestsplit"></a>If we want to deal with the cold start in integrated way (idk of possible), then maybe can just split as we wish by rows/columns/connected components etc.
+<img src="/PublicPersonalKnowledgeBase/assets/images/2022-01-17-15-31-56.png" alt="RecSys traintestsplit"> </p>
+<p>Cold start problem is related to <sup id="fnref-inductive-gnn"><a href="#fn-inductive-gnn" class="footnote-ref">inductive-gnn</a></sup>.</p>
+<p><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^recsys-end" href="#^recsys-end"></a> </p>
+<h1 id="graph-neural-nets">Graph Neural Nets:<a aria-hidden="true" class="anchor-heading icon-link" href="#graph-neural-nets"></a></h1>
+<h2 id="transductive">Transductive<a aria-hidden="true" class="anchor-heading icon-link" href="#transductive"></a></h2>
+<p><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^transductive-gnn" href="#^transductive-gnn"></a> In transductive learning in graphs, we see the whole graph structure, and want to learn something
+about unobserved node/edge labels/features. </p>
+<h2 id="inductive-learning">Inductive Learning<a aria-hidden="true" class="anchor-heading icon-link" href="#inductive-learning"></a></h2>
+<p><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^inductive-gnn" href="#^inductive-gnn"></a> In transductive learning, we have access to both the node features and topology of test nodes while inductive learning requires testing on graphs unseen in the training. </p>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/QE1BddXlccbyYN1avaB4M">Recommender Systems</a></li>
+</ul>

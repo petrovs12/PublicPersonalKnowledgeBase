@@ -1,0 +1,28 @@
+<h1 id="mlops">MLOps<a aria-hidden="true" class="anchor-heading icon-link" href="#mlops"></a></h1>
+<p><a href="https://juliapackages.com/p/mlops">MLOps tool list (probably biased)</a> </p>
+<h1 id="performance-monitoring-and-tracking-"><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^mlops-monitoring-tracking" href="#^mlops-monitoring-tracking"></a>Performance monitoring and tracking <a aria-hidden="true" class="anchor-heading icon-link" href="#performance-monitoring-and-tracking-"></a></h1>
+<p> As part of the model serving infrastructure in a given system, we could have a <a href="/PublicPersonalKnowledgeBase/notes/FmNx4uxMzAQvyEkoiOPts">Load Balancer</a>, or more generally, a dispatcher, which, for each incoming request, determines which model to serve.</p>
+<p> The disparcher then returns the modelid, and we keep track which model id/configuration is served for each request. </p>
+<p> Then after the data is in DWH, we can use <a href="/PublicPersonalKnowledgeBase/notes/uxwwYYzCji7ljiWWT4zif#^ANOVA">Tests</a>, <a href="/PublicPersonalKnowledgeBase/notes/JClhWanv6nT58jkwQvo3o">AB Testing</a>, <a href="/PublicPersonalKnowledgeBase/notes/uxwwYYzCji7ljiWWT4zif#^t-test">Tests</a></p>
+<p> We can also use <a href="/PublicPersonalKnowledgeBase/notes/DsKZelx6MYiRfjxGqSJqh#^bandits">Reinforcement Learning</a> in the dispatcher in order figure out what to send.</p>
+<h1 id="summary">summary<a aria-hidden="true" class="anchor-heading icon-link" href="#summary"></a></h1>
+<ul>
+<li>Scaling machines up and down</li>
+<li>increasing/ decreasing batch size, increasing latency in exchagne of efficiency etc.</li>
+</ul>
+<h1 id=""><a aria-hidden="true" class="anchor-heading icon-link" href="#"></a></h1>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/PublicPersonalKnowledgeBase/notes/3coCU94D3OUfqD6I8EWoX">Feature Stores</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/6IHeErZzu6n5teEn5jZN6">ML Flow</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/fwJbQKdytxvuwjuehkoXf">ONNX</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/Tg3RFdFmJaq924T2psHCw">Paperspace</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/M8dKa1Shw9AsEDt7YzCS9">StatsD</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/ykZOLmmEoxBAesJmh6TI2">Training-Serving Skew</a></li>
+</ol>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/alOnY7Dp8EkE2Yns8PFFP">DevOps</a></li>
+</ul>

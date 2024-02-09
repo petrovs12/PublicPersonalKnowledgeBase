@@ -1,0 +1,68 @@
+<h1 id="ads-evaluation-framework">Ads Evaluation Framework<a aria-hidden="true" class="anchor-heading icon-link" href="#ads-evaluation-framework"></a></h1>
+<p>Design evaluation framework for ads ranking</p>
+<p>Source ads: given query; queries are grouped for scalability.</p>
+<ul>
+<li>Sourcing ads is like 'search' a list of ads.</li>
+<li>Then you have several steps of rankings.</li>
+<li>They all go trough same code. </li>
+<li><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>E</mi><mo stretchy="false">[</mo><mi>C</mi><mi>T</mi><mi>R</mi><mo stretchy="false">]</mo></mrow><annotation encoding="application/x-tex">E[CTR]</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathnormal" style="margin-right:0.05764em;">E</span><span class="mopen">[</span><span class="mord mathnormal" style="margin-right:0.00773em;">CTR</span><span class="mclose">]</span></span></span></span></span> , other metrics -> bidding  formula.</li>
+<li>Positioning on page hapens in the end.</li>
+</ul>
+<p>Cause you have many steps and need to return ad very fast, every step needs to be fast.</p>
+<p>Revenue
+OPS - what they make from the sale using the ad.</p>
+<p>RoAS = OPS/Revenue</p>
+<hr>
+<p>LTV - lifetime value</p>
+<p>Use short-term surrogates. Number of top purchases is correlated with LTV (Accuracy@1).</p>
+<p>3 stakeholders:
+Advertiser
+Ad provider
+Shopper.</p>
+<p>For each model you have treatment, do statistical testing on the business metrics.</p>
+<p>When you're online you know the metrics.</p>
+<p><strong>You need offline metrics (counterfactuals) that it correlates a lot with the online evaluation.
+</strong></p>
+<h1 id="offline-vs-online-ads-testing">offline vs online ads testing<a aria-hidden="true" class="anchor-heading icon-link" href="#offline-vs-online-ads-testing"></a></h1>
+<p>Online - AB testing, etc.</p>
+<p>Offline - counterfactuals with proxies.</p>
+<p>Need very high value of the 'offline evaluation data'.</p>
+<p>Humans can create this 'ground truth' data.</p>
+<p>Example of automatically create ground truth data is 'clicked and purchased' data..</p>
+<p><strong>Is the offline ground truth data representative of the online use case
+</strong></p>
+<p>Rank models against each other- offline proxies.</p>
+<p>Offline data is not representative of the online use case.</p>
+<p> Offline proxi metric should 'correlate' with online 'proper counterfactuals', which are impossible to estimate. </p>
+<p> The correlation should be in the sense of 'ranks between models are monotonous'.</p>
+<h2 id="ab-testing-comment-when-switching-models">AB Testing Comment when switching models<a aria-hidden="true" class="anchor-heading icon-link" href="#ab-testing-comment-when-switching-models"></a></h2>
+<p>  When switching models, leave the baselines as some pct to be able to compare stuff later.</p>
+<p> e.g. tiny percentage of population w/o spam filter.</p>
+<h1 id="questions">Questions<a aria-hidden="true" class="anchor-heading icon-link" href="#questions"></a></h1>
+<h2 id=""><a aria-hidden="true" class="anchor-heading icon-link" href="#"></a></h2>
+<h2 id="reading-listtopics-to-read">Reading list/Topics to read<a aria-hidden="true" class="anchor-heading icon-link" href="#reading-listtopics-to-read"></a></h2>
+<ul>
+<li>
+<p>EducativeIO Grokking ML list</p>
+</li>
+<li>
+<p>Attribtuion Modelling for Google and Facebook Ads</p>
+</li>
+<li>
+<p><a href="https://www.amazon.com/Attribution-Modelling-Google-Ads-Facebook/dp/1792911394">https://www.amazon.com/Attribution-Modelling-Google-Ads-Facebook/dp/1792911394</a></p>
+<h2 id="classificationranking-based-approaches">Classification/ranking based approaches<a aria-hidden="true" class="anchor-heading icon-link" href="#classificationranking-based-approaches"></a></h2>
+<h2 id="optimizationgame-theory-bidding">Optimization/Game Theory/ Bidding<a aria-hidden="true" class="anchor-heading icon-link" href="#optimizationgame-theory-bidding"></a></h2>
+<h2 id="technologies">Technologies<a aria-hidden="true" class="anchor-heading icon-link" href="#technologies"></a></h2>
+<p>He has background in graphs, e-commerce, multi-agent distributed planning, trust,
+etc</p>
+</li>
+</ul>
+<h2 id="technology-stack">Technology Stack<a aria-hidden="true" class="anchor-heading icon-link" href="#technology-stack"></a></h2>
+<h2 id="what-are-you-looking-for-in-terms-of-skill-set">What are you looking for in terms of skill set?<a aria-hidden="true" class="anchor-heading icon-link" href="#what-are-you-looking-for-in-terms-of-skill-set"></a></h2>
+<p> How is the team matching done?</p>
+<h1 id="onboarding">Onboarding<a aria-hidden="true" class="anchor-heading icon-link" href="#onboarding"></a></h1>
+<h1 id="team-integration">Team Integration<a aria-hidden="true" class="anchor-heading icon-link" href="#team-integration"></a></h1>
+<h1 id="pct-of-people-working-off-site">Pct of People Working Off-Site<a aria-hidden="true" class="anchor-heading icon-link" href="#pct-of-people-working-off-site"></a></h1>
+<p>  How many ppl work </p>
+<p>Commerce Area.</p>
+<h2 id="-1"><a aria-hidden="true" class="anchor-heading icon-link" href="#-1"></a></h2>

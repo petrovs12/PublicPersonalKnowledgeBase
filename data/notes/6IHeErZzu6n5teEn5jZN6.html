@@ -1,0 +1,64 @@
+<h1 id="ml-flow">ML Flow<a aria-hidden="true" class="anchor-heading icon-link" href="#ml-flow"></a></h1>
+<h1 id="tracking">Tracking<a aria-hidden="true" class="anchor-heading icon-link" href="#tracking"></a></h1>
+<h1 id="projects-code-and-environment-packaging-experiment-management-and-reproducability">Projects, code and environment packaging, Experiment management and reproducability<a aria-hidden="true" class="anchor-heading icon-link" href="#projects-code-and-environment-packaging-experiment-management-and-reproducability"></a></h1>
+<h1 id="data-versioning">Data Versioning<a aria-hidden="true" class="anchor-heading icon-link" href="#data-versioning"></a></h1>
+<h1 id="models">Models<a aria-hidden="true" class="anchor-heading icon-link" href="#models"></a></h1>
+<p>Deploy ML models in diverse environments.</p>
+<h1 id="ml-flow-getting-started-tutorials">ML Flow getting started tutorials<a aria-hidden="true" class="anchor-heading icon-link" href="#ml-flow-getting-started-tutorials"></a></h1>
+<p><a href="https://www.mlflow.org/docs/latest/tutorials-and-examples/tutorial.html">https://www.mlflow.org/docs/latest/tutorials-and-examples/tutorial.html</a></p>
+<pre class="language-{r}"><code class="language-{r}">
+library(mlflow)
+library(glmnet)
+library(carrier) # for creating ad-hoc closures
+
+set.seed(40)
+
+# Read the wine-quality csv file
+data &#x3C;- read.csv("wine-quality.csv")
+
+# Split the data into training and test sets. (0.75, 0.25) split.
+sampled &#x3C;- sample(1:nrow(data), 0.75 * nrow(data))
+train &#x3C;- data[sampled, ]
+test &#x3C;- data[-sampled, ]
+
+# The predicted column is "quality" which is a scalar from [3, 9]
+train_x &#x3C;- as.matrix(train[, !(names(train) == "quality")])
+test_x &#x3C;- as.matrix(test[, !(names(train) == "quality")])
+train_y &#x3C;- train[, "quality"]
+test_y &#x3C;- test[, "quality"]
+
+
+# Create 'Parameters' to  a 'run' ; then can query models/runs by their parameters
+alpha &#x3C;- mlflow_param("alpha", 0.5, "numeric")
+lambda &#x3C;- mlflow_param("lambda", 0.5, "numeric")
+
+# I guess some kind of 'context manager'
+with(mlflow_start_run(), {
+  model &#x3C;- glmnet(train_x, train_y, alpha = alpha, lambda = lambda, family= "gaussian", standardize = FALSE)
+
+  # create closure around glmnet::predict w/ the model we just trained
+
+  predictor &#x3C;- crate(~ glmnet::predict.glmnet(!!model, as.matrix(.x)), !!model)
+  predicted &#x3C;- predictor(test_x)
+  
+  rmse &#x3C;- sqrt(mean((predicted - test_y) ^ 2))
+  mae &#x3C;- mean(abs(predicted - test_y))
+  r2 &#x3C;- as.numeric(cor(predicted, test_y) ^ 2)
+  
+  message("Elasticnet model (alpha=", alpha, ", lambda=", lambda, "):")
+  message("  RMSE: ", rmse)
+  message("  MAE: ", mae)
+  message("  R2: ", r2)
+  
+  mlflow_log_param("alpha", alpha)
+  mlflow_log_param("lambda", lambda)
+  mlflow_log_metric("rmse", rmse)
+  mlflow_log_metric("r2", r2)
+  mlflow_log_metric("mae", mae)
+  
+  mlflow_log_model(predictor, "model")
+})
+
+
+
+</code></pre>

@@ -1,0 +1,30 @@
+<h1 id="oauth">OAuth<a aria-hidden="true" class="anchor-heading icon-link" href="#oauth"></a></h1>
+<p> For-my-own purposes summary from <a href="https://cloud.google.com/files/apigee/apigee-oauth-the-big-picture-ebook.pdf">Apigee's OAuth Pamphlet</a>.</p>
+<h1 id="major-point">Major point:<a aria-hidden="true" class="anchor-heading icon-link" href="#major-point"></a></h1>
+<p>OAuth allows an app to use the API of a platform (say Twitter) on your behalf without ever seeing your Twitter password.</p>
+<h1 id="businesses-as-platforms">Businesses as Platforms<a aria-hidden="true" class="anchor-heading icon-link" href="#businesses-as-platforms"></a></h1>
+<p>Markets have intermediaries, who connect buyers and sellers by knowing what both want and create convenient ways to transact.
+Apps are the new intermediaries.</p>
+<h1 id="apis-are-way-for-machines-to-talk-to-each-other">API's are way for machines to talk to each other<a aria-hidden="true" class="anchor-heading icon-link" href="#apis-are-way-for-machines-to-talk-to-each-other"></a></h1>
+<p>API's require trust. Innovation require openness. Trust and openness are at odds.</p>
+<p>An innovative app could want to use your Twitter/Facebook/Google/etc data for a specific purpose.
+It uses that by calling some API's Twitter/Facebook/Google provide.</p>
+<p>But, you can't trust the app with your google password, as you have everything in there. If the password leaks, you're boned</p>
+<p>OAuth is a way to get around this. </p>
+<h1 id="vallet-key">Vallet Key<a aria-hidden="true" class="anchor-heading icon-link" href="#vallet-key"></a></h1>
+<p>A vallet key for a car is a <strong>limited privilige key</strong> you can use to operate the car, but not access the car's glove box or trunc.</p>
+<p> OAuth tries to simulate this by having it's own <strong>vallet key: token</strong> giving a single app/API access to particular API's/services on a <strong>service provider (e.g. Twitter)</strong> on behalf of the user .</p>
+<p> <img src="/PublicPersonalKnowledgeBase/assets/images/2022-01-25-12-06-54.png"></p>
+<h1 id="flow-miko-stefapp-and-twitter">Flow: Miko, stefApp, and Twitter<a aria-hidden="true" class="anchor-heading icon-link" href="#flow-miko-stefapp-and-twitter"></a></h1>
+<ol>
+<li>Miko uses stefApp on phone, which uses Twitter API for something.Miko already has logins for
+stefApp and twitter.</li>
+<li>Behind the scenes, stefApp starts the process of getting access from Twitter.</li>
+<li>A browser opens, asking Miko to log into with twitter.</li>
+<li>A page apprears, asking if Miko gives permission to stefApp to do specific things
+and not do other things w/ Miko's Twitter account.</li>
+<li>If Miko agrees, then a token is sent back and stored on Miko's phone.</li>
+</ol>
+<p>This can be sharded to make it harder for a thief to get access to your Twitter account.
+stefApp never sees Miko's password.</p>
+<p>Key/token permissions cna be gracefully upgraded/downgraded/ stopped if needed.</p>

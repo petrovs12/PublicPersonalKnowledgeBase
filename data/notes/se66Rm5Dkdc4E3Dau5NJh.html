@@ -1,0 +1,17 @@
+<h1 id="memory-operation-costs">Memory Operation Costs<a aria-hidden="true" class="anchor-heading icon-link" href="#memory-operation-costs"></a></h1>
+<p><img src="https://cdn.hackernoon.com/hn-images/1*nT3RAGnOAWmKmvOBnizNtw.png" alt="Low-Level Memory Model "></p>
+<p><img src="http://ithare.com/infographics-operation-costs-in-cpu-clock-cycles/" alt="this classic chart"></p>
+<p>Minimizing cache misses w/ numerical algorithms:
+row-major and column-major optimization.</p>
+<h1 id="heap-stack-etc">Heap, Stack, etc<a aria-hidden="true" class="anchor-heading icon-link" href="#heap-stack-etc"></a></h1>
+<p><img src="https://bayanbox.ir/view/581244719208138556/virtual-memory.jpg" alt="Virtual Memory"></p>
+<p><img src="https://camo.githubusercontent.com/ca96d70d09ce694363e44b93fd975bb3033898c1/687474703a2f2f7475746f7269616c732e6a656e6b6f762e636f6d2f696d616765732f6a6176612d636f6e63757272656e63792f6a6176612d6d656d6f72792d6d6f64656c2d352e706e67" alt="Stacka and heap 2"></p>
+<h1 id="type-stability">Type Stability<a aria-hidden="true" class="anchor-heading icon-link" href="#type-stability"></a></h1>
+<p>Why is the inference algorithm able to infer all of the types of g? It's because it knows the types coming out of f at compile time. Given an Int and a Float64, f will always output a Float64, and thus it can continue with inference knowing that c, d, and eventually the output is Float64. Thus in order for this to occur, we need that the type of the output on our function is directly inferred from the type of the input. This property is known as type-stability.</p>
+<p>An example of breaking it is as follows:</p>
+<pre class="language-{julia}"><code class="language-{julia}">function h(x,y)
+  out = x + y
+  rand() &#x3C; 0.5 ? out : Float64(out)
+end
+</code></pre>
+<p>Here, on an integer input the output's type is randomly either Int or Float64, and thus the output is unknown:</p>

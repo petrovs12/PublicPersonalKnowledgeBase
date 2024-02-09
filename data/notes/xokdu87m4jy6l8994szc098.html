@@ -1,0 +1,9 @@
+<h1 id="token-masking">Token Masking<a aria-hidden="true" class="anchor-heading icon-link" href="#token-masking"></a></h1>
+<h1 id="token-masking-1">Token Masking<a aria-hidden="true" class="anchor-heading icon-link" href="#token-masking-1"></a></h1>
+<p>Mask some words in a sequence and predict which tokens should replace that...
+e.g. </p>
+<pre class="language-python"><code class="language-python"><span class="token keyword">from</span> transformers <span class="token keyword">import</span> pipeline
+classifier <span class="token operator">=</span> pipeline<span class="token punctuation">(</span><span class="token string">"fill-mask"</span><span class="token punctuation">)</span>
+
+classifier<span class="token punctuation">(</span><span class="token string">"Paris is the [MASK] of France."</span><span class="token punctuation">)</span>
+</code></pre>

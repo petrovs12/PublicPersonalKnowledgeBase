@@ -1,0 +1,66 @@
+<h1 id="docker-compose">Docker Compose<a aria-hidden="true" class="anchor-heading icon-link" href="#docker-compose"></a></h1>
+<h1 id="docker-compose-1">Docker Compose<a aria-hidden="true" class="anchor-heading icon-link" href="#docker-compose-1"></a></h1>
+<p>Tool to combine and run multiple related containers with single command and define their dependencies reasonably...</p>
+<p>Syntax:</p>
+<pre><code>services:
+ service 1:
+    image: image1
+    ports:
+     - "80:80"
+     - "443:443"
+    volumes:
+     - /var/www/html:/var/www/html
+    links:
+     - service 2
+     - service 3
+service 2:
+    build: . # path to dockerfile
+    ports:
+     - "80:81"
+     - "443:444"
+    links:
+     - service 1
+
+</code></pre>
+<h2 id="clauses">Clauses<a aria-hidden="true" class="anchor-heading icon-link" href="#clauses"></a></h2>
+<h3 id="build-or-image">Build or Image<a aria-hidden="true" class="anchor-heading icon-link" href="#build-or-image"></a></h3>
+<p> -- path to the dockerfile, or image name (from the repository, I guess), respectfully.</p>
+<h3 id="ports">Ports<a aria-hidden="true" class="anchor-heading icon-link" href="#ports"></a></h3>
+<p> -- Mapping of container ports to host ports.
+-- Creates a tunnel
+-- Same as using the -p 5000:5001 flag in <code>docker run</code>.</p>
+<h3 id="volumes">Volumes<a aria-hidden="true" class="anchor-heading icon-link" href="#volumes"></a></h3>
+<p> same as the -v option in <code>docker run</code>. Used to mount disks.</p>
+<h3 id="links">Links<a aria-hidden="true" class="anchor-heading icon-link" href="#links"></a></h3>
+<p> Link in the </p><p></p><div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">Bridge Network</span></div>
+<a href="/PublicPersonalKnowledgeBase/notes/ks6e18pb9z3mctjcsiq0ejm" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div><p>By default, all cockers run
+in the 'Docker network' (?). Maybe.</p>
+<p>Quote from educative:</p>
+<p>"By default, <strong>all</strong> containers <strong>run</strong> in the <strong>default network space of Docker</strong>. Hence, <strong>every container can communicate</strong> with others. We can create network isolation if it is needed."</p>
+<p><img src="/PublicPersonalKnowledgeBase/assets/images/2022-07-14-15-15-32.png" alt="Docker Network View"></p>
+<h1 id="default-docker-networks">Default Docker Networks<a aria-hidden="true" class="anchor-heading icon-link" href="#default-docker-networks"></a></h1>
+<p>By default, 3 networks are created:</p>
+<h1 id="host-network">host network<a aria-hidden="true" class="anchor-heading icon-link" href="#host-network"></a></h1>
+<p>Docker Internal- nevermind</p>
+<h1 id="none-network">None Network<a aria-hidden="true" class="anchor-heading icon-link" href="#none-network"></a></h1>
+<p>Docker Internal- nevermind</p>
+<h1 id="bridge-network">Bridge network<a aria-hidden="true" class="anchor-heading icon-link" href="#bridge-network"></a></h1>
+<p>named Docker0; it automatically creates IP subnet and gateway.</p>
+<p> <strong>Containers within the docker network can talk to each other via IP addressing</strong>. They are in the <strong>same subnet</strong>.</p>
+</div></div><p></p><p></p>
+<pre><code>
+
+# Docker Swarm
+
+
+
+# Docker Security and Nginx
+</code></pre>

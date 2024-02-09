@@ -1,0 +1,51 @@
+<h1 id="designing-data-intensive-applications">Designing Data Intensive Applications<a aria-hidden="true" class="anchor-heading icon-link" href="#designing-data-intensive-applications"></a></h1>
+<p>These are nots from the Designing Data Intensive Applications book.</p>
+<h1 id="storage-and-retrieval">Storage and Retrieval<a aria-hidden="true" class="anchor-heading icon-link" href="#storage-and-retrieval"></a></h1>
+<p>Big difference between storage engines, optimized for analytics, and ones optimized for transactional workloads.</p>
+<p>one can use auxilary <a href="/PublicPersonalKnowledgeBase/notes/DGlamf8n85vZa7s6JE1TG">Bloom Filters</a> in cases where not finding key would take long time.</p>
+<h2 id="hash-indices">Hash indices<a aria-hidden="true" class="anchor-heading icon-link" href="#hash-indices"></a></h2>
+<p>Keep the offset</p>
+<ul>
+<li>only append to file</li>
+<li>tombstone is a special value, indicating that the key is deleted</li>
+<li>to optimize:
+use fixed- size segments, periodically compact (removing duplicates) and merge them </li>
+</ul>
+<p>Limitations: no range queries.</p>
+<h2 id="apend-split-into-segments">Apend, split into segments<a aria-hidden="true" class="anchor-heading icon-link" href="#apend-split-into-segments"></a></h2>
+<p>keep segments sorted, compactify segments.</p>
+<h1 id="sstables-and-lsm-trees">SSTables and LSM trees<a aria-hidden="true" class="anchor-heading icon-link" href="#sstables-and-lsm-trees"></a></h1>
+<p>Require that the sequence of key value records is sorted by key always.
+In-memory memtable, implemented as self-balancing tree.
+When grows, write it to disk as a segment.</p>
+<p>Find record: </p>
+<ol>
+<li>try the memtable.</li>
+<li>if not found, try the disk segments in order of recency.</li>
+</ol>
+<p>Handle crash by writing simultaneously to disk as well as the memtable.</p>
+<h3 id="merge-and-compact">Merge and compact<a aria-hidden="true" class="anchor-heading icon-link" href="#merge-and-compact"></a></h3>
+<p>On schedule, compact and merge the disk segments.</p>
+<p>This is how lucene works, roughly.</p>
+<p><strong>Range queries </strong> are supported ,as keys are kept sorted.</p>
+<h1 id="b-tree-indices">B-tree indices<a aria-hidden="true" class="anchor-heading icon-link" href="#b-tree-indices"></a></h1>
+<p>B-trees are much more wildly used than lsm trees, but latter are promising.</p>
+<p>Very similar to other balanced trees</p>
+<h1 id="summary">Summary<a aria-hidden="true" class="anchor-heading icon-link" href="#summary"></a></h1>
+<p> LSM trees might be faster to write, as it's just sequential writes...
+Look at pages 82-83 of the book.</p>
+<h1 id="secondary-keys">Secondary keys<a aria-hidden="true" class="anchor-heading icon-link" href="#secondary-keys"></a></h1>
+<p> they are not unique, but crucial for performance of joins and such.
+can append row id to the row to make it unique and use either b-tree or lsm tree. Another way is to make the values lists of matching row identifiers.</p>
+<h1 id="multi-dimensional-indices">Multi-dimensional indices<a aria-hidden="true" class="anchor-heading icon-link" href="#multi-dimensional-indices"></a></h1>
+<h2 id="latitude-and-longitude">Latitude and longitude<a aria-hidden="true" class="anchor-heading icon-link" href="#latitude-and-longitude"></a></h2>
+<p> in a geographical ocntext, we would like to see all locations within a lat-lon grid...</p>
+<p> One option is to translate a two-dimensional location into a single number using a <strong>space-filling curve</strong>, and then to use a regular B-tree index [28]. More commonly, spe‐
+cialized spatial indexes such as R-trees are used. For example, PostGIS implements
+geospatial indexes as R-trees using PostgreSQL’s Generalized Search Tree indexing
+facility [29]. We don’t have space to describe R-trees in detail here, but there is plenty
+of literature on them.</p>
+<h1 id="in-memory-databases">In-memory databases<a aria-hidden="true" class="anchor-heading icon-link" href="#in-memory-databases"></a></h1>
+<p>Redis, Memcached
+<a href="/PublicPersonalKnowledgeBase/notes/r3sa76hN4TqZT6Pue9QCJ">Redis and Memcached</a>
+when restarted, Memcached would reload state from disk or over network. Disk is used only for an appen0donly log, which we use in case of crash/resta</p>

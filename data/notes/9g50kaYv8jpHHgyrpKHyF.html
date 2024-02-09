@@ -1,0 +1,54 @@
+<h1 id="time-series">Time Series<a aria-hidden="true" class="anchor-heading icon-link" href="#time-series"></a></h1>
+<h1 id="hyndman-book">Hyndman Book<a aria-hidden="true" class="anchor-heading icon-link" href="#hyndman-book"></a></h1>
+<h1 id="data-skeptic-season">Data Skeptic Season<a aria-hidden="true" class="anchor-heading icon-link" href="#data-skeptic-season"></a></h1>
+<h2 id="matrix-profiles">Matrix Profiles<a aria-hidden="true" class="anchor-heading icon-link" href="#matrix-profiles"></a></h2>
+<p><a href="https://pypi.org/project/stumpy/">Stumpy</a></p>
+<p>(Site)[https://pypi.org/project/stumpy/]</p>
+<p><a href="/PublicPersonalKnowledgeBase/notes/hJLWp5xZ02jjLzJz2sw2w">Matrix Profile</a>
+Computes:</p>
+<ul>
+<li>patterns/motifs</li>
+<li>GPU- scaleable</li>
+<li>approximate computation</li>
+<li>on-line(incremental) updates</li>
+<li>finding discord/anomalies</li>
+<li>snippets for summarizing time series</li>
+<li>Time Series EDA</li>
+</ul>
+<h1 id="general-references-and-articles">General References And Articles<a aria-hidden="true" class="anchor-heading icon-link" href="#general-references-and-articles"></a></h1>
+<p>*<a href="https://otexts.com/fpp3/">Hyndman's online textbook</a></p>
+<h1 id="single-time-series-models">Single Time Series Models<a aria-hidden="true" class="anchor-heading icon-link" href="#single-time-series-models"></a></h1>
+<h3 id="ets"><a href="https://www.rdocumentation.org/packages/forecast/versions/8.16/topics/ets">ETS</a><a aria-hidden="true" class="anchor-heading icon-link" href="#ets"></a></h3>
+<h3 id="autoarima"><a href="https://www.rdocumentation.org/packages/forecast/versions/8.16/topics/auto.arima">AutoArima</a><a aria-hidden="true" class="anchor-heading icon-link" href="#autoarima"></a></h3>
+<h3 id="multiple-seasonalities">Multiple Seasonalities<a aria-hidden="true" class="anchor-heading icon-link" href="#multiple-seasonalities"></a></h3>
+<ul>
+<li><a href="https://www.rdocumentation.org/packages/forecast/versions/8.16/topics/tbats">TBATS</a></li>
+<li><a href="https://www.rdocumentation.org/packages/forecast/versions/8.16/topics/mstl">MSTL</a></li>
+</ul>
+<h1 id="kaggle-state-of-the-art-stuff">Kaggle/ State of The Art Stuff<a aria-hidden="true" class="anchor-heading icon-link" href="#kaggle-state-of-the-art-stuff"></a></h1>
+<p>Some comments from the forum for the Favorita case:</p>
+<h2 id="1th-place-solution-model-overview">1th place solution: model Overview<a aria-hidden="true" class="anchor-heading icon-link" href="#1th-place-solution-model-overview"></a></h2>
+<p>I build 3 models: a lightGBM, a CNN+DNN and a seq2seq RNN model. Final model was a weighted average of these models (where each model is stabilized by training multiple times with different random seeds then take the average), with special dealing with promotion, which I will discuss later. Each model separately can stay in top 1% in the private leaderboard.</p>
+<p>LGBM: It is an upgraded version of the public kernels. More features, data and periods were fed to the model.</p>
+<p>CNN+DNN: This is a traditional NN model, where the CNN part is a dilated causal convolution inspired by WaveNet, and the DNN part is 2 FC layers connected to raw sales sequences. Then the inputs are concatenated together with categorical embeddings and future promotions, and directly output to 16 future days of predictions.</p>
+<p>RNN: This is a seq2seq model with a similar architecture of <a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">@Arthur (Private)</a> Suilin's solution for the web traffic prediction. Encoder and decoder are both GRUs. The hidden states of the encoder are passed to the decoder through an FC layer connector. This is useful to improve the accuracy significantly.</p>
+<p><a href="https://www.kaggle.com/headsortails/shopping-for-insights-favorita-eda">Favorita EDA</a>
+<a href="https://www.kaggle.com/headsortails/be-my-guest-recruit-restaurant-eda/notebook">Favorita Restaurant</a></p>
+<h1 id="operators-on-inhomogenous-time-series"><a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=208278">Operators on Inhomogenous Time Series</a><a aria-hidden="true" class="anchor-heading icon-link" href="#operators-on-inhomogenous-time-series"></a></h1>
+<p>Interesting bunch of operators.
+It's good to get a good mathematical foothold of them...</p>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/PublicPersonalKnowledgeBase/notes/5g7kbsvy0mcckscksc0y2b6">ASAP Time Series Paper</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/8po23yqsof1hx8vx1xm4uhv">KATS</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/hJLWp5xZ02jjLzJz2sw2w">Matrix Profile</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/u4lsq2czkmz5n1iwb8dbcp7">Visualization</a></li>
+</ol>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/9zrdj2dhauqiuoizrh4z696">Forecasting</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/hiuvax4qcz63e0zseg5c8ai">Industry Applications</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/3coCU94D3OUfqD6I8EWoX">Feature Stores</a></li>
+</ul>

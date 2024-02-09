@@ -1,0 +1,40 @@
+<h1 id="asap-time-series-paper">ASAP Time Series Paper<a aria-hidden="true" class="anchor-heading icon-link" href="#asap-time-series-paper"></a></h1>
+<hr>
+<p>id: zznn7su9abv01q61qk6mym1
+title: ASAP Time Series Paper
+desc: ''
+updated: 1657530669543</p>
+<h2 id="created-1657460809018">created: 1657460809018<a aria-hidden="true" class="anchor-heading icon-link" href="#created-1657460809018"></a></h2>
+<p><a href="https://arxiv.org/abs/1703.00983v1">ASAP: Automatic Smoothing for Attention Prioritization in Streaming Time Series Visualization</a></p>
+<h1 id="situation">Situation<a aria-hidden="true" class="anchor-heading icon-link" href="#situation"></a></h1>
+<p>Much telemetry data has been generated from various systems. For some of it there are human operators,
+looking at it in order to do detect anomalies quickly.</p>
+<p>But trend shifts can be hidden by variance.</p>
+<p>Idea:</p>
+<p>Smooth variance between first differences
+subject to kurtosis (4th moment) remaining the same.</p>
+<p>Find window length that does this best, calculate online (if possible).</p>
+<h1 id="implementations">Implementations<a aria-hidden="true" class="anchor-heading icon-link" href="#implementations"></a></h1>
+<p><a href="/PublicPersonalKnowledgeBase/notes/75ww1w9fh8mtt4cn2etqvh7">MacroBase</a></p>
+<p><a href="/PublicPersonalKnowledgeBase/notes/27og1965rwaub2klpk1vo8o">JavaScript</a></p>
+<h1 id="task">Task<a aria-hidden="true" class="anchor-heading icon-link" href="#task"></a></h1>
+<h1 id="action">Action<a aria-hidden="true" class="anchor-heading icon-link" href="#action"></a></h1>
+<p>Solve efficiently above problem..</p>
+<p><strong>Acts as a transformation on fixed-size sliding windows and
+over a single time series</strong></p>
+<p><strong>ASAP can also execute on
+the client; we provide a JavaScript library for doing so.</strong></p>
+<p><strong>*ASAP acts as a building block in time series visualization. It
+can ingest and process raw data from time series databases such
+as InfluxDB, as well as from visualization clients such as plotting
+libraries and frontends</strong></p>
+<h2 id="roughness-measure">Roughness measure<a aria-hidden="true" class="anchor-heading icon-link" href="#roughness-measure"></a></h2>
+<p>it's the roughness of the <strong>trend</strong> (roughly).</p>
+<p>Roughness = 0 &#x3C;=> straight line .</p>
+<h2 id="preservation-measure">Preservation Measure<a aria-hidden="true" class="anchor-heading icon-link" href="#preservation-measure"></a></h2>
+<p>Kurtosis:</p>
+<p>(4th standartised moment).</p>
+<h3 id="smoothing-function">Smoothing Function<a aria-hidden="true" class="anchor-heading icon-link" href="#smoothing-function"></a></h3>
+<p>It's just the simple moving average.</p>
+<h3 id="smoothing-problem-statement">Smoothing problem statement<a aria-hidden="true" class="anchor-heading icon-link" href="#smoothing-problem-statement"></a></h3>
+<h1 id="result">Result<a aria-hidden="true" class="anchor-heading icon-link" href="#result"></a></h1>

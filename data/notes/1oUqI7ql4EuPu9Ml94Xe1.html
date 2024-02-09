@@ -1,0 +1,97 @@
+<h1 id="deep-neural-networks">Deep Neural Networks<a aria-hidden="true" class="anchor-heading icon-link" href="#deep-neural-networks"></a></h1>
+<p><a href="/PublicPersonalKnowledgeBase/notes/c73cnLe7dO9Xfslo8hfXo">tensorflow</a>
+<a href="/PublicPersonalKnowledgeBase/notes/awidUgzHuMsvTiKstZ28g">pytorch</a></p>
+<h1 id="hierarchical-modelling">Hierarchical Modelling<a aria-hidden="true" class="anchor-heading icon-link" href="#hierarchical-modelling"></a></h1>
+<p><a href="http://blog.shakirm.com/wp-content/uploads/2015/07/SVDL.pdf">Statistical View on Deep Neural Networks</a></p>
+<h1 id="recurrent-neural-networks">Recurrent Neural Networks<a aria-hidden="true" class="anchor-heading icon-link" href="#recurrent-neural-networks"></a></h1>
+<h2 id="the-explodingvanishing-gradient-problem">The exploding/vanishing gradient problem<a aria-hidden="true" class="anchor-heading icon-link" href="#the-explodingvanishing-gradient-problem"></a></h2>
+<p><a href="/PublicPersonalKnowledgeBase/notes/IhReOFbucdOEVagOY56OQ">Dynamical Systems</a>
+<a href="/PublicPersonalKnowledgeBase/notes/yAJy4YgrYvSvzJwQ40gyG">Mode</a>
+<a href="/PublicPersonalKnowledgeBase/notes/3x1TXUkd6kmowsgaSqd7i">Autoregressive Models</a></p>
+<h1 id="symetries-"><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^symmetries" href="#^symmetries"></a>Symetries <a aria-hidden="true" class="anchor-heading icon-link" href="#symetries-"></a></h1>
+<h1 id="restricted-boltzmann-machines">Restricted Boltzmann Machines<a aria-hidden="true" class="anchor-heading icon-link" href="#restricted-boltzmann-machines"></a></h1>
+<p>Some of the best single-model performers in <a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">Philosophy and Rationality.Incentives for Research and Engineering Advances^ (Private)</a>.</p>
+<p><a class="color-tag" style="--tag-color: #fbdd7e;" href="/PublicPersonalKnowledgeBase/notes/vYWCmlO6WVQQZUTowUlHT">#TODO</a> add pages for the architectures and notes here</p>
+<h1 id="feed-forward-neural-networks-"><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^feed-forward-nets" href="#^feed-forward-nets"></a>Feed Forward Neural Networks <a aria-hidden="true" class="anchor-heading icon-link" href="#feed-forward-neural-networks-"></a></h1>
+<h1 id="deep-and-wide-networks">Deep-and-wide networks<a aria-hidden="true" class="anchor-heading icon-link" href="#deep-and-wide-networks"></a></h1>
+<p>Deep Hierarchical model for numeric features, sparse and 'skipping layers' for categorical features and their products...</p>
+<p><img src="/PublicPersonalKnowledgeBase/assets/images/2022-01-17-22-18-25.png"></p>
+<p>Lately being used in <a href="/PublicPersonalKnowledgeBase/notes/VG6JMpj1Lic8br5iTSvIL">Recommender Systems</a>. There are claims they perform well...</p>
+<p>In R formula language parlance it's a bit like this:</p>
+<p><span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>x</mi><mtext> </mtext><mi>B</mi><mi>e</mi><mi>r</mi><mi>n</mi><mi>o</mi><mi>u</mi><mi>l</mi><mi>l</mi><msub><mi>i</mi><mi>l</mi></msub><mi>o</mi><mi>g</mi><mi>i</mi><mi>t</mi><mo stretchy="false">(</mo><mi>f</mi><mo stretchy="false">(</mo><mi>n</mi><mi>u</mi><mi>m</mi><mi>e</mi><mi>r</mi><mi>i</mi><msub><mi>c</mi><mi>f</mi></msub><mi>e</mi><mi>a</mi><mi>t</mi><mi>u</mi><mi>r</mi><mi>e</mi><mi>s</mi><mo stretchy="false">)</mo><mo>+</mo><mi>c</mi><mi>a</mi><mi>t</mi><mi>e</mi><mi>g</mi><mi>o</mi><mi>r</mi><mi>i</mi><mi>c</mi><mi>a</mi><msub><mi>l</mi><mi>f</mi></msub><mi>e</mi><mi>a</mi><mi>t</mi><mi>u</mi><mi>r</mi><mi>e</mi><msup><mi>s</mi><mn>2</mn></msup><mo stretchy="false">)</mo></mrow><annotation encoding="application/x-tex">x~Bernoulli_logit(f(numeric_features)+categorical_features^2)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0361em;vertical-align:-0.2861em;"></span><span class="mord mathnormal">x</span><span class="mspace nobreak"> </span><span class="mord mathnormal" style="margin-right:0.05017em;">B</span><span class="mord mathnormal" style="margin-right:0.02778em;">er</span><span class="mord mathnormal">n</span><span class="mord mathnormal">o</span><span class="mord mathnormal">u</span><span class="mord mathnormal" style="margin-right:0.01968em;">ll</span><span class="mord"><span class="mord mathnormal">i</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.01968em;">l</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mord mathnormal">o</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal">i</span><span class="mord mathnormal">t</span><span class="mopen">(</span><span class="mord mathnormal" style="margin-right:0.10764em;">f</span><span class="mopen">(</span><span class="mord mathnormal">n</span><span class="mord mathnormal">u</span><span class="mord mathnormal">m</span><span class="mord mathnormal" style="margin-right:0.02778em;">er</span><span class="mord mathnormal">i</span><span class="mord"><span class="mord mathnormal">c</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord mathnormal">e</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">u</span><span class="mord mathnormal">res</span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:1.1002em;vertical-align:-0.2861em;"></span><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">e</span><span class="mord mathnormal" style="margin-right:0.03588em;">g</span><span class="mord mathnormal" style="margin-right:0.02778em;">or</span><span class="mord mathnormal">i</span><span class="mord mathnormal">c</span><span class="mord mathnormal">a</span><span class="mord"><span class="mord mathnormal" style="margin-right:0.01968em;">l</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3361em;"><span style="top:-2.55em;margin-left:-0.0197em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathnormal mtight" style="margin-right:0.10764em;">f</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2861em;"><span></span></span></span></span></span></span><span class="mord mathnormal">e</span><span class="mord mathnormal">a</span><span class="mord mathnormal">t</span><span class="mord mathnormal">u</span><span class="mord mathnormal">re</span><span class="mord"><span class="mord mathnormal">s</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span></span>
+where f is deep <a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">^feed-forward-nets (Private)</a>
+or so. The categorical features^2 part could be specied further, of course, and the
+Bernoulli_logit sigmoid layer could be skipped.</p>
+<p>You have to specify what feature interactions to directly include.</p>
+<h1 id="convolutional-neural-networks-"><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^cnn" href="#^cnn"></a>Convolutional Neural Networks <a aria-hidden="true" class="anchor-heading icon-link" href="#convolutional-neural-networks-"></a></h1>
+<p><a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">^symetries (Private)</a></p>
+<h2 id="alexnet-"><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^alexnet" href="#^alexnet"></a>AlexNet <a aria-hidden="true" class="anchor-heading icon-link" href="#alexnet-"></a></h2>
+<h1 id="recurrent-neural-networks-1">Recurrent Neural Networks<a aria-hidden="true" class="anchor-heading icon-link" href="#recurrent-neural-networks-1"></a></h1>
+<ul>
+<li>RNNs</li>
+<li>Machine Translation, text generation</li>
+<li>LSTM,GRU</li>
+</ul>
+<h1 id="embeddings">Embeddings<a aria-hidden="true" class="anchor-heading icon-link" href="#embeddings"></a></h1>
+<p> <a href="/PublicPersonalKnowledgeBase/notes/sx92oju973uydTM0c39Cv#^word2vec">Language Models</a>
+</p><p></p><div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">Prod2Vec</span></div>
+<a href="/PublicPersonalKnowledgeBase/notes/v70GEz6i3EiwijenXGivj" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div><p><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^prod2vec" href="#^prod2vec"></a> <a href="https://recohut-projects.github.io/recohut/models.prod2vec.html">Prod2Vec</a> </p>
+</div></div><p></p><p></p>
+<h1 id="deep-learning-as-feature-extraction">Deep Learning as Feature Extraction<a aria-hidden="true" class="anchor-heading icon-link" href="#deep-learning-as-feature-extraction"></a></h1>
+<h1 id="recommendation-systems-dl">Recommendation Systems (DL)<a aria-hidden="true" class="anchor-heading icon-link" href="#recommendation-systems-dl"></a></h1>
+<h2 id="deep-content-based-models">Deep Content-based Models<a aria-hidden="true" class="anchor-heading icon-link" href="#deep-content-based-models"></a></h2>
+<h3 id="spotify-example">Spotify Example<a aria-hidden="true" class="anchor-heading icon-link" href="#spotify-example"></a></h3>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/1oUqI7ql4EuPu9Ml94Xe1#^cnn">Deep Neural Networks</a> with audio spectrogram as input data.</li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/1juPoYnzDHJuaEjaX1WHs">Max Pooling</a> and global pooling</li>
+<li>'Bottleneck' layer <a href="/PublicPersonalKnowledgeBase/notes/6h6H8HisRruYR6EwyfwVt">Auto-encoders</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/Bca6j4vMvC3WpJWhiLYUX">ReLU</a></li>
+<li>Output is the factor vector for the track from a <strong>trained Collaborative Filtering model</strong>. It's a model stack...<a href="/PublicPersonalKnowledgeBase/notes/IrX0CHBMVG7nyhuA9KJrn">Stacking Models</a></li>
+</ul>
+<h1 id="deep-factorization-machines">Deep Factorization Machines<a aria-hidden="true" class="anchor-heading icon-link" href="#deep-factorization-machines"></a></h1>
+<p><a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">science.stats.Regression.Support Vector Machines (Private)</a>
+<a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">science.stats.Regression.Support Vector Machines.Factorization Machines (Private)</a>
+<a class="color-tag" style="--tag-color: #fbdd7e;" href="/PublicPersonalKnowledgeBase/notes/vYWCmlO6WVQQZUTowUlHT">#TODO</a> - skip for now</p>
+<h1 id="content2vec-"><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^content2vec" href="#^content2vec"></a>Content2Vec <a aria-hidden="true" class="anchor-heading icon-link" href="#content2vec-"></a></h1>
+<p>Combine modular sets of feature extractors into 1 item embedding. E.g.
+<a href="/PublicPersonalKnowledgeBase/notes/1oUqI7ql4EuPu9Ml94Xe1#^alexnet">Deep Neural Networks</a>,<a href="/PublicPersonalKnowledgeBase/notes/sx92oju973uydTM0c39Cv#^word2vec">Language Models</a>, <a href="/PublicPersonalKnowledgeBase/notes/v70GEz6i3EiwijenXGivj">Prod2Vec</a>, etc. </p>
+<h1 id="frameworkslibraries">Frameworks/Libraries<a aria-hidden="true" class="anchor-heading icon-link" href="#frameworkslibraries"></a></h1>
+<p> <a href="/PublicPersonalKnowledgeBase/notes/K93cKDmInFmPJGz1VVNTF">Differentiable and Probabalistic Programming</a>
+<a href="/PublicPersonalKnowledgeBase/notes/c73cnLe7dO9Xfslo8hfXo">tensorflow</a>
+<a href="/PublicPersonalKnowledgeBase/notes/awidUgzHuMsvTiKstZ28g">pytorch</a>
+<a href="/PublicPersonalKnowledgeBase/notes/V390XsXhFB1AulS1wiKEJ">jax</a>
+<a href="/PublicPersonalKnowledgeBase/notes/NrjTD70ex5DW6N86ciKbp">CUDA</a></p>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/PublicPersonalKnowledgeBase/notes/0eavyyB1FV31znYjoX6hE">Attention Mechanisms</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/6h6H8HisRruYR6EwyfwVt">Auto-encoders</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/cXSFbsOfow3j1C7SkEMom">Embeddings</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/WpY10hSgixq23JeadOD34">GPUs</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/n2WACzfl7879utGwz2RVl">Graph Neural Networks</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/sx92oju973uydTM0c39Cv">Language Models</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/1juPoYnzDHJuaEjaX1WHs">Max Pooling</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/v70GEz6i3EiwijenXGivj">Prod2Vec</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/csu492up8z2rdy99ixq06mq">Recurrent Neural Networks</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/V4exKlI4VAWINpSZOytYw">Transfer Learning</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/wBdAtrMgIGaoliZx7AL58">Transformers</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/ucsAr4CTf0HJvl3B4KY1u">Vision Models</a></li>
+</ol>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/1oUqI7ql4EuPu9Ml94Xe1">Deep Neural Networks</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/FgZtSIWCrTYy5QcGwwDaS">Mixed Effect Models</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/ucsAr4CTf0HJvl3B4KY1u">Vision Models</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/L1tv49iwD2nPC04X3rbtW">Autoencoders</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/iAkhnGcJBZxhyAQXlEqbU">Approximate Dynamic Programming</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/xiapi8qb9gwnc4q7p1orm06">Activation Functions</a></li>
+</ul>

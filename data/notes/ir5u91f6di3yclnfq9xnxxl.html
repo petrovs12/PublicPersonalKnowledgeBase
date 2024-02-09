@@ -1,0 +1,47 @@
+<h1 id="multiple-labels">Multiple Labels<a aria-hidden="true" class="anchor-heading icon-link" href="#multiple-labels"></a></h1>
+<h1 id="multilabel-classification-"><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^multilabel" href="#^multilabel"></a>MultiLabel Classification <a aria-hidden="true" class="anchor-heading icon-link" href="#multilabel-classification-"></a></h1>
+<p><a href="https://machinelearningmastery.com/multi-label-classification-with-deep-learning/">https://machinelearningmastery.com/multi-label-classification-with-deep-learning/</a>
+<a href="https://github.com/keras-team/keras/issues/741">https://github.com/keras-team/keras/issues/741</a></p>
+<p>One way is to use sigmoid output, but not normalize w/ softmax/multilabel likelyhood, and have the loss function be point-wise binary crossentropy
+loss for each element, and sum them up (it works).</p>
+<pre><code>
+Q:
+I need train a multi-label softmax classifier, but there is a lot of one-hot code labels in examples, so how to change code to do it?
+
+A:elanmart commented on Sep 28, 2015
+Don't use softmax. Use sigmoid units in the output layer and then use "binary_crossentrpy" loss.
+</code></pre>
+<p><strong>Actually it's equivalent to train a single binary classifier to everything, but the learned hierarchical representation before the last label
+is shared.</strong></p>
+<h2 id="keras-example">Keras Example<a aria-hidden="true" class="anchor-heading icon-link" href="#keras-example"></a></h2>
+<pre class="language-{python}"><code class="language-{python}">
+# Build a classifier optimized for maximizing f1_score (uses class_weights)
+
+clf = Sequential()
+
+clf.add(Dropout(0.3))
+clf.add(Dense(xt.shape[1], 1600, activation='relu'))
+clf.add(Dropout(0.6))
+clf.add(Dense(1600, 1200, activation='relu'))
+clf.add(Dropout(0.6))
+clf.add(Dense(1200, 800, activation='relu'))
+clf.add(Dropout(0.6))
+clf.add(Dense(800, yt.shape[1], activation='sigmoid'))
+
+clf.compile(optimizer=Adam(), loss='binary_crossentropy')
+
+clf.fit(xt, yt, batch_size=64, nb_epoch=300, validation_data=(xs, ys), class_weight=W, verbose=0)
+
+preds = clf.predict(xs)
+
+preds[preds>=0.5] = 1
+preds[preds&#x3C;0.5] = 0
+
+print f1_score(ys, preds, average='macro')
+
+</code></pre>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/mrutVzfoYT6wrHEOKLrWf">Classification</a></li>
+</ul>

@@ -1,0 +1,85 @@
+<h1 id="feature-stores">Feature Stores<a aria-hidden="true" class="anchor-heading icon-link" href="#feature-stores"></a></h1>
+<p>Tl;dr
+Several perspectives:</p>
+<ol>
+<li>Implementational
+Layer on top of a DB, supporting many writes, key-based retrieval, last-before-timestamp retrieval.
+Supports writing batch or streaming features.
+read: can ask for a feature x for item/customer/whatever id y at time t easily and get back the correct result.
+FS handles backfilling of these features.
+Useful for embedding maps as well.</li>
+</ol>
+<ol start="2">
+<li>Semantic
+Have an 'easy and consistent way to write something that generates features ppl or models can use.
+Then create models that take data directly from the feature store, and it's easily portable to production.</li>
+</ol>
+<p>Many of the points are from the <a href="https://docs.feast.dev/">FEASTS Docs</a>.</p>
+<p>Feature Stores are systems that support the following functionalities: </p>
+<ol>
+<li>Consistent Access to Data During Model Ideation, Training, Testing, and Deployment.
+Different roles in the organization have divergent objectives and data sources. It would be best if the path between 'prototype data source' and 'production data sources' is as short as possible.</li>
+<li>Point-in-time correctness
+When the 'predict' call comes, we need the latest allowable value of the feature for the entity in question. Look below for the <a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">^timeTravel (Private)</a>
+<a href="/PublicPersonalKnowledgeBase/notes/9g50kaYv8jpHHgyrpKHyF">Time Series</a>
+<a href="/PublicPersonalKnowledgeBase/notes/2XiS5aCtw21fA9eepyGOc">Data Leakage</a>
+<a href="/PublicPersonalKnowledgeBase/notes/Xqmd659wwoSE3tVeYFxKo">Filtration</a></li>
+</ol>
+<p>One of the <strong>key value propositions</strong> when compared to a <a href="/PublicPersonalKnowledgeBase/notes/ku6IjaM8VZscHWIneLNJv">Nosql Databases</a> like <a href="/PublicPersonalKnowledgeBase/notes/eI2UkNEvXg8Is3tNzvvoQ">BigTable</a> by itself.</p>
+<ol start="3">
+<li>Deploying new features into prod is difficult
+For example, if a data scientist has created some long feature calculation pipeline during the script, it's possible to shoehorn this into production.
+But maybe it's computationally burdensome, especially if it's using a bunch of time/data to compute (e.g. rolling windows).
+Then the prod system would have to make additional queries to fetch data for a week back, then aggregate over it- very slow.
+Feature store can be 'Database for kids' in this sense- a database ml ppl can experiment and put scripts/ ETL's for feature calculation without trouble.</li>
+<li><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^reuse" href="#^reuse"></a>Features aren't reused across projects/ ppl Clear what this means</li>
+</ol>
+<h1 id="another-perspective-from-talk">Another perspective from <a href="https://www.youtube.com/watch?v=6OCUMbEtSLU&#x26;ab_channel=StanfordMLSysSeminars">talk</a><a aria-hidden="true" class="anchor-heading icon-link" href="#another-perspective-from-talk"></a></h1>
+<h2 id="challenges-with-data-for-ml">Challenges with data for ml<a aria-hidden="true" class="anchor-heading icon-link" href="#challenges-with-data-for-ml"></a></h2>
+<p> Data pipelines are messy.
+Different between training and serving
+Different data sources between training and serving
+Lack of point-in-time correctness/information sets/ Filtrations</p>
+<p> Models can be developed by DS, then re-developed and maintained by DE/MLE.</p>
+<h3 id="building-feature-pipelines-is-hard">Building Feature Pipelines is hard<a aria-hidden="true" class="anchor-heading icon-link" href="#building-feature-pipelines-is-hard"></a></h3>
+<ul>
+<li>Same semantics, adapted to different requirements, lead to <strong>different production requirements</strong> - distributed compute, strem processing, low-latency transformations.</li>
+<li>Reliable computation and <strong>backfilling</strong> of features is a large investment</li>
+</ul>
+<h3 id="consistent-data-access">Consistent Data Access<a aria-hidden="true" class="anchor-heading icon-link" href="#consistent-data-access"></a></h3>
+<ul>
+<li>Redevelopment of pipelines- inconsistencties in data</li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/ykZOLmmEoxBAesJmh6TI2">Training-Serving Skew</a> </li>
+</ul>
+<h2 id="duplication-of-effort">Duplication of Effort<a aria-hidden="true" class="anchor-heading icon-link" href="#duplication-of-effort"></a></h2>
+<p>This is covered in the <a href="/PublicPersonalKnowledgeBase/notes/3coCU94D3OUfqD6I8EWoX#^reuse">Feature Stores</a> point above</p>
+<h3 id="data-quality-monitoring">Data Quality Monitoring<a aria-hidden="true" class="anchor-heading icon-link" href="#data-quality-monitoring"></a></h3>
+<ul>
+<li>Logging serving times, computation times</li>
+<li>Checking for <a href="/PublicPersonalKnowledgeBase/notes/Zh0txnUCi8NGy872tQhGN">Distribution Drift</a></li>
+<li>Checking for 'Freshness', i.e. have we re-computed the features recently</li>
+</ul>
+<h2 id="how-feature-stores-help">How feature stores help<a aria-hidden="true" class="anchor-heading icon-link" href="#how-feature-stores-help"></a></h2>
+<p>They are usually built on top of existing data stores, eg. DynamoDB, Redis, BigTable, etc.
+Normally the underlying storage system should support fast key lookup + timestamp range queries, e.g. BigTable style
+<a href="/PublicPersonalKnowledgeBase/notes/eI2UkNEvXg8Is3tNzvvoQ">BigTable</a></p>
+<p><a href="/PublicPersonalKnowledgeBase/notes/vZEKj8XPxSQLPC17acPay">Nosql</a></p>
+<p>Honestly, for ML features, it does seem like something that:</p>
+<ul>
+<li>is key-based</li>
+<li>supports <strong>appends</strong>, range queries, and one can put secondary indices on
+sounds perfect.</li>
+</ul>
+<h2 id="time-travel-problem-and-information-sets-"><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^timeTravel" href="#^timeTravel"></a>Time Travel Problem and Information Sets <a aria-hidden="true" class="anchor-heading icon-link" href="#time-travel-problem-and-information-sets-"></a></h2>
+<p>Issue:
+we would like to serve a model at time <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span></span> for lookahead period <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span></span>, so we would like to use the data up to and including time <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>−</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">T-h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span></span>. So all features we use should be 'current' as of that timestamp. </p>
+<p>In other words, when we're making prediction at time <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi></mrow><annotation encoding="application/x-tex">T</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span></span></span></span></span> with planning horizon <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>h</mi></mrow><annotation encoding="application/x-tex">h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span></span>, the <strong>information set</strong> we can use is the one available at time <span class="math math-inline"><span class="katex"><span class="katex-mathml"><math xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mi>T</mi><mo>−</mo><mi>h</mi></mrow><annotation encoding="application/x-tex">T-h</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7667em;vertical-align:-0.0833em;"></span><span class="mord mathnormal" style="margin-right:0.13889em;">T</span><span class="mspace" style="margin-right:0.2222em;"></span><span class="mbin">−</span><span class="mspace" style="margin-right:0.2222em;"></span></span><span class="base"><span class="strut" style="height:0.6944em;"></span><span class="mord mathnormal">h</span></span></span></span></span>.</p>
+<p>Some <a href="https://www.tecton.ai/blog/time-travel-in-ml/">feature store solutions can help</a> with this problem.</p>
+<h1 id="feats-overview">FEATS Overview<a aria-hidden="true" class="anchor-heading icon-link" href="#feats-overview"></a></h1>
+<p><img src="https://www.tecton.ai/blog/time-travel-in-ml/"></p>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/3coCU94D3OUfqD6I8EWoX">Feature Stores</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/ykZOLmmEoxBAesJmh6TI2">Training-Serving Skew</a></li>
+</ul>

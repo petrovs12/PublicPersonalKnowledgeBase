@@ -1,0 +1,28 @@
+<h1 id="qmk-notes">QMK Notes<a aria-hidden="true" class="anchor-heading icon-link" href="#qmk-notes"></a></h1>
+<p>Notes, following the <a href="https://docs.qmk.fm/">official QMK documentation</a>.</p>
+<h1 id="tools">Tools<a aria-hidden="true" class="anchor-heading icon-link" href="#tools"></a></h1>
+<h1 id="qmk-firmware">QMK Firmware<a aria-hidden="true" class="anchor-heading icon-link" href="#qmk-firmware"></a></h1>
+<p><a href="/PublicPersonalKnowledgeBase/notes/b008hn6sd22mfbslp7vn2un">Firmware</a></p>
+<p>From <a href="https://docs.qmk.fm/#/newbs">QMK docs</a>
+Your computer <strong>keyboard has a processor</strong> inside of it, similar to the one inside your computer. This processor <strong>runs software</strong> that is responsible for <strong>detecting button pr
+sesses</strong> and informing the computer when keys are pressed. <strong>QMK Firmware</strong> fills the role of <strong>that software</strong>, detecting button presses and passing that information on to the host computer. When you build your <strong>custom keymap</strong>, you are creating an <strong>executable program for your keyboard</strong>.
+jkll</p>
+<p>Steps:</p>
+<ol>
+<li>First, fork the ergohaven's fork of the qMk repo. they have the code there.</li>
+<li>Make sure the compiler works, using some of the example keyboards in the qmk repo.</li>
+<li>install the qmk. it was tricky to do on linux, as there was something with the nmPy first, and then after that arm stack etc...</li>
+<li>From the EH repo, copy to the vial repo, the EH files. Edit as needed. I basically removed the fancy rgb sruff, and added rhe tap daace stuff. </li>
+<li>Build the files. I found the build hex files in rhe .build folder in the repo.</li>
+<li>Use the qmk toolbox to flash. The best way to flash is to check in <strong>Vial</strong> where is the <strong>Reset</strong> button. This will put the kb in the flash mode, then relAtively quickly press the <strong> flash</strong> button in the qmk toolbox interface. </li>
+<li>Of course, there is an equivalent command line way to do that, but haven't used it.</li>
+<li>Voila, you gotthe tap dace option now!!!</li>
+</ol>
+<h1 id="qmk-configurator">QMK Configurator<a aria-hidden="true" class="anchor-heading icon-link" href="#qmk-configurator"></a></h1>
+<h1 id="qmk-toolbox">QMK Toolbox<a aria-hidden="true" class="anchor-heading icon-link" href="#qmk-toolbox"></a></h1>
+<h1 id="qmkfm">qmk.fm<a aria-hidden="true" class="anchor-heading icon-link" href="#qmkfm"></a></h1>
+<h1 id="software-only-alternatives">Software-only alternatives<a aria-hidden="true" class="anchor-heading icon-link" href="#software-only-alternatives"></a></h1>
+<p>On windows there is autohotkey, which has a bunch of advanced functionalities.
+On unix and mac (as well as Win), there is  kmonad, which can I suppose emulate qmk pretty well...</p>
+<p>Will try to check it out, p;erhaps especially with autoshift for the kinesis and so on...</p>
+<p>Maybe also on the lapop i would be nice.</p>

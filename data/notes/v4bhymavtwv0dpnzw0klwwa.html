@@ -1,0 +1,109 @@
+<h1 id="search-ranking">Search Ranking<a aria-hidden="true" class="anchor-heading icon-link" href="#search-ranking"></a></h1>
+<h1 id="problem-statement">Problem Statement<a aria-hidden="true" class="anchor-heading icon-link" href="#problem-statement"></a></h1>
+<p>General Query, return results</p>
+<h2 id="scale">Scale<a aria-hidden="true" class="anchor-heading icon-link" href="#scale"></a></h2>
+<h2 id="personalization">Personalization<a aria-hidden="true" class="anchor-heading icon-link" href="#personalization"></a></h2>
+<h2 id="internationalization">Internationalization<a aria-hidden="true" class="anchor-heading icon-link" href="#internationalization"></a></h2>
+<h1 id="metrics">Metrics<a aria-hidden="true" class="anchor-heading icon-link" href="#metrics"></a></h1>
+<h2 id="online-metrics">Online Metrics<a aria-hidden="true" class="anchor-heading icon-link" href="#online-metrics"></a></h2>
+<h3 id="end-to-end-metrics">End To End Metrics<a aria-hidden="true" class="anchor-heading icon-link" href="#end-to-end-metrics"></a></h3>
+<h3 id="user-engagement">User engagement<a aria-hidden="true" class="anchor-heading icon-link" href="#user-engagement"></a></h3>
+<p> <a href="/PublicPersonalKnowledgeBase/notes/kWzR0yolsu5D1FBzQDiZE">User Based Metrics (Digital Products)</a>
+<a href="/PublicPersonalKnowledgeBase/notes/kWzR0yolsu5D1FBzQDiZE#^ctr">User Based Metrics (Digital Products)</a></p>
+<h3 id="query-succcess">Query Succcess<a aria-hidden="true" class="anchor-heading icon-link" href="#query-succcess"></a></h3>
+<p> Dwell time, not re-doing search after short time.</p>
+<p> <a href="/PublicPersonalKnowledgeBase/notes/kWzR0yolsu5D1FBzQDiZE#^task_success">User Based Metrics (Digital Products)</a></p>
+<h1 id="offline-metrics">Offline Metrics<a aria-hidden="true" class="anchor-heading icon-link" href="#offline-metrics"></a></h1>
+<p> Classification metrics
+<a href="/PublicPersonalKnowledgeBase/notes/C0xQGR2tHaA6spLh3IAiw">Metrics</a>
+AUC, precision, recall, etc.
+Ranking Metrics:
+</p><p></p><div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">Loss Functions</span></div>
+<a href="/PublicPersonalKnowledgeBase/notes/pBIMmRuN5zKHlVDIWn2wt" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div><h2 id="normalized-discounted-cumulative-gain-"><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^ranking-NDCG" href="#^ranking-NDCG"></a>Normalized Discounted Cumulative Gain <a aria-hidden="true" class="anchor-heading icon-link" href="#normalized-discounted-cumulative-gain-"></a></h2>
+</div></div><p></p>,
+<p></p><div class="portal-container">
+<div class="portal-head">
+<div class="portal-backlink">
+<div class="portal-title">From <span class="portal-text-title">Loss Functions</span></div>
+<a href="/PublicPersonalKnowledgeBase/notes/pBIMmRuN5zKHlVDIWn2wt" class="portal-arrow">Go to text <span class="right-arrow">→</span></a>
+</div>
+</div>
+<div id="portal-parent-anchor" class="portal-parent" markdown="1">
+<div class="portal-parent-fader-top"></div>
+<div class="portal-parent-fader-bottom"></div><h3 id="mean-average-precision-"><a aria-hidden="true" class="block-anchor anchor-heading icon-link" id="^ranking-map" href="#^ranking-map"></a>Mean Average Precision <a aria-hidden="true" class="anchor-heading icon-link" href="#mean-average-precision-"></a></h3>
+</div></div><p></p>,<p></p>
+<h1 id="architectural-components">Architectural Components<a aria-hidden="true" class="anchor-heading icon-link" href="#architectural-components"></a></h1>
+<p> Draw the usual Picture - think about multiple models etc.</p>
+<h1 id="document-selection-algorithm">Document Selection Algorithm<a aria-hidden="true" class="anchor-heading icon-link" href="#document-selection-algorithm"></a></h1>
+<p> We can give multiple semi-independent scores of different aspects of the user-query-document match.</p>
+<ol>
+<li>
+<p>Intent-document match</p>
+</li>
+<li>
+<p>Document Pagerank</p>
+</li>
+<li>
+<p>Keyword Match</p>
+</li>
+<li>
+<p>User-Document Topic Match</p>
+</li>
+<li>
+<p>Location Match </p>
+<p>We will have independent models, estimating all these scores, and combine them w/ some function to estimate the best score.</p>
+</li>
+</ol>
+<h1 id="ml-architectural-parts">ML Architectural Parts<a aria-hidden="true" class="anchor-heading icon-link" href="#ml-architectural-parts"></a></h1>
+<h2 id="query-rewriting">Query Rewriting<a aria-hidden="true" class="anchor-heading icon-link" href="#query-rewriting"></a></h2>
+<h3 id="spell-checking">Spell Checking<a aria-hidden="true" class="anchor-heading icon-link" href="#spell-checking"></a></h3>
+<h3 id="query-expansion">Query Expansion<a aria-hidden="true" class="anchor-heading icon-link" href="#query-expansion"></a></h3>
+<p>Add synonyms and nearby phrases.</p>
+<h4 id="query-relaxation">Query Relaxation<a aria-hidden="true" class="anchor-heading icon-link" href="#query-relaxation"></a></h4>
+<p>Remove redundant words (e.g. <strong>good italian restaurants</strong> --> <strong>italian restaurant</strong>).</p>
+<h3 id="query">Query<a aria-hidden="true" class="anchor-heading icon-link" href="#query"></a></h3>
+<h2 id="query-understanding">Query Understanding<a aria-hidden="true" class="anchor-heading icon-link" href="#query-understanding"></a></h2>
+<h3 id="intent-understanding">Intent Understanding<a aria-hidden="true" class="anchor-heading icon-link" href="#intent-understanding"></a></h3>
+<p> Embed query?
+Create an 'intent' embedding for the query- 'earthquake' is 'news-y', 'food' is 'local', etc.
+Can see the intent dataset by manual labelling and then proceed.</p>
+<h2 id="inverted-index-lookup">Inverted Index Lookup<a aria-hidden="true" class="anchor-heading icon-link" href="#inverted-index-lookup"></a></h2>
+<h2 id=""><a aria-hidden="true" class="anchor-heading icon-link" href="#"></a></h2>
+<h1 id="relevance-scoring-scheme">Relevance Scoring Scheme<a aria-hidden="true" class="anchor-heading icon-link" href="#relevance-scoring-scheme"></a></h1>
+<p>Create different models for relevance for:</p>
+<ol>
+<li>Terms match</li>
+<li>Document popularity</li>
+<li>Query intent match</li>
+<li>Personalization match</li>
+</ol>
+<p>And maybe do a function on that to decide what to show</p>
+<h1 id="feature-engineering">Feature Engineering<a aria-hidden="true" class="anchor-heading icon-link" href="#feature-engineering"></a></h1>
+<p>The 'agent types' in this system are:</p>
+<ol>
+<li>Searcher</li>
+<li>Query</li>
+<li>Documents</li>
+<li>'Context' (includes session length, current intent, etc)</li>
+</ol>
+<p>In addition, we can think about </p>
+<ul>
+<li>Searcher-Document Interactions</li>
+<li>Query-Document Interactions</li>
+</ul>
+<h2 id="searcher-features">Searcher Features<a aria-hidden="true" class="anchor-heading icon-link" href="#searcher-features"></a></h2>
+<p>Demographic data. Historical intents. Interests.</p>
+<h2 id="query-features">Query Features<a aria-hidden="true" class="anchor-heading icon-link" href="#query-features"></a></h2>
+<p><a href="/PublicPersonalKnowledgeBase/notes/c7rsts0s84pjnj28m21ee3s#^companygoals">Product School Book</a>
+Keywords, query embedding. Temporal features (time of day).
+Query historical engagement.</p>
+<h2 id="document-features">Document Features<a aria-hidden="true" class="anchor-heading icon-link" href="#document-features"></a></h2>
+<p>Document Embedding. Pagerank/popularity measures.</p>

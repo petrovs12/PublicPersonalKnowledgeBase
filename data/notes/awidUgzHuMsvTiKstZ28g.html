@@ -1,0 +1,110 @@
+<h1 id="pytorch">pytorch<a aria-hidden="true" class="anchor-heading icon-link" href="#pytorch"></a></h1>
+<p><a href="https://pytorch.org/">Website</a></p>
+<h1 id="multiple-submodules">Multiple submodules<a aria-hidden="true" class="anchor-heading icon-link" href="#multiple-submodules"></a></h1>
+<h2 id="dataloader">DataLoader<a aria-hidden="true" class="anchor-heading icon-link" href="#dataloader"></a></h2>
+<p>It's a iterator helper that would deal w/</p>
+<h1 id="neural-nets-forward-and-backwards">Neural Nets, Forward and Backwards<a aria-hidden="true" class="anchor-heading icon-link" href="#neural-nets-forward-and-backwards"></a></h1>
+<p> To create a neural net, make a class that inherits from <code>nn.Module</code>.
+It needs to implement <code>__init__</code> and <code>forward</code> methods.</p>
+<pre class="language-{python}"><code class="language-{python}">class DenseNet(nn.Module):
+   def __init__():
+       self.input = nn.Flatten()
+       self.linear_relu_stack=nn.Sequential(
+           nn.Linear(28*25, 256),
+           nn.ReLU(),
+           nn.Linear(256, 128),
+           nn.ReLU(),
+           nn.Linear(128, 10)
+       )
+   def forward(self,x):
+       x = self.input(x)
+       logits = self.linear_relu_stack(x)
+       return logits
+
+model = DenseNet().to(device)# send the model to execute on the gpu/cpu
+
+
+</code></pre>
+<p> So that's how we encode a a given computational tree.
+Probably there are various simplifications/specializations of the above. Is</p>
+<h2 id="parameter-fittingoptimization-and-backward-pass">Parameter fitting/optimization and backward pass<a aria-hidden="true" class="anchor-heading icon-link" href="#parameter-fittingoptimization-and-backward-pass"></a></h2>
+<p>After we have defined the 'evaluation' part, next we want to see how to fit parameters to the data.</p>
+<p>Define 'optimizer' object and the loss funciton object
+<strong>NB</strong> <a title="Private" href="https://wiki.dendron.so/notes/hfyvYGJZQiUwQaaxQO27q.html" target="_blank" class="private">#NB (Private)</a> optimizer needs to be supplied the model.parameters() as an argument in order to know what it's optimizing.</p>
+<p>If you think about a function instead, the optimizer
+would need to know the function + it's parameters, so it makes sense.</p>
+<pre class="language-{python}"><code class="language-{python}">loss_fn = nn.CrossEntropyLoss()
+!!!
+optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
+</code></pre>
+<h1 id="training-loop">Training loop<a aria-hidden="true" class="anchor-heading icon-link" href="#training-loop"></a></h1>
+<p>We have to define the training loop by ourselves.</p>
+<p>The backpropagation is done via the following opaque at first look pattern:</p>
+<pre class="language-{python}"><code class="language-{python}">optimizer.zero_grad() # nullify previous gradient data
+loss.backward() #compute gradient (!!!)
+optimizer.step() #make step w/ the optimizer
+</code></pre>
+<p>Overall  Ifind the above pattern confusing, as there is quite a bit of state manipulation there.
+In particular, the signatures of functions there don't tell you about what's happening.</p>
+<p> Nevertheless, it's short and only 'strange' part is</p>
+<p><code>loss.backward()</code>. Why is this actinf on the model parameters? no idea.</p>
+<p>from <a href="http://seba1511.net/tutorials/beginner/blitz/neural_networks_tutorial.html#:~:text=Loss%20Function,-A%20loss%20function&#x26;text=MSELoss%20which%20computes%20the%20mean,the%20input%20and%20the%20target.&#x26;text=So%2C%20when%20we%20call%20loss,Variable%20accumulated%20with%20the%20gradient.">here</a></p>
+<p><strong>So, when we call loss.backward(), the whole graph is differentiated w.r.t. the loss, and all Variables in the graph will have their .grad Variable accumulated with the gradient.</strong></p>
+<p> Ok, so that makes sense. Every Variable has a .grad Variable, which is acted upon by <code>loss.backward()</code>.</p>
+<pre><code>
+def train(dataloader, model, loss_fn, optimizer):
+    size = len(dataloader.dataset)
+    # I guess this tells the model that
+    # paramteres are free to update
+    
+    model.train()
+    # for each batch of samples
+    for batch, (X, y) in enumerate(dataloader):
+        X, y = X.to(device), y.to(device)
+        pred = model(X)
+        loss = loss_fn(pred, y)
+
+        # Backpropagation and parameter update
+        optimizer.zero_grad()
+        loss.backward()
+        optimizer.step()
+
+        # Occasional progress report (like callback)
+        if batch % 100 == 0:
+            loss, current = loss.item(), batch * len(X)
+            print(f"loss: {loss:>7f}  [{current:>5d}/{size:>5d}]")
+
+</code></pre>
+<h2 id="what-does-modeltrain-do"><a href="https://stackoverflow.com/questions/51433378/what-does-model-train-do-in-pytorch">What Does model.train() do?</a><a aria-hidden="true" class="anchor-heading icon-link" href="#what-does-modeltrain-do"></a></h2>
+<p>It sets the model so layers that behave differently during train and test set.</p>
+<p><code>model.train()</code> and <code>model.eval()</code> basically only care about dropout and batch normalization layers atm.</p>
+<pre class="language-{python}"><code class="language-{python}">data = [[1, 2],[3, 4]]
+x_data = torch.tensor(data)
+</code></pre>
+<h1 id="lossbackward"><a href="https://discuss.pytorch.org/t/what-does-the-backward-function-do/9944">loss.backward()</a><a aria-hidden="true" class="anchor-heading icon-link" href="#lossbackward"></a></h1>
+<pre><code>loss.backward() computes dloss/dx for every parameter x which has requires_grad=True. These are accumulated into x.grad for every parameter x. In pseudo-code:
+</code></pre>
+<p><img src="https://discuss.pytorch.org/t/what-does-the-backward-function-do/9944/2"></p>
+<pre class="language-{python}"><code class="language-{python}">x.grad += dloss/dx
+
+</code></pre>
+<p>So because of that we have to 0 the grad beforehand</p>
+<h1 id="grad-mode">Grad Mode<a aria-hidden="true" class="anchor-heading icon-link" href="#grad-mode"></a></h1>
+<p>(Enable grad)[https://pytorch.org/docs/stable/_modules/torch/autograd/grad_mode.html# enable_grad]</p>
+<h2 id="torchno_grad">Torch.no_grad<a aria-hidden="true" class="anchor-heading icon-link" href="#torchno_grad"></a></h2>
+<p>Context manager, disabling (thread-wise) grad calculations. Use when evaluating model.</p>
+<h2 id="aitem">a.item()<a aria-hidden="true" class="anchor-heading icon-link" href="#aitem"></a></h2>
+<p>if object is number/1 element tensor.
+use a.tolist() otherwise.</p>
+<h1 id="differentiable">Differentiable<a aria-hidden="true" class="anchor-heading icon-link" href="#differentiable"></a></h1>
+<p>Some ops in torch are differentiable, some are not.</p>
+<h1 id="tensors-and-differeentiataion">Tensors and differeentiataion<a aria-hidden="true" class="anchor-heading icon-link" href="#tensors-and-differeentiataion"></a></h1>
+<p><a href="https://pytorch.org/tutorials/beginner/blitz/autograd_tutorial.html">'Autograd' is some engine,running in the background? Idk</a></p>
+<h1 id="resources">resources<a aria-hidden="true" class="anchor-heading icon-link" href="#resources"></a></h1>
+<p><a href="http://blog.ezyang.com/2019/05/pytorch-internals/">Pytorch Internals Blog Post</a></p>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/1oUqI7ql4EuPu9Ml94Xe1">Deep Neural Networks</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/K93cKDmInFmPJGz1VVNTF">Differentiable and Probabalistic Programming</a></li>
+</ul>

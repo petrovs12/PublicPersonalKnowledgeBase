@@ -1,0 +1,49 @@
+<h1 id="scoreboard">Scoreboard<a aria-hidden="true" class="anchor-heading icon-link" href="#scoreboard"></a></h1>
+<p>We can:</p>
+<ol>
+<li>For each user, keep bucket_id, and score. </li>
+<li>For each bucket, keep bucket_id, user_id, lower_bound,upper_bound, score, next and previous bucket pointers. </li>
+<li>The ranking table is split into buckets.</li>
+<li>When the user score is updates, we:</li>
+</ol>
+<ul>
+<li>
+<p>update the user score</p>
+</li>
+<li>
+<p>check if we're still in the same bucket, else delete user from bucket, go up or down bucket pointers, and add user to new bucket. Alternatively, we can first consult a the bucket table above, and we can figure out the appropriate new bucket .</p>
+</li>
+<li>
+<p>evern 100 ms, sort each bucket in parallel, using insertion sort. If we detect some buckets have too many inversions,
+can switch them to merge sort (too many games in a given bracket).</p>
+</li>
+<li>
+<p>if sorting time for any bucket becomes too large (>e.g. 50ms), then split the bucket into two,
+move upper part of the user range to new bucket.</p>
+</li>
+<li>
+<p>We retrieve 10 above and bellow you in the same bucket. For edge cases where  you're the top/bottom 9 person in bucket- have 2 parallel 'bucket' sequences: e.g. percentiles 0,2,...,98,100, and percentiles 0,1,3,5,...,99,100, search for user in both sequences. At least  1 of them will contain the -10-user_rank;10 +user_rank interval completely (or can use the bucket pointers, mentioned before)</p>
+</li>
+<li>
+<p>For sorting the friend list: </p>
+</li>
+</ul>
+<ol>
+<li>
+<p>If friend list is undirected, maintain these equivalence relations sort and retrieve them
+Then we use similar sorting mechanisms for each friend list.
+Friend lists are equivalence relationships, every time a user plays a game, update their score, use a procedure as above.</p>
+</li>
+<li>
+<p>If friend list is directed
+Maintain list to show to each user.</p>
+</li>
+</ol>
+<p>For players with not many incoming friends (ppl who follow them):
+Every such player is a pub-sub topic, to which ppl who follow them subscribe.
+Then when game happens, the user publishes to the topic, and the topic publishes to all the users who follow it,
+updating their 'friend' scoreboard w/ insertion sort.</p>
+<p>For players with many incoming friends (ppl who follow them) :
+Celebrity problem
+Don't update follower scoreboard directly, but for each user, maintain a special list of celebrities they follow, and at
+request- time, if there was update, insertion-sort them into the existing 'friend' scoreboards. </p>

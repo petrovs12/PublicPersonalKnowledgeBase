@@ -1,0 +1,50 @@
+<h1 id="nosql-databases">Nosql Databases<a aria-hidden="true" class="anchor-heading icon-link" href="#nosql-databases"></a></h1>
+<p><strong>Note - these are my personal notes from barely studying these things and trying to understand them</strong>. They might be completely off.</p>
+<h1 id="mongodb">MongoDB<a aria-hidden="true" class="anchor-heading icon-link" href="#mongodb"></a></h1>
+<p>Document database. 'Best' use-case scenario: not sure what our data model is exactly, need to integrate many different data sources. Can just put them in Mongo and have the application deal with
+it later.</p>
+<h2 id="use-cases">Use Cases:<a aria-hidden="true" class="anchor-heading icon-link" href="#use-cases"></a></h2>
+<p>When you are expecting a lot of reads and write operations from your application but you do not care much about some of the data being lost in the server crash </p>
+<p>Up to application logic to handle joins/etc!!! </p>
+<h1 id="key--value-stores">Key- Value stores<a aria-hidden="true" class="anchor-heading icon-link" href="#key--value-stores"></a></h1>
+<h2 id="dynamodb">DynamoDB<a aria-hidden="true" class="anchor-heading icon-link" href="#dynamodb"></a></h2>
+<p>Amazon DynamoDB supports keys, partition keys, sort keys, and secondary indices.
+(DynamoDB keys)[https://docs.aws.amazon.com/amazondynamodb/latest/developerguide/bp-sort-keys.html].</p>
+<p>So it can probably support fast range queries.</p>
+<h2 id="cassandra-and-hbase">Cassandra and Hbase.<a aria-hidden="true" class="anchor-heading icon-link" href="#cassandra-and-hbase"></a></h2>
+<p>When your use case requires more writing operations than reading ones ---  </p>
+<p>In situations where you need more availability than consistency. For example, you can use it for social network websites but cannot use it for banking purposes </p>
+<p>You require less number of joins and aggregations in your queries to the database </p>
+<p>Health trackers, weather data, tracking of orders, and time series data are some good use cases where you can use Cassandra databases </p>
+<h1 id="wide-column-stores">Wide Column Stores<a aria-hidden="true" class="anchor-heading icon-link" href="#wide-column-stores"></a></h1>
+<p> BigTable</p>
+<h1 id="graph-databases-neo4j">Graph Databases (Neo4j)<a aria-hidden="true" class="anchor-heading icon-link" href="#graph-databases-neo4j"></a></h1>
+<p>Use case is clear- want recursive joins and long-range relationships.
+It's kind of clear when we want it...</p>
+<h1 id="column-oriented-databases">Column Oriented Databases:<a aria-hidden="true" class="anchor-heading icon-link" href="#column-oriented-databases"></a></h1>
+<p>Support fast appends, use <a href="/PublicPersonalKnowledgeBase/notes/0mzukggjdm17iezl80f6oe9">Run Length Encoding</a> to compress data. Great for massive time series (e.g. sensor data, <a href="/PublicPersonalKnowledgeBase/notes/3w4p32t24ynkqxqe2xhhxlx">Internet Of Things</a>).</p>
+<h1 id="list-of-popular-nosql-databases-w-some-notes">List Of popular NoSQL databases w/ some notes...<a aria-hidden="true" class="anchor-heading icon-link" href="#list-of-popular-nosql-databases-w-some-notes"></a></h1>
+<p><a href="https://onedrive.live.com/view.aspx?resid=A6A13EED7FFACAB8%215824&#x26;id=documents&#x26;wd=target%28System%20Design%20Stuff.one%7CC47AA9EC-5641-4E28-9386-48260F2E0A52%2FNoSQL%20databases%20list%7CB0AF0C61-E8DA-4D46-8CCE-4F24A23D4698%2F%29">https://onedrive.live.com/view.aspx?resid=A6A13EED7FFACAB8%215824&#x26;id=documents&#x26;wd=target%28System%20Design%20Stuff.one%7CC47AA9EC-5641-4E28-9386-48260F2E0A52%2FNoSQL%20databases%20list%7CB0AF0C61-E8DA-4D46-8CCE-4F24A23D4698%2F%29</a></p>
+<h1 id="database-replication">Database Replication<a aria-hidden="true" class="anchor-heading icon-link" href="#database-replication"></a></h1>
+<ul>
+<li>Cold Standby </li>
+</ul>
+<pre class="language-{mermaid}"><code class="language-{mermaid}">graph LR;
+a[a]-->b[b]
+
+</code></pre>
+<h1 id="time-series">Time Series<a aria-hidden="true" class="anchor-heading icon-link" href="#time-series"></a></h1>
+<p>Have some common properties with <a href="/PublicPersonalKnowledgeBase/notes/ku6IjaM8VZscHWIneLNJv#column-oriented-databases">Nosql Databases</a></p>
+<p><a href="/PublicPersonalKnowledgeBase/notes/stq3hc4b7octpinmcsrpvj6">InfluxDB</a></p>
+<hr>
+<strong>Children</strong>
+<ol>
+<li><a href="/PublicPersonalKnowledgeBase/notes/eI2UkNEvXg8Is3tNzvvoQ">BigTable</a></li>
+</ol>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/gImPQvOVGCsqgPnkpuVfC">System Design</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/ku6IjaM8VZscHWIneLNJv">Nosql Databases</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/3coCU94D3OUfqD6I8EWoX">Feature Stores</a></li>
+</ul>

@@ -1,0 +1,48 @@
+<h1 id="graph-traversal">Graph Traversal<a aria-hidden="true" class="anchor-heading icon-link" href="#graph-traversal"></a></h1>
+<h1 id=""><a aria-hidden="true" class="anchor-heading icon-link" href="#"></a></h1>
+<h1 id="basic-tree-traversals">Basic Tree Traversals<a aria-hidden="true" class="anchor-heading icon-link" href="#basic-tree-traversals"></a></h1>
+<h2 id="dfs">DFS<a aria-hidden="true" class="anchor-heading icon-link" href="#dfs"></a></h2>
+<p>T-top(or root)
+L=left
+R=right</p>
+<p><a href="https://www.geeksforgeeks.org/tree-traversals-inorder-preorder-and-postorder/">Tree traversals</a></p>
+<h3 id="pre-order">Pre-order<a aria-hidden="true" class="anchor-heading icon-link" href="#pre-order"></a></h3>
+<p>T, L , R </p>
+<h3 id="in-order">In-order<a aria-hidden="true" class="anchor-heading icon-link" href="#in-order"></a></h3>
+<p>L, T, R</p>
+<h3 id="post-order-">Post-order :<a aria-hidden="true" class="anchor-heading icon-link" href="#post-order-"></a></h3>
+<p>L R T</p>
+<h2 id="bfs">BFS<a aria-hidden="true" class="anchor-heading icon-link" href="#bfs"></a></h2>
+<h3 id="iteratively-deepening-bfs">Iteratively deepening BFS<a aria-hidden="true" class="anchor-heading icon-link" href="#iteratively-deepening-bfs"></a></h3>
+<h2 id="heuristic-search">Heuristic Search<a aria-hidden="true" class="anchor-heading icon-link" href="#heuristic-search"></a></h2>
+<h3 id="a">A*<a aria-hidden="true" class="anchor-heading icon-link" href="#a"></a></h3>
+<p> consisten heuristic</p>
+<h1 id="dfs-notes">DFS Notes<a aria-hidden="true" class="anchor-heading icon-link" href="#dfs-notes"></a></h1>
+<p>Exploring w/ dfs</p>
+<pre class="language-{python}"><code class="language-{python}">
+seen = set()
+def explore(V:List[Int],E:Dict[Int,Set[int]],v):
+    if v in seen:  #optionally!!!
+        return
+    seen.add(v)
+    previsit(v) # optionally! use if need to detect cycles, other stuff 
+    for w in E[v]:
+        explore(V,E,w)
+    postvisit(v) # optionally! useful to keep track of cycles and other stuff
+
+</code></pre>
+<p>Intuition:
+Explore labyrinth: need some <strong>rope</strong> (stack) and <strong>piece of chalk</strong>(visited set). Go along the <strong>rightmost path without chalk marks</strong> (dfs ordering), and return when
+you reach a dead end.</p>
+<h3 id="previsit-and-connected-components">Previsit and connected components<a aria-hidden="true" class="anchor-heading icon-link" href="#previsit-and-connected-components"></a></h3>
+<pre class="language-{python}"><code class="language-{python}">#...
+cc=dict()
+def previsit(v,cc):
+   ccnum[v] = cc
+</code></pre>
+<hr>
+<strong>Backlinks</strong>
+<ul>
+<li><a href="/PublicPersonalKnowledgeBase/notes/4FIxH4rGwMUvVyCogNmHe">Optimization</a></li>
+<li><a href="/PublicPersonalKnowledgeBase/notes/iiXbMCqdkdfEMqpCPWrpY">Graphs</a></li>
+</ul>
