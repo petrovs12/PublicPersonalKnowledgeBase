@@ -2,7 +2,7 @@
 id: xokdu87m4jy6l8994szc098
 title: Token Masking
 desc: ''
-updated: 1689691256554
+updated: 1690467002361
 created: 1689682251868
 ---
 
@@ -19,4 +19,4 @@ classifier("Paris is the [MASK] of France.")
 ```
 
 
-No, really 
+
